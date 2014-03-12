@@ -1,0 +1,3533 @@
+{
+	"catchments":{
+	
+	},
+	
+	"maxTprob30":{
+		"property_name":"maxTprob30",
+		"property_label":"Temperature Increase Tolerated",
+		"property_sublabel":"Target 30% Probability Occurrence",
+		"rules":[
+			{
+				"min":null,
+				"max":0,
+				"equal_to":"max",
+				"fill":"#ADADAD",
+				"label":"below target currently or 0&deg C",
+				"stroke":null
+			},
+			{
+				"min":0,
+				"max":1,
+				"equal_to":"max",
+				"fill":"#EFFF45",
+				"label":"up to 1&deg C",
+				"stroke":null
+			},
+			{
+				"min":1,
+				"max":2,
+				"equal_to":"max",
+				"fill":"#C4FF45",
+				"label":"up to 2&deg C",
+				"stroke":null
+			},
+			{
+				"min":2,
+				"max":3,
+				"equal_to":"max",
+				"fill":"#9FFF45",
+				"label":"up to 3&deg C",
+				"stroke":null
+			},
+			{
+				"min":3,
+				"max":4,
+				"equal_to":"max",
+				"fill":"#85D63A",
+				"label":"up to 4&deg C",
+				"stroke":null
+			},
+			{
+				"min":4,
+				"max":5,
+				"equal_to":"max",
+				"fill":"#77BD35",
+				"label":"up to 5&deg C",
+				"stroke":null
+			},
+			{
+				"min":5,
+				"max":6,
+				"equal_to":"max",
+				"fill":"#64A12B",
+				"label":"up to 6&deg C",
+				"stroke":null
+			},
+			{
+				"min":6,
+				"max":7,
+				"equal_to":"max",
+				"fill":"#528522",
+				"label":"up to 7&deg C",
+				"stroke":null
+			},
+			{
+				"min":7,
+				"max":8,
+				"equal_to":"max",
+				"fill":"#428C29",
+				"label":"up to 8&deg C",
+				"stroke":null
+			},
+			{
+				"min":8,
+				"max":9,
+				"equal_to":"max",
+				"fill":"#316B1E",
+				"label":"above 8&deg C",
+				"stroke":null
+			}
+		
+		]
+	},
+	
+	"maxTprob50":{
+		"property_name":"maxTprob50",
+		"property_label":"Temperature Increase Tolerated",
+		"property_sublabel":"Target 50% Probability Occurrence",
+		"rules":[
+			{
+				"min":null,
+				"max":0,
+				"equal_to":"max",
+				"fill":"#ADADAD",
+				"label":"below target currently or 0&deg C",
+				"stroke":null
+			},
+			{
+				"min":0,
+				"max":1,
+				"equal_to":"max",
+				"fill":"#EFFF45",
+				"label":"up to 1&deg C",
+				"stroke":null
+			},
+			{
+				"min":1,
+				"max":2,
+				"equal_to":"max",
+				"fill":"#C4FF45",
+				"label":"up to 2&deg C",
+				"stroke":null
+			},
+			{
+				"min":2,
+				"max":3,
+				"equal_to":"max",
+				"fill":"#9FFF45",
+				"label":"up to 3&deg C",
+				"stroke":null
+			},
+			{
+				"min":3,
+				"max":4,
+				"equal_to":"max",
+				"fill":"#85D63A",
+				"label":"up to 4&deg C",
+				"stroke":null
+			},
+			{
+				"min":4,
+				"max":5,
+				"equal_to":"max",
+				"fill":"#77BD35",
+				"label":"up to 5&deg C",
+				"stroke":null
+			},
+			{
+				"min":5,
+				"max":6,
+				"equal_to":"max",
+				"fill":"#64A12B",
+				"label":"up to 6&deg C",
+				"stroke":null
+			},
+			{
+				"min":6,
+				"max":7,
+				"equal_to":"max",
+				"fill":"#528522",
+				"label":"up to 7&deg C",
+				"stroke":null
+			},
+			{
+				"min":7,
+				"max":8,
+				"equal_to":"max",
+				"fill":"#428C29",
+				"label":"up to 8&deg C",
+				"stroke":null
+			},
+			{
+				"min":8,
+				"max":9,
+				"equal_to":"max",
+				"fill":"#316B1E",
+				"label":"above 8&deg C",
+				"stroke":null
+			}
+		
+		]
+	},
+	
+	"maxTprob70":{
+		"property_name":"maxTprob70",
+		"property_label":"Temperature Increase Tolerated",
+		"property_sublabel":"Target 70% Probability Occurrence",
+		"rules":[
+			{
+				"min":null,
+				"max":0,
+				"equal_to":"max",
+				"fill":"#ADADAD",
+				"label":"below target currently or 0&deg C",
+				"stroke":null
+			},
+			{
+				"min":0,
+				"max":1,
+				"equal_to":"max",
+				"fill":"#EFFF45",
+				"label":"up to 1&deg C",
+				"stroke":null
+			},
+			{
+				"min":1,
+				"max":2,
+				"equal_to":"max",
+				"fill":"#C4FF45",
+				"label":"up to 2&deg C",
+				"stroke":null
+			},
+			{
+				"min":2,
+				"max":3,
+				"equal_to":"max",
+				"fill":"#9FFF45",
+				"label":"up to 3&deg C",
+				"stroke":null
+			},
+			{
+				"min":3,
+				"max":4,
+				"equal_to":"max",
+				"fill":"#85D63A",
+				"label":"up to 4&deg C",
+				"stroke":null
+			},
+			{
+				"min":4,
+				"max":5,
+				"equal_to":"max",
+				"fill":"#77BD35",
+				"label":"up to 5&deg C",
+				"stroke":null
+			},
+			{
+				"min":5,
+				"max":6,
+				"equal_to":"max",
+				"fill":"#64A12B",
+				"label":"up to 6&deg C",
+				"stroke":null
+			},
+			{
+				"min":6,
+				"max":7,
+				"equal_to":"max",
+				"fill":"#528522",
+				"label":"up to 7&deg C",
+				"stroke":null
+			},
+			{
+				"min":7,
+				"max":8,
+				"equal_to":"max",
+				"fill":"#428C29",
+				"label":"up to 8&deg C",
+				"stroke":null
+			},
+			{
+				"min":8,
+				"max":9,
+				"equal_to":"max",
+				"fill":"#316B1E",
+				"label":"above 8&deg C",
+				"stroke":null
+			}
+		
+		]
+	},
+	
+	"current":{
+		"property_name":"current",
+		"property_label":"Probability of Brook Trout Occupancy",
+		"property_sublabel":"Historic Conditions",
+		"rules":[
+			{
+				"min":null,
+				"max":0,
+				"equal_to":"max",
+				"fill":"#9C9C9C",
+				"label":" ~ 0% or no data",
+				"stroke":null
+			},
+			{
+				"min":0,
+				"max":0.10,
+				"equal_to":"max",
+				"fill":"#9E8560",
+				"label":"1% - 10%",
+				"stroke":null
+			},
+			{
+				"min":0.10,
+				"max":0.20,
+				"equal_to":"max",
+				"fill":"#B8A384",
+				"label":"11% - 20%",
+				"stroke":null
+			},
+			{
+				"min":0.20,
+				"max":0.30,
+				"equal_to":"max",
+				"fill":"#CFBFA9",
+				"label":"21% - 30%",
+				"stroke":null
+			},
+			{
+				"min":0.30,
+				"max":0.40,
+				"equal_to":"max",
+				"fill":"#E6DDD1",
+				"label":"31% - 40%",
+				"stroke":null
+			},
+			{
+				"min":0.40,
+				"max":0.50,
+				"equal_to":"max",
+				"fill":"#FFFFFF",
+				"label":"41% - 50%",
+				"stroke":null
+			},
+			{
+				"min":0.50,
+				"max":0.60,
+				"equal_to":"max",
+				"fill":"#D0E3C5",
+				"label":"51% - 60%",
+				"stroke":null
+			},
+			{
+				"min":0.60,
+				"max":0.70,
+				"equal_to":"max",
+				"fill":"#A2C48F",
+				"label":"61% - 70%",
+				"stroke":null
+			},
+			{
+				"min":0.70,
+				"max":0.80,
+				"equal_to":"max",
+				"fill":"#77A85E",
+				"label":"71% - 80%",
+				"stroke":null
+			},
+			{
+				"min":0.80,
+				"max":0.90,
+				"equal_to":"max",
+				"fill":"#4D8C32",
+				"label":"81% - 90%",
+				"stroke":null
+			},
+			{
+				"min":0.91,
+				"max":1.0,
+				"equal_to":"max",
+				"fill":"#267300",
+				"label":"91% - 100%",
+				"stroke":null
+			}
+		
+		]
+	},
+	
+	"plus20":{
+		"property_name":"plus20",
+		"property_label":"Probability of Brook Trout Occupancy",
+		"property_sublabel":"Under 2&degC Temperature Increase",
+		"rules":[
+			{
+				"min":null,
+				"max":0,
+				"equal_to":"max",
+				"fill":"#9C9C9C",
+				"label":" ~ 0% or no data",
+				"stroke":null
+			},
+			{
+				"min":0,
+				"max":0.10,
+				"equal_to":"max",
+				"fill":"#9E8560",
+				"label":"1% - 10%",
+				"stroke":null
+			},
+			{
+				"min":0.10,
+				"max":0.20,
+				"equal_to":"max",
+				"fill":"#B8A384",
+				"label":"11% - 20%",
+				"stroke":null
+			},
+			{
+				"min":0.20,
+				"max":0.30,
+				"equal_to":"max",
+				"fill":"#CFBFA9",
+				"label":"21% - 30%",
+				"stroke":null
+			},
+			{
+				"min":0.30,
+				"max":0.40,
+				"equal_to":"max",
+				"fill":"#E6DDD1",
+				"label":"31% - 40%",
+				"stroke":null
+			},
+			{
+				"min":0.40,
+				"max":0.50,
+				"equal_to":"max",
+				"fill":"#FFFFFF",
+				"label":"41% - 50%",
+				"stroke":null
+			},
+			{
+				"min":0.50,
+				"max":0.60,
+				"equal_to":"max",
+				"fill":"#D0E3C5",
+				"label":"51% - 60%",
+				"stroke":null
+			},
+			{
+				"min":0.60,
+				"max":0.70,
+				"equal_to":"max",
+				"fill":"#A2C48F",
+				"label":"61% - 70%",
+				"stroke":null
+			},
+			{
+				"min":0.70,
+				"max":0.80,
+				"equal_to":"max",
+				"fill":"#77A85E",
+				"label":"71% - 80%",
+				"stroke":null
+			},
+			{
+				"min":0.80,
+				"max":0.90,
+				"equal_to":"max",
+				"fill":"#4D8C32",
+				"label":"81% - 90%",
+				"stroke":null
+			},
+			{
+				"min":0.91,
+				"max":1.0,
+				"equal_to":"max",
+				"fill":"#267300",
+				"label":"91% - 100%",
+				"stroke":null
+			}
+		
+		]
+	},
+	
+	"plus40":{
+		"property_name":"plus40",
+		"property_label":"Probability of Brook Trout Occupancy",
+		"property_sublabel":"Under 4&degC Temperature Increase",
+		"rules":[
+			{
+				"min":null,
+				"max":0,
+				"equal_to":"max",
+				"fill":"#9C9C9C",
+				"label":" ~ 0% or no data",
+				"stroke":null
+			},
+			{
+				"min":0,
+				"max":0.10,
+				"equal_to":"max",
+				"fill":"#9E8560",
+				"label":"1% - 10%",
+				"stroke":null
+			},
+			{
+				"min":0.10,
+				"max":0.20,
+				"equal_to":"max",
+				"fill":"#B8A384",
+				"label":"11% - 20%",
+				"stroke":null
+			},
+			{
+				"min":0.20,
+				"max":0.30,
+				"equal_to":"max",
+				"fill":"#CFBFA9",
+				"label":"21% - 30%",
+				"stroke":null
+			},
+			{
+				"min":0.30,
+				"max":0.40,
+				"equal_to":"max",
+				"fill":"#E6DDD1",
+				"label":"31% - 40%",
+				"stroke":null
+			},
+			{
+				"min":0.40,
+				"max":0.50,
+				"equal_to":"max",
+				"fill":"#FFFFFF",
+				"label":"41% - 50%",
+				"stroke":null
+			},
+			{
+				"min":0.50,
+				"max":0.60,
+				"equal_to":"max",
+				"fill":"#D0E3C5",
+				"label":"51% - 60%",
+				"stroke":null
+			},
+			{
+				"min":0.60,
+				"max":0.70,
+				"equal_to":"max",
+				"fill":"#A2C48F",
+				"label":"61% - 70%",
+				"stroke":null
+			},
+			{
+				"min":0.70,
+				"max":0.80,
+				"equal_to":"max",
+				"fill":"#77A85E",
+				"label":"71% - 80%",
+				"stroke":null
+			},
+			{
+				"min":0.80,
+				"max":0.90,
+				"equal_to":"max",
+				"fill":"#4D8C32",
+				"label":"81% - 90%",
+				"stroke":null
+			},
+			{
+				"min":0.91,
+				"max":1.0,
+				"equal_to":"max",
+				"fill":"#267300",
+				"label":"91% - 100%",
+				"stroke":null
+			}
+		
+		]
+	},
+	
+	"plus60":{
+		"property_name":"plus60",
+		"property_label":"Probability of Brook Trout Occupancy",
+		"property_sublabel":"Under 6&degC Temperature Increase",
+		"rules":[
+			{
+				"min":null,
+				"max":0,
+				"equal_to":"max",
+				"fill":"#9C9C9C",
+				"label":" ~ 0% or no data",
+				"stroke":null
+			},
+			{
+				"min":0,
+				"max":0.10,
+				"equal_to":"max",
+				"fill":"#9E8560",
+				"label":"1% - 10%",
+				"stroke":null
+			},
+			{
+				"min":0.10,
+				"max":0.20,
+				"equal_to":"max",
+				"fill":"#B8A384",
+				"label":"11% - 20%",
+				"stroke":null
+			},
+			{
+				"min":0.20,
+				"max":0.30,
+				"equal_to":"max",
+				"fill":"#CFBFA9",
+				"label":"21% - 30%",
+				"stroke":null
+			},
+			{
+				"min":0.30,
+				"max":0.40,
+				"equal_to":"max",
+				"fill":"#E6DDD1",
+				"label":"31% - 40%",
+				"stroke":null
+			},
+			{
+				"min":0.40,
+				"max":0.50,
+				"equal_to":"max",
+				"fill":"#FFFFFF",
+				"label":"41% - 50%",
+				"stroke":null
+			},
+			{
+				"min":0.50,
+				"max":0.60,
+				"equal_to":"max",
+				"fill":"#D0E3C5",
+				"label":"51% - 60%",
+				"stroke":null
+			},
+			{
+				"min":0.60,
+				"max":0.70,
+				"equal_to":"max",
+				"fill":"#A2C48F",
+				"label":"61% - 70%",
+				"stroke":null
+			},
+			{
+				"min":0.70,
+				"max":0.80,
+				"equal_to":"max",
+				"fill":"#77A85E",
+				"label":"71% - 80%",
+				"stroke":null
+			},
+			{
+				"min":0.80,
+				"max":0.90,
+				"equal_to":"max",
+				"fill":"#4D8C32",
+				"label":"81% - 90%",
+				"stroke":null
+			},
+			{
+				"min":0.91,
+				"max":1.0,
+				"equal_to":"max",
+				"fill":"#267300",
+				"label":"91% - 100%",
+				"stroke":null
+			}
+		
+		]
+	},
+	
+	"plus80":{
+		"property_name":"plus80",
+		"property_label":"Probability of Brook Trout Occupancy",
+		"property_sublabel":"Under 8&degC Temperature Increase",
+		"rules":[
+			{
+				"min":null,
+				"max":0,
+				"equal_to":"max",
+				"fill":"#9C9C9C",
+				"label":" ~ 0% or no data",
+				"stroke":null
+			},
+			{
+				"min":0,
+				"max":0.10,
+				"equal_to":"max",
+				"fill":"#9E8560",
+				"label":"1% - 10%",
+				"stroke":null
+			},
+			{
+				"min":0.10,
+				"max":0.20,
+				"equal_to":"max",
+				"fill":"#B8A384",
+				"label":"11% - 20%",
+				"stroke":null
+			},
+			{
+				"min":0.20,
+				"max":0.30,
+				"equal_to":"max",
+				"fill":"#CFBFA9",
+				"label":"21% - 30%",
+				"stroke":null
+			},
+			{
+				"min":0.30,
+				"max":0.40,
+				"equal_to":"max",
+				"fill":"#E6DDD1",
+				"label":"31% - 40%",
+				"stroke":null
+			},
+			{
+				"min":0.40,
+				"max":0.50,
+				"equal_to":"max",
+				"fill":"#FFFFFF",
+				"label":"41% - 50%",
+				"stroke":null
+			},
+			{
+				"min":0.50,
+				"max":0.60,
+				"equal_to":"max",
+				"fill":"#D0E3C5",
+				"label":"51% - 60%",
+				"stroke":null
+			},
+			{
+				"min":0.60,
+				"max":0.70,
+				"equal_to":"max",
+				"fill":"#A2C48F",
+				"label":"61% - 70%",
+				"stroke":null
+			},
+			{
+				"min":0.70,
+				"max":0.80,
+				"equal_to":"max",
+				"fill":"#77A85E",
+				"label":"71% - 80%",
+				"stroke":null
+			},
+			{
+				"min":0.80,
+				"max":0.90,
+				"equal_to":"max",
+				"fill":"#4D8C32",
+				"label":"81% - 90%",
+				"stroke":null
+			},
+			{
+				"min":0.91,
+				"max":1.0,
+				"equal_to":"max",
+				"fill":"#267300",
+				"label":"91% - 100%",
+				"stroke":null
+			}
+		
+		]
+	},
+	
+	"Forest":{
+		"property_name":"forest",
+		"property_label":"Percent Forested",
+		"property_sublabel":"",
+		"rules":[
+			{
+				"min":null,
+				"max":0,
+				"equal_to":"max",
+				"fill":"#FFEA8C",
+				"label":" ~ 0% or no data",
+				"stroke":null
+			},
+			{
+				"min":0,
+				"max":10,
+				"equal_to":"max",
+				"fill":"#E7DC80",
+				"label":"1% - 10%",
+				"stroke":null
+			},
+			{
+				"min":10,
+				"max":20,
+				"equal_to":"max",
+				"fill":"#D0CE74",
+				"label":"11% - 20%",
+				"stroke":null
+			},
+			{
+				"min":20,
+				"max":30,
+				"equal_to":"max",
+				"fill":"#B9C068",
+				"label":"21% - 30%",
+				"stroke":null
+			},
+			{
+				"min":30,
+				"max":40,
+				"equal_to":"max",
+				"fill":"#A1B25D",
+				"label":"31% - 40%",
+				"stroke":null
+			},
+			{
+				"min":40,
+				"max":50,
+				"equal_to":"max",
+				"fill":"#8AA451",
+				"label":"41% - 50%",
+				"stroke":null
+			},
+			{
+				"min":50,
+				"max":60,
+				"equal_to":"max",
+				"fill":"#739645",
+				"label":"51% - 60%",
+				"stroke":null
+			},
+			{
+				"min":60,
+				"max":70,
+				"equal_to":"max",
+				"fill":"#5B883A",
+				"label":"61% - 70%",
+				"stroke":null
+			},
+			{
+				"min":70,
+				"max":80,
+				"equal_to":"max",
+				"fill":"#447A2E",
+				"label":"71% - 80%",
+				"stroke":null
+			},
+			{
+				"min":80,
+				"max":90,
+				"equal_to":"max",
+				"fill":"#2D6C22",
+				"label":"81% - 90%",
+				"stroke":null
+			},
+			{
+				"min":90,
+				"max":100,
+				"equal_to":"max",
+				"fill":"#165E17",
+				"label":"90% - 100%",
+				"stroke":null
+			}
+		
+		]
+	},
+	
+	"Reach_Slop":{
+		"property_name":"Reach_Slop",
+		"property_label":"Reach Slope",
+		"property_sublabel":"",
+		"rules":[
+			{
+				"min":null,
+				"max":0,
+				"equal_to":"max",
+				"fill":"#FFF4D4",
+				"label":" ~ 0 or no data",
+				"stroke":null
+			},
+			{
+				"min":0,
+				"max":0.05,
+				"equal_to":"max",
+				"fill":"#ECE1C4",
+				"label":"0 - 0.05",
+				"stroke":null
+			},
+			{
+				"min":0.05,
+				"max":0.10,
+				"equal_to":"max",
+				"fill":"#D9CFB4",
+				"label":"0.05 - 0.10",
+				"stroke":null
+			},
+			{
+				"min":0.10,
+				"max":0.15,
+				"equal_to":"max",
+				"fill":"#C6BCA5",
+				"label":"0.10 - 0.15",
+				"stroke":null
+			},
+			{
+				"min":0.15,
+				"max":0.20,
+				"equal_to":"max",
+				"fill":"#B3AA95",
+				"label":"0.15 - 0.20",
+				"stroke":null
+			},
+			{
+				"min":0.20,
+				"max":0.25,
+				"equal_to":"max",
+				"fill":"#A09786",
+				"label":"0.20 - 0.25",
+				"stroke":null
+			},
+			{
+				"min":0.25,
+				"max":0.30,
+				"equal_to":"max",
+				"fill":"#8E8576",
+				"label":"0.25 - 0.30",
+				"stroke":null
+			},
+			{
+				"min":0.30,
+				"max":0.35,
+				"equal_to":"max",
+				"fill":"#7B7267",
+				"label":"0.30 - 0.35",
+				"stroke":null
+			},
+			{
+				"min":0.35,
+				"max":0.40,
+				"equal_to":"max",
+				"fill":"#686057",
+				"label":"0.35 - 0.40",
+				"stroke":null
+			},
+			{
+				"min":0.40,
+				"max":0.45,
+				"equal_to":"max",
+				"fill":"#554D48",
+				"label":"0.40 - 0.45",
+				"stroke":null
+			},
+			{
+				"min":0.45,
+				"max":0.50,
+				"equal_to":"max",
+				"fill":"#423B38",
+				"label":"0.45 - 0.50",
+				"stroke":null
+			},
+			{
+				"min":0.50,
+				"max":1.0,
+				"equal_to":"max",
+				"fill":"#302929",
+				"label":"Greater than 0.50",
+				"stroke":null
+			}
+		
+		]
+	},
+	
+	"TotDASqKM":{
+		"property_name":"TotDASqKM",
+		"property_label":"Total Drainage Area Square Kilometers",
+		"property_sublabel":"Kilometers<sup>2</sup>",
+		"rules":[
+			{
+				"min":null,
+				"max":0,
+				"equal_to":"max",
+				"fill":"#001111",
+				"label":" ~ 0 or no data",
+				"stroke":null
+			},
+			{
+				"min":0,
+				"max":10,
+				"equal_to":"max",
+				"fill":"#002028",
+				"label":"1 - 10",
+				"stroke":null
+			},
+			{
+				"min":10,
+				"max":50,
+				"equal_to":"max",
+				"fill":"#002F40",
+				"label":"11 - 50",
+				"stroke":null
+			},
+			{
+				"min":50,
+				"max":100,
+				"equal_to":"max",
+				"fill":"#003E58",
+				"label":"51 - 100",
+				"stroke":null
+			},
+			{
+				"min":100,
+				"max":500,
+				"equal_to":"max",
+				"fill":"#004E70",
+				"label":"101 - 500",
+				"stroke":null
+			},
+			{
+				"min":500,
+				"max":1000,
+				"equal_to":"max",
+				"fill":"#005D88",
+				"label":"501 - 1000",
+				"stroke":null
+			},
+			{
+				"min":1000,
+				"max":2000,
+				"equal_to":"max",
+				"fill":"#006C9F",
+				"label":"1001 - 2000",
+				"stroke":null
+			},
+			{
+				"min":2000,
+				"max":5000,
+				"equal_to":"max",
+				"fill":"#007CB7",
+				"label":"2001 - 5000",
+				"stroke":null
+			},
+			{
+				"min":5000,
+				"max":10000,
+				"equal_to":"max",
+				"fill":"#008BCF",
+				"label":"5001 or greater",
+				"stroke":null
+			}
+		
+		]
+	},
+	
+	"UpstreamDA":{
+		"property_name":"UpstreamDA",
+		"property_label":"Upstream Area Square Kilometers",
+		"property_sublabel":"",
+		"rules":[
+			{
+				"min":null,
+				"max":0,
+				"equal_to":"max",
+				"fill":"#001111",
+				"label":" ~ 0km or no data",
+				"stroke":null
+			},
+			{
+				"min":0,
+				"max":10,
+				"equal_to":"max",
+				"fill":"#002028",
+				"label":"1km - 10km",
+				"stroke":null
+			},
+			{
+				"min":10,
+				"max":50,
+				"equal_to":"max",
+				"fill":"#002F40",
+				"label":"11km - 50km",
+				"stroke":null
+			},
+			{
+				"min":50,
+				"max":100,
+				"equal_to":"max",
+				"fill":"#003E58",
+				"label":"51km - 100km",
+				"stroke":null
+			},
+			{
+				"min":100,
+				"max":500,
+				"equal_to":"max",
+				"fill":"#004E70",
+				"label":"101km - 500km",
+				"stroke":null
+			},
+			{
+				"min":500,
+				"max":1000,
+				"equal_to":"max",
+				"fill":"#005D88",
+				"label":"501km - 1000km",
+				"stroke":null
+			},
+			{
+				"min":1000,
+				"max":2000,
+				"equal_to":"max",
+				"fill":"#006C9F",
+				"label":"1001km - 2000km",
+				"stroke":null
+			},
+			{
+				"min":2000,
+				"max":5000,
+				"equal_to":"max",
+				"fill":"#007CB7",
+				"label":"2001km - 5000km",
+				"stroke":null
+			},
+			{
+				"min":5000,
+				"max":10000,
+				"equal_to":"max",
+				"fill":"#008BCF",
+				"label":"5001km or greater",
+				"stroke":null
+			}
+		
+		]
+	},
+	
+	"Annual_Pre":{
+		"property_name":"AnnPrcpMM",
+		"property_label":"Annual Precipitation",
+		"property_sublabel":"Millimeters",
+		"rules":[
+			{
+				"min":0,
+				"max":900,
+				"equal_to":"max",
+				"fill":"#FF3333",
+				"label":"less than 900",
+				"stroke":null
+			},
+			{
+				"min":900,
+				"max":970,
+				"equal_to":"max",
+				"fill":"#FF6533",
+				"label":"900 - 970",
+				"stroke":null
+			},
+			{
+				"min":970,
+				"max":1040,
+				"equal_to":"max",
+				"fill":"#FF9733",
+				"label":"970 - 1040",
+				"stroke":null
+			},
+			{
+				"min":1040,
+				"max":1110,
+				"equal_to":"max",
+				"fill":"#FFC933",
+				"label":"1040 - 1110",
+				"stroke":null
+			},
+			{
+				"min":1110,
+				"max":1180,
+				"equal_to":"max",
+				"fill":"#FFFC33",
+				"label":"1110 - 1180",
+				"stroke":null
+			},
+			{
+				"min":1180,
+				"max":1250,
+				"equal_to":"max",
+				"fill":"#C8FC26",
+				"label":"1180 - 1250",
+				"stroke":null
+			},
+			{
+				"min":1250,
+				"max":1320,
+				"equal_to":"max",
+				"fill":"#92FD19",
+				"label":"1250 - 1320",
+				"stroke":null
+			},
+			{
+				"min":1320,
+				"max":1390,
+				"equal_to":"max",
+				"fill":"#5CFE0C",
+				"label":"1320 - 1390",
+				"stroke":null
+			},
+			{ 
+				"min":1390,
+				"max":1460,
+				"equal_to":"max",
+				"fill":"#45C72D",
+				"label":"1390 - 1460",
+				"stroke":null
+			},
+			{
+				"min":1460,
+				"max":1530,
+				"equal_to":"max",
+				"fill":"#2F914E",
+				"label":"1460 - 1530",
+				"stroke":null
+			},
+			{
+				"min":1530,
+				"max":1600,
+				"equal_to":"max",
+				"fill":"#195A6F",
+				"label":"1530 - 1600",
+				"stroke":null
+			},
+			{
+				"min":1600,
+				"max":2000,
+				"equal_to":"max",
+				"fill":"#032491",
+				"label":"greater than 1600",
+				"stroke":null
+			}
+		
+		]
+	},
+	
+	"Water":{
+		"property_name":"Water",
+		"property_label":"Percent Open Water",
+		"property_sublabel":"",
+		"rules":[
+			{
+				"min":null,
+				"max":0,
+				"equal_to":"max",
+				"fill":"#426E1E",
+				"label":"0%",
+				"stroke":null
+			},
+			{
+				"min":0,
+				"max":0.10,
+				"equal_to":"max",
+				"fill":"#3B6D2C",
+				"label":"1% - 10%",
+				"stroke":null
+			},
+			{
+				"min":0.10,
+				"max":0.20,
+				"equal_to":"max",
+				"fill":"#346C3A",
+				"label":"11% - 20%",
+				"stroke":null
+			},
+			{
+				"min":0.20,
+				"max":0.30,
+				"equal_to":"max",
+				"fill":"#2E6B48",
+				"label":"21% - 30%",
+				"stroke":null
+			},
+			{
+				"min":0.30,
+				"max":0.40,
+				"equal_to":"max",
+				"fill":"#276A56",
+				"label":"31% - 40%",
+				"stroke":null
+			},
+			{
+				"min":0.40,
+				"max":0.50,
+				"equal_to":"max",
+				"fill":"#216A64",
+				"label":"41% - 50%",
+				"stroke":null
+			},
+			{
+				"min":0.50,
+				"max":0.60,
+				"equal_to":"max",
+				"fill":"#1A6972",
+				"label":"51% - 60%",
+				"stroke":null
+			},
+			{
+				"min":0.60,
+				"max":0.70,
+				"equal_to":"max",
+				"fill":"#136880",
+				"label":"61% - 70%",
+				"stroke":null
+			},
+			{
+				"min":0.70,
+				"max":0.80,
+				"equal_to":"max",
+				"fill":"#0D678E",
+				"label":"71% - 80%",
+				"stroke":null
+			},
+			{
+				"min":0.80,
+				"max":0.90,
+				"equal_to":"max",
+				"fill":"#06669C",
+				"label":"81% - 90%",
+				"stroke":null
+			},
+			{
+				"min":0.91,
+				"max":1.0,
+				"equal_to":"max",
+				"fill":"#0066AA",
+				"label":"91% - 100%",
+				"stroke":null
+			}
+		
+		]
+	},
+	
+	"Percent_Sa":{
+		"property_name":"Percent_Sa",
+		"property_label":"Percent Sand",
+		"property_sublabel":"",
+		"rules":[
+			{
+				"min":null,
+				"max":0,
+				"equal_to":"max",
+				"fill":"#633D00",
+				"label":"0%",
+				"stroke":null
+			},
+			{
+				"min":0,
+				"max":10,
+				"equal_to":"max",
+				"fill":"#724E09",
+				"label":"1% - 10%",
+				"stroke":null
+			},
+			{
+				"min":10,
+				"max":20,
+				"equal_to":"max",
+				"fill":"#825F13",
+				"label":"11% - 20%",
+				"stroke":null
+			},
+			{
+				"min":20,
+				"max":30,
+				"equal_to":"max",
+				"fill":"#91701D",
+				"label":"21% - 30%",
+				"stroke":null
+			},
+			{
+				"min":30,
+				"max":40,
+				"equal_to":"max",
+				"fill":"#A18126",
+				"label":"31% - 40%",
+				"stroke":null
+			},
+			{
+				"min":40,
+				"max":50,
+				"equal_to":"max",
+				"fill":"#B19230",
+				"label":"41% - 50%",
+				"stroke":null
+			},
+			{
+				"min":50,
+				"max":60,
+				"equal_to":"max",
+				"fill":"#C0A33A",
+				"label":"51% - 60%",
+				"stroke":null
+			},
+			{
+				"min":60,
+				"max":70,
+				"equal_to":"max",
+				"fill":"#D0B443",
+				"label":"61% - 70%",
+				"stroke":null
+			},
+			{
+				"min":70,
+				"max":80,
+				"equal_to":"max",
+				"fill":"#DFC54D",
+				"label":"71% - 80%",
+				"stroke":null
+			},
+			{
+				"min":80,
+				"max":90,
+				"equal_to":"max",
+				"fill":"#EFD657",
+				"label":"81% - 90%",
+				"stroke":null
+			},
+			{
+				"min":91,
+				"max":100,
+				"equal_to":"max",
+				"fill":"#FFE761",
+				"label":"91% - 100%",
+				"stroke":null
+			}
+		
+		]
+	},
+	
+	"Annual_Tma":{
+		"property_name":"AnnTmaxC",
+		"property_label":"Annual Max Temperature",
+		"property_sublabel":"Centigrade",
+		"rules":[
+			{
+				"min":null,
+				"max":3,
+				"equal_to":"max",
+				"fill":"#000ECC",
+				"label":"Less than 3",
+				"stroke":null
+			},
+			{
+				"min":3,
+				"max":4,
+				"equal_to":"max",
+				"fill":"#1F2AC6",
+				"label":"3 - 4",
+				"stroke":null
+			},
+			{
+				"min":4,
+				"max":5,
+				"equal_to":"max",
+				"fill":"#3F47C0",
+				"label":"4 - 5",
+				"stroke":null
+			},
+			{
+				"min":5,
+				"max":6,
+				"equal_to":"max",
+				"fill":"#5F64BA",
+				"label":"5 - 6",
+				"stroke":null
+			},
+			{
+				"min":6,
+				"max":7,
+				"equal_to":"max",
+				"fill":"#7F81B5",
+				"label":"6 - 7",
+				"stroke":null
+			},
+			{
+				"min":7,
+				"max":8,
+				"equal_to":"max",
+				"fill":"#9F9DAF",
+				"label":"7 - 8",
+				"stroke":null
+			},
+			{
+				"min":8,
+				"max":9,
+				"equal_to":"max",
+				"fill":"#BFBAA9",
+				"label":"8 - 9",
+				"stroke":null
+			},
+			{
+				"min":9,
+				"max":10,
+				"equal_to":"max",
+				"fill":"#DFD7A3",
+				"label":"9 - 10",
+				"stroke":null
+			},
+			{
+				"min":10,
+				"max":11,
+				"equal_to":"max",
+				"fill":"#FFF49E",
+				"label":"10 - 11",
+				"stroke":null
+			},
+			{
+				"min":11,
+				"max":12,
+				"equal_to":"max",
+				"fill":"#FFD58A",
+				"label":"11 - 12",
+				"stroke":null
+			},
+			{
+				"min":12,
+				"max":13,
+				"equal_to":"max",
+				"fill":"#FFB776",
+				"label":"12 - 13",
+				"stroke":null
+			},
+			{
+				"min":13,
+				"max":14,
+				"equal_to":"max",
+				"fill":"#FF9862",
+				"label":"13 - 14",
+				"stroke":null
+			},
+			{
+				"min":14,
+				"max":15,
+				"equal_to":"max",
+				"fill":"#FF7A4F",
+				"label":"14 - 15",
+				"stroke":null
+			},
+			{
+				"min":15,
+				"max":16,
+				"equal_to":"max",
+				"fill":"#FF5B3B",
+				"label":"15 - 16",
+				"stroke":null
+			},
+			{
+				"min":16,
+				"max":17,
+				"equal_to":"max",
+				"fill":"#FF3D27",
+				"label":"16 - 17",
+				"stroke":null
+			},
+			{
+				"min":17,
+				"max":18,
+				"equal_to":"max",
+				"fill":"#FF1E13",
+				"label":"Greater than 17",
+				"stroke":null
+			}
+		
+		]
+	},
+	
+	"Annual_Tmi":{
+		"property_name":"AnnTminC",
+		"property_label":"Annual Minimum Temperature",
+		"property_sublabel":"Centigrade",
+		"rules":[
+			{
+				"min":null,
+				"max":-5,
+				"equal_to":"max",
+				"fill":"#000ECC",
+				"label":"Less than -5",
+				"stroke":null
+			},
+			{
+				"min":-5,
+				"max":-4,
+				"equal_to":"max",
+				"fill":"#1F2AC6",
+				"label":"-5 - -4",
+				"stroke":null
+			},
+			{
+				"min":-4,
+				"max":-3,
+				"equal_to":"max",
+				"fill":"#3F47C0",
+				"label":"-4 - -3",
+				"stroke":null
+			},
+			{
+				"min":-3,
+				"max":-2,
+				"equal_to":"max",
+				"fill":"#5F64BA",
+				"label":"-3 - -2",
+				"stroke":null
+			},
+			{
+				"min":-2,
+				"max":-1,
+				"equal_to":"max",
+				"fill":"#7F81B5",
+				"label":"-2 - -1",
+				"stroke":null
+			},
+			{
+				"min":-1,
+				"max":0,
+				"equal_to":"max",
+				"fill":"#9F9DAF",
+				"label":"-1 - 0",
+				"stroke":null
+			},
+			{
+				"min":0,
+				"max":1,
+				"equal_to":"max",
+				"fill":"#BFBAA9",
+				"label":"0 - 1",
+				"stroke":null
+			},
+			{
+				"min":1,
+				"max":2,
+				"equal_to":"max",
+				"fill":"#DFD7A3",
+				"label":"1 - 2",
+				"stroke":null
+			},
+			{
+				"min":2,
+				"max":3,
+				"equal_to":"max",
+				"fill":"#FFF49E",
+				"label":"2 - 3",
+				"stroke":null
+			},
+			{
+				"min":3,
+				"max":4,
+				"equal_to":"max",
+				"fill":"#FFD58A",
+				"label":"3 - 4",
+				"stroke":null
+			},
+			{
+				"min":4,
+				"max":5,
+				"equal_to":"max",
+				"fill":"#FFB776",
+				"label":"4 - 5",
+				"stroke":null
+			},
+			{
+				"min":5,
+				"max":6,
+				"equal_to":"max",
+				"fill":"#FF9862",
+				"label":"5 - 6",
+				"stroke":null
+			},
+			{
+				"min":6,
+				"max":7,
+				"equal_to":"max",
+				"fill":"#FF7A4F",
+				"label":"6 - 7",
+				"stroke":null
+			},
+			{
+				"min":7,
+				"max":8,
+				"equal_to":"max",
+				"fill":"#FF5B3B",
+				"label":"7 - 8",
+				"stroke":null
+			},
+			{
+				"min":8,
+				"max":9,
+				"equal_to":"max",
+				"fill":"#FF3D27",
+				"label":"8 - 9",
+				"stroke":null
+			},
+			{
+				"min":9,
+				"max":10,
+				"equal_to":"max",
+				"fill":"#FF1E13",
+				"label":"Greater than 9",
+				"stroke":null
+			}
+		
+		]
+	},
+	
+	"Drainage_C":{
+		"property_name":"Drainage_C",
+		"property_label":"Soil Drainage Class",
+		"property_sublabel":"",
+		"rules":[
+			
+			{
+				"min":null,
+				"max":1,
+				"equal_to":"max",
+				"fill":"#A8EFDB",
+				"label":"1 - Excessively drained",
+				"stroke":null
+			},
+			{
+				"min":1,
+				"max":2,
+				"equal_to":"max",
+				"fill":"#B4E6BC",
+				"label":"2 - Somewhat excessively drained",
+				"stroke":null
+			},
+			{
+				"min":2,
+				"max":3,
+				"equal_to":"max",
+				"fill":"#C0DD9D",
+				"label":"3 - Well drained",
+				"stroke":null
+			},
+			{
+				"min":3,
+				"max":4,
+				"equal_to":"max",
+				"fill":"#CDD57E",
+				"label":"4 - Moderately well drained",
+				"stroke":null
+			},
+			{
+				"min":4,
+				"max":5,
+				"equal_to":"max",
+				"fill":"#D9CC5F",
+				"label":"5 - Somewhat poorly drained",
+				"stroke":null
+			},
+			{
+				"min":5,
+				"max":6,
+				"equal_to":"max",
+				"fill":"#E6C440",
+				"label":"6 - Poorly drained",
+				"stroke":null
+			},
+			{
+				"min":6,
+				"max":7,
+				"equal_to":"max",
+				"fill":"#F2BB21",
+				"label":"7 - Very poorly drained",
+				"stroke":null
+			}
+			
+		
+		]
+	},
+	
+	"herbacious":{
+		"property_name":"herbacious",
+		"property_label":"Percent Herbacious",
+		"property_sublabel":"",
+		"rules":[
+			{
+				"min":null,
+				"max":0,
+				"equal_to":"max",
+				"fill":"#E5E200",
+				"label":"0%",
+				"stroke":null
+			},
+			{
+				"min":0,
+				"max":10,
+				"equal_to":"max",
+				"fill":"#CFDA00",
+				"label":"1% - 10%",
+				"stroke":null
+			},
+			{
+				"min":10,
+				"max":20,
+				"equal_to":"max",
+				"fill":"#BAD301",
+				"label":"11% - 20%",
+				"stroke":null
+			},
+			{
+				"min":20,
+				"max":30,
+				"equal_to":"max",
+				"fill":"#A5CC02",
+				"label":"21% - 30%",
+				"stroke":null
+			},
+			{
+				"min":30,
+				"max":40,
+				"equal_to":"max",
+				"fill":"#8FC503",
+				"label":"31% - 40%",
+				"stroke":null
+			},
+			{
+				"min":40,
+				"max":50,
+				"equal_to":"max",
+				"fill":"#7ABE04",
+				"label":"41% - 50%",
+				"stroke":null
+			},
+			{
+				"min":50,
+				"max":60,
+				"equal_to":"max",
+				"fill":"#65B605",
+				"label":"51% - 60%",
+				"stroke":null
+			},
+			{
+				"min":60,
+				"max":70,
+				"equal_to":"max",
+				"fill":"#4FAF06",
+				"label":"61% - 70%",
+				"stroke":null
+			},
+			{
+				"min":70,
+				"max":80,
+				"equal_to":"max",
+				"fill":"#3AA807",
+				"label":"71% - 80%",
+				"stroke":null
+			},
+			{
+				"min":80,
+				"max":90,
+				"equal_to":"max",
+				"fill":"#25A108",
+				"label":"81% - 90%",
+				"stroke":null
+			},
+			{
+				"min":91,
+				"max":100,
+				"equal_to":"max",
+				"fill":"#109A09",
+				"label":"91% - 100%",
+				"stroke":null
+			}
+		
+		]
+	},
+	
+	"Agricultural":{
+		"property_name":"agricultur",
+		"property_label":"Percent Agricultural",
+		"property_sublabel":"",
+		"rules":[
+			{
+				"min":null,
+				"max":0,
+				"equal_to":"max",
+				"fill":"#E5A800",
+				"label":"0%",
+				"stroke":null
+			},
+			{
+				"min":0,
+				"max":10,
+				"equal_to":"max",
+				"fill":"#CFA600",
+				"label":"1% - 10%",
+				"stroke":null
+			},
+			{
+				"min":10,
+				"max":20,
+				"equal_to":"max",
+				"fill":"#BAA501",
+				"label":"11% - 20%",
+				"stroke":null
+			},
+			{
+				"min":20,
+				"max":30,
+				"equal_to":"max",
+				"fill":"#A5A302",
+				"label":"21% - 30%",
+				"stroke":null
+			},
+			{
+				"min":30,
+				"max":40,
+				"equal_to":"max",
+				"fill":"#8FA203",
+				"label":"31% - 40%",
+				"stroke":null
+			},
+			{
+				"min":40,
+				"max":50,
+				"equal_to":"max",
+				"fill":"#7AA104",
+				"label":"41% - 50%",
+				"stroke":null
+			},
+			{
+				"min":50,
+				"max":60,
+				"equal_to":"max",
+				"fill":"#659F05",
+				"label":"51% - 60%",
+				"stroke":null
+			},
+			{
+				"min":60,
+				"max":70,
+				"equal_to":"max",
+				"fill":"#4F9E06",
+				"label":"61% - 70%",
+				"stroke":null
+			},
+			{
+				"min":70,
+				"max":80,
+				"equal_to":"max",
+				"fill":"#3A9C07",
+				"label":"71% - 80%",
+				"stroke":null
+			},
+			{
+				"min":80,
+				"max":90,
+				"equal_to":"max",
+				"fill":"#259B08",
+				"label":"81% - 90%",
+				"stroke":null
+			},
+			{
+				"min":91,
+				"max":100,
+				"equal_to":"max",
+				"fill":"#109A09",
+				"label":"91% - 100%",
+				"stroke":null
+			}
+		
+		]
+	},
+	
+	"developed":{
+		"property_name":"developed",
+		"property_label":"Percent Developed",
+		"property_sublabel":"",
+		"rules":[
+			{
+				"min":null,
+				"max":0,
+				"equal_to":"max",
+				"fill":"#2A653B",
+				"label":"0%",
+				"stroke":null
+			},
+			{
+				"min":0,
+				"max":10,
+				"equal_to":"max",
+				"fill":"#3A704B",
+				"label":"1% - 10%",
+				"stroke":null
+			},
+			{
+				"min":10,
+				"max":20,
+				"equal_to":"max",
+				"fill":"#4A7B5B",
+				"label":"11% - 20%",
+				"stroke":null
+			},
+			{
+				"min":20,
+				"max":30,
+				"equal_to":"max",
+				"fill":"#5A866B",
+				"label":"21% - 30%",
+				"stroke":null
+			},
+			{
+				"min":30,
+				"max":40,
+				"equal_to":"max",
+				"fill":"#6A927B",
+				"label":"31% - 40%",
+				"stroke":null
+			},
+			{
+				"min":40,
+				"max":50,
+				"equal_to":"max",
+				"fill":"#7A9D8C",
+				"label":"41% - 50%",
+				"stroke":null
+			},
+			{
+				"min":50,
+				"max":60,
+				"equal_to":"max",
+				"fill":"#8AA89C",
+				"label":"51% - 60%",
+				"stroke":null
+			},
+			{
+				"min":60,
+				"max":70,
+				"equal_to":"max",
+				"fill":"#9AB4AC",
+				"label":"61% - 70%",
+				"stroke":null
+			},
+			{
+				"min":70,
+				"max":80,
+				"equal_to":"max",
+				"fill":"#AABFBC",
+				"label":"71% - 80%",
+				"stroke":null
+			},
+			{
+				"min":80,
+				"max":90,
+				"equal_to":"max",
+				"fill":"#BACACC",
+				"label":"81% - 90%",
+				"stroke":null
+			},
+			{
+				"min":91,
+				"max":100,
+				"equal_to":"max",
+				"fill":"#CBD6DD",
+				"label":"91% - 100%",
+				"stroke":null
+			}
+		
+		]
+	},
+	
+	"impervious":{
+		"property_name":"impervious",
+		"property_label":"Percent Impervious",
+		"property_sublabel":"",
+		"rules":[
+			{
+				"min":null,
+				"max":0,
+				"equal_to":"max",
+				"fill":"#FFFFFF",
+				"label":"0%",
+				"stroke":null
+			},
+			{
+				"min":0,
+				"max":10,
+				"equal_to":"max",
+				"fill":"#E5E5E5",
+				"label":"1% - 10%",
+				"stroke":null
+			},
+			{
+				"min":10,
+				"max":20,
+				"equal_to":"max",
+				"fill":"#CCCCCC",
+				"label":"11% - 20%",
+				"stroke":null
+			},
+			{
+				"min":20,
+				"max":30,
+				"equal_to":"max",
+				"fill":"#B2B2B2",
+				"label":"21% - 30%",
+				"stroke":null
+			},
+			{
+				"min":30,
+				"max":40,
+				"equal_to":"max",
+				"fill":"#999999",
+				"label":"31% - 40%",
+				"stroke":null
+			},
+			{
+				"min":40,
+				"max":50,
+				"equal_to":"max",
+				"fill":"#7F7F7F",
+				"label":"41% - 50%",
+				"stroke":null
+			},
+			{
+				"min":50,
+				"max":60,
+				"equal_to":"max",
+				"fill":"#666666",
+				"label":"51% - 60%",
+				"stroke":null
+			},
+			{
+				"min":60,
+				"max":70,
+				"equal_to":"max",
+				"fill":"#4C4C4C",
+				"label":"61% - 70%",
+				"stroke":null
+			},
+			{
+				"min":70,
+				"max":80,
+				"equal_to":"max",
+				"fill":"#323232",
+				"label":"71% - 80%",
+				"stroke":null
+			},
+			{
+				"min":80,
+				"max":90,
+				"equal_to":"max",
+				"fill":"#191919",
+				"label":"81% - 90%",
+				"stroke":null
+			},
+			{
+				"min":91,
+				"max":100,
+				"equal_to":"max",
+				"fill":"#000000",
+				"label":"91% - 100%",
+				"stroke":null
+			}
+		
+		]
+	},
+	
+	"PresenceAb":{
+		"property_name":"PresenceAb",
+		"property_label":"Presence and Absence",
+		"property_sublabel":"",
+		"rules":[		
+			{
+				"min":0,
+				"max":10,
+				"equal_to":"max",
+				"fill":"#093805",
+				"label":"Presence",
+				"stroke":null
+			},
+			{
+				"min":10,
+				"max":20,
+				"equal_to":"max",
+				"fill":"#A88245",
+				"label":"Absence",
+				"stroke":null
+			}
+		
+		]
+	},
+	
+	"WntrPrcpMM":{
+		"property_name":"WntrPrcpMM",
+		"property_label":"Winter Precipitation",
+		"property_sublabel":"Millimeters",
+		"rules":[
+			
+			{
+				"min":0,
+				"max":150,
+				"equal_to":"max",
+				"fill":"#F75757",
+				"label":"less than 150",
+				"stroke":null
+			},
+			{
+				"min":150,
+				"max":170,
+				"equal_to":"max",
+				"fill":"#F97941",
+				"label":"150 - 170",
+				"stroke":null
+			},
+			{
+				"min":170,
+				"max":190,
+				"equal_to":"max",
+				"fill":"#FB9C2B",
+				"label":"170 - 190",
+				"stroke":null
+			},
+			{
+				"min":190,
+				"max":210,
+				"equal_to":"max",
+				"fill":"#FDBE15",
+				"label":"190 - 210",
+				"stroke":null
+			},
+			{
+				"min":210,
+				"max":230,
+				"equal_to":"max",
+				"fill":"#FFE100",
+				"label":"210 - 230",
+				"stroke":null
+			},
+			{
+				"min":230,
+				"max":250,
+				"equal_to":"max",
+				"fill":"#BFDB09",
+				"label":"230 - 250",
+				"stroke":null
+			},
+			{
+				"min":250,
+				"max":270,
+				"equal_to":"max",
+				"fill":"#7FD612",
+				"label":"250 - 270",
+				"stroke":null
+			},
+			{
+				"min":270,
+				"max":290,
+				"equal_to":"max",
+				"fill":"#3FD11B",
+				"label":"270 - 290",
+				"stroke":null
+			},
+			{
+				"min":290,
+				"max":310,
+				"equal_to":"max",
+				"fill":"#00CC25",
+				"label":"290 - 310",
+				"stroke":null
+			},
+			{
+				"min":310,
+				"max":330,
+				"equal_to":"max",
+				"fill":"#00886D",
+				"label":"310 - 330",
+				"stroke":null
+			},
+			{
+				"min":330,
+				"max":350,
+				"equal_to":"max",
+				"fill":"#0044B6",
+				"label":"330 - 350",
+				"stroke":null
+			},
+			{
+				"min":350,
+				"max":500,
+				"equal_to":"max",
+				"fill":"#0000FF",
+				"label":"greater than 350",
+				"stroke":null
+			}
+		
+		]
+	},
+	
+	"so4_dep":{
+		"property_name":"dep_so4",
+		"property_label":"Atmospheric Deposition of SO4",
+		"property_sublabel":"Kilograms per Hectare",
+		"rules":[
+			
+			{
+				"min":0,
+				"max":2,
+				"equal_to":"max",
+				"fill":"#10C200",
+				"label":"0 - 2",
+				"stroke":null
+			},
+			{
+				"min":2,
+				"max":4,
+				"equal_to":"max",
+				"fill":"#40BE23",
+				"label":"2 - 4",
+				"stroke":null
+			},
+			{
+				"min":4,
+				"max":6,
+				"equal_to":"max",
+				"fill":"#71BB46",
+				"label":"4 - 6",
+				"stroke":null
+			},
+			{
+				"min":6,
+				"max":8,
+				"equal_to":"max",
+				"fill":"#A1B769",
+				"label":"6 - 8",
+				"stroke":null
+			},
+			{
+				"min":8,
+				"max":10,
+				"equal_to":"max",
+				"fill":"#D2B48C",
+				"label":"8 - 10",
+				"stroke":null
+			},
+			{
+				"min":10,
+				"max":12,
+				"equal_to":"max",
+				"fill":"#CE9070",
+				"label":"10 - 12",
+				"stroke":null
+			},
+			{
+				"min":12,
+				"max":14,
+				"equal_to":"max",
+				"fill":"#CB6D55",
+				"label":"12 - 14",
+				"stroke":null
+			},
+			{
+				"min":14,
+				"max":16,
+				"equal_to":"max",
+				"fill":"#C84A3A",
+				"label":"14 - 16",
+				"stroke":null
+			},
+			{
+				"min":16,
+				"max":18,
+				"equal_to":"max",
+				"fill":"#C5271F",
+				"label":"16 - 18",
+				"stroke":null
+			},
+			{
+				"min":18,
+				"max":20,
+				"equal_to":"max",
+				"fill":"#C20404",
+				"label":"Greater than 18",
+				"stroke":null
+			}
+		
+		]
+	},
+	
+	"dep_no3":{
+		"property_name":"dep_no3",
+		"property_label":"Atmospheric Deposition of NO3",
+		"property_sublabel":"Kilograms per Hectare",
+		"rules":[
+			
+			{
+				"min":0,
+				"max":2,
+				"equal_to":"max",
+				"fill":"#10C200",
+				"label":"0 - 2",
+				"stroke":null
+			},
+			{
+				"min":2,
+				"max":4,
+				"equal_to":"max",
+				"fill":"#40BE23",
+				"label":"2 - 4",
+				"stroke":null
+			},
+			{
+				"min":4,
+				"max":6,
+				"equal_to":"max",
+				"fill":"#71BB46",
+				"label":"4 - 6",
+				"stroke":null
+			},
+			{
+				"min":6,
+				"max":8,
+				"equal_to":"max",
+				"fill":"#A1B769",
+				"label":"6 - 8",
+				"stroke":null
+			},
+			{
+				"min":8,
+				"max":10,
+				"equal_to":"max",
+				"fill":"#D2B48C",
+				"label":"8 - 10",
+				"stroke":null
+			},
+			{
+				"min":10,
+				"max":12,
+				"equal_to":"max",
+				"fill":"#CE9070",
+				"label":"10 - 12",
+				"stroke":null
+			},
+			{
+				"min":12,
+				"max":14,
+				"equal_to":"max",
+				"fill":"#CB6D55",
+				"label":"12 - 14",
+				"stroke":null
+			},
+			{
+				"min":14,
+				"max":16,
+				"equal_to":"max",
+				"fill":"#C84A3A",
+				"label":"14 - 16",
+				"stroke":null
+			},
+			{
+				"min":16,
+				"max":18,
+				"equal_to":"max",
+				"fill":"#C5271F",
+				"label":"16 - 18",
+				"stroke":null
+			},
+			{
+				"min":18,
+				"max":20,
+				"equal_to":"max",
+				"fill":"#C20404",
+				"label":"Greater than 18",
+				"stroke":null
+			}
+		
+		]
+	},
+	
+	"Wetland":{
+		"property_name":"Wetland",
+		"property_label":"Percent Wetland",
+		"property_sublabel":"",
+		"rules":[
+			{
+				"min":null,
+				"max":0,
+				"equal_to":"max",
+				"fill":"#426E1E",
+				"label":"0%",
+				"stroke":null
+			},
+			{
+				"min":0,
+				"max":0.10,
+				"equal_to":"max",
+				"fill":"#3B6D2C",
+				"label":"1% - 10%",
+				"stroke":null
+			},
+			{
+				"min":0.10,
+				"max":0.20,
+				"equal_to":"max",
+				"fill":"#346C3A",
+				"label":"11% - 20%",
+				"stroke":null
+			},
+			{
+				"min":0.20,
+				"max":0.30,
+				"equal_to":"max",
+				"fill":"#2E6B48",
+				"label":"21% - 30%",
+				"stroke":null
+			},
+			{
+				"min":0.30,
+				"max":0.40,
+				"equal_to":"max",
+				"fill":"#276A56",
+				"label":"31% - 40%",
+				"stroke":null
+			},
+			{
+				"min":0.40,
+				"max":0.50,
+				"equal_to":"max",
+				"fill":"#216A64",
+				"label":"41% - 50%",
+				"stroke":null
+			},
+			{
+				"min":0.50,
+				"max":0.60,
+				"equal_to":"max",
+				"fill":"#1A6972",
+				"label":"51% - 60%",
+				"stroke":null
+			},
+			{
+				"min":0.60,
+				"max":0.70,
+				"equal_to":"max",
+				"fill":"#136880",
+				"label":"61% - 70%",
+				"stroke":null
+			},
+			{
+				"min":0.70,
+				"max":0.80,
+				"equal_to":"max",
+				"fill":"#0D678E",
+				"label":"71% - 80%",
+				"stroke":null
+			},
+			{
+				"min":0.80,
+				"max":0.90,
+				"equal_to":"max",
+				"fill":"#06669C",
+				"label":"81% - 90%",
+				"stroke":null
+			},
+			{
+				"min":0.90,
+				"max":1.0,
+				"equal_to":"max",
+				"fill":"#0066AA",
+				"label":"91% - 100%",
+				"stroke":null
+			}
+		
+		]
+	},
+	
+	"SurfCrseC":{
+		"property_name":"SurfCrseC",
+		"property_label":"Surficial Coarseness",
+		"property_sublabel":"",
+		"rules":[
+			{
+				"min":null,
+				"max":0,
+				"equal_to":"max",
+				"fill":"#C2E7B0",
+				"label":"0%",
+				"stroke":null
+			},
+			{
+				"min":0,
+				"max":0.10,
+				"equal_to":"max",
+				"fill":"#B7D59E",
+				"label":"1% - 10%",
+				"stroke":null
+			},
+			{
+				"min":0.10,
+				"max":0.20,
+				"equal_to":"max",
+				"fill":"#ACC38D",
+				"label":"11% - 20%",
+				"stroke":null
+			},
+			{
+				"min":0.20,
+				"max":0.30,
+				"equal_to":"max",
+				"fill":"#A1B17C",
+				"label":"21% - 30%",
+				"stroke":null
+			},
+			{
+				"min":0.30,
+				"max":0.40,
+				"equal_to":"max",
+				"fill":"#969F6A",
+				"label":"31% - 40%",
+				"stroke":null
+			},
+			{
+				"min":0.40,
+				"max":0.50,
+				"equal_to":"max",
+				"fill":"#8B8E59",
+				"label":"41% - 50%",
+				"stroke":null
+			},
+			{
+				"min":0.50,
+				"max":0.60,
+				"equal_to":"max",
+				"fill":"#807C48",
+				"label":"51% - 60%",
+				"stroke":null
+			},
+			{
+				"min":0.60,
+				"max":0.70,
+				"equal_to":"max",
+				"fill":"#756A36",
+				"label":"61% - 70%",
+				"stroke":null
+			},
+			{
+				"min":0.70,
+				"max":0.80,
+				"equal_to":"max",
+				"fill":"#6A5825",
+				"label":"71% - 80%",
+				"stroke":null
+			},
+			{
+				"min":0.80,
+				"max":0.90,
+				"equal_to":"max",
+				"fill":"#5F4614",
+				"label":"81% - 90%",
+				"stroke":null
+			},
+			{
+				"min":0.90,
+				"max":1.0,
+				"equal_to":"max",
+				"fill":"#543503",
+				"label":"91% - 100%",
+				"stroke":null
+			}
+		
+		]
+	},
+	
+	"RchLngthKM":{
+		"property_name":"RchLngthKM",
+		"property_label":"Stream Reach Length",
+		"property_sublabel":"Kilometers",
+
+		"rules":[
+			{
+				"min":null,
+				"max":0,
+				"equal_to":"max",
+				"fill":"#001111",
+				"label":" ~ 0 or no data",
+				"stroke":null
+			},
+			{
+				"min":0,
+				"max":1,
+				"equal_to":"max",
+				"fill":"#002028",
+				"label":"0 - 1",
+				"stroke":null
+			},
+			{
+				"min":1,
+				"max":2,
+				"equal_to":"max",
+				"fill":"#002F40",
+				"label":"1 - 2",
+				"stroke":null
+			},
+			{
+				"min":2,
+				"max":3,
+				"equal_to":"max",
+				"fill":"#003E58",
+				"label":"2 - 3",
+				"stroke":null
+			},
+			{
+				"min":3,
+				"max":4,
+				"equal_to":"max",
+				"fill":"#004E70",
+				"label":"3 - 4",
+				"stroke":null
+			},
+			{
+				"min":4,
+				"max":5,
+				"equal_to":"max",
+				"fill":"#005D88",
+				"label":"4 - 5",
+				"stroke":null
+			},
+			{
+				"min":5,
+				"max":6,
+				"equal_to":"max",
+				"fill":"#006C9F",
+				"label":"5 - 6",
+				"stroke":null
+			},
+			{
+				"min":6,
+				"max":7,
+				"equal_to":"max",
+				"fill":"#007CB7",
+				"label":"6 - 7",
+				"stroke":null
+			},
+			{
+				"min":7,
+				"max":8,
+				"equal_to":"max",
+				"fill":"#008BCF",
+				"label":"7 - 8",
+				"stroke":null
+			},
+			{
+				"min":8,
+				"max":9,
+				"equal_to":"max",
+				"fill":"#008BCF",
+				"label":"8 - 9",
+				"stroke":null
+			},
+			{
+				"min":9,
+				"max":10,
+				"equal_to":"max",
+				"fill":"#008BCF",
+				"label":"9 - 10",
+				"stroke":null
+			},
+			{
+				"min":10,
+				"max":11,
+				"equal_to":"max",
+				"fill":"#008BCF",
+				"label":"Greater than 10",
+				"stroke":null
+			}
+		
+		]
+	},
+	
+	"HerbOrAg":{
+		"property_name":"HerbOrAg",
+		"property_label":"Percent Herbacious or Agricultural",
+		"property_sublabel":"",
+		"rules":[
+			{
+				"min":null,
+				"max":0,
+				"equal_to":"max",
+				"fill":"#E5E200",
+				"label":"0%",
+				"stroke":null
+			},
+			{
+				"min":0,
+				"max":10,
+				"equal_to":"max",
+				"fill":"#CFDA00",
+				"label":"1% - 10%",
+				"stroke":null
+			},
+			{
+				"min":10,
+				"max":20,
+				"equal_to":"max",
+				"fill":"#BAD301",
+				"label":"11% - 20%",
+				"stroke":null
+			},
+			{
+				"min":20,
+				"max":30,
+				"equal_to":"max",
+				"fill":"#A5CC02",
+				"label":"21% - 30%",
+				"stroke":null
+			},
+			{
+				"min":30,
+				"max":40,
+				"equal_to":"max",
+				"fill":"#8FC503",
+				"label":"31% - 40%",
+				"stroke":null
+			},
+			{
+				"min":40,
+				"max":50,
+				"equal_to":"max",
+				"fill":"#7ABE04",
+				"label":"41% - 50%",
+				"stroke":null
+			},
+			{
+				"min":50,
+				"max":60,
+				"equal_to":"max",
+				"fill":"#65B605",
+				"label":"51% - 60%",
+				"stroke":null
+			},
+			{
+				"min":60,
+				"max":70,
+				"equal_to":"max",
+				"fill":"#4FAF06",
+				"label":"61% - 70%",
+				"stroke":null
+			},
+			{
+				"min":70,
+				"max":80,
+				"equal_to":"max",
+				"fill":"#3AA807",
+				"label":"71% - 80%",
+				"stroke":null
+			},
+			{
+				"min":80,
+				"max":90,
+				"equal_to":"max",
+				"fill":"#25A108",
+				"label":"81% - 90%",
+				"stroke":null
+			},
+			{
+				"min":91,
+				"max":100,
+				"equal_to":"max",
+				"fill":"#109A09",
+				"label":"91% - 100%",
+				"stroke":null
+			}
+		
+		]
+	},
+	
+	"DevNotOpen":{
+		"property_name":"DevNotOpen",
+		"property_label":"Percent Developed Not Open",
+		"property_sublabel":"",
+		"rules":[
+			{
+				"min":null,
+				"max":0,
+				"equal_to":"max",
+				"fill":"#2A653B",
+				"label":"0%",
+				"stroke":null
+			},
+			{
+				"min":0,
+				"max":10,
+				"equal_to":"max",
+				"fill":"#3A704B",
+				"label":"1% - 10%",
+				"stroke":null
+			},
+			{
+				"min":10,
+				"max":20,
+				"equal_to":"max",
+				"fill":"#4A7B5B",
+				"label":"11% - 20%",
+				"stroke":null
+			},
+			{
+				"min":20,
+				"max":30,
+				"equal_to":"max",
+				"fill":"#5A866B",
+				"label":"21% - 30%",
+				"stroke":null
+			},
+			{
+				"min":30,
+				"max":40,
+				"equal_to":"max",
+				"fill":"#6A927B",
+				"label":"31% - 40%",
+				"stroke":null
+			},
+			{
+				"min":40,
+				"max":50,
+				"equal_to":"max",
+				"fill":"#7A9D8C",
+				"label":"41% - 50%",
+				"stroke":null
+			},
+			{
+				"min":50,
+				"max":60,
+				"equal_to":"max",
+				"fill":"#8AA89C",
+				"label":"51% - 60%",
+				"stroke":null
+			},
+			{
+				"min":60,
+				"max":70,
+				"equal_to":"max",
+				"fill":"#9AB4AC",
+				"label":"61% - 70%",
+				"stroke":null
+			},
+			{
+				"min":70,
+				"max":80,
+				"equal_to":"max",
+				"fill":"#AABFBC",
+				"label":"71% - 80%",
+				"stroke":null
+			},
+			{
+				"min":80,
+				"max":90,
+				"equal_to":"max",
+				"fill":"#BACACC",
+				"label":"81% - 90%",
+				"stroke":null
+			},
+			{
+				"min":91,
+				"max":100,
+				"equal_to":"max",
+				"fill":"#CBD6DD",
+				"label":"91% - 100%",
+				"stroke":null
+			}
+		
+		]
+		
+		
+	},
+	
+	"UndevForst":{
+		"property_name":"UndevForst",
+		"property_label":"Percent Undeveloped Forested",
+		"property_sublabel":"",
+		"rules":[
+			{
+				"min":null,
+				"max":0,
+				"equal_to":"max",
+				"fill":"#FFEA8C",
+				"label":" ~ 0% or no data",
+				"stroke":null
+			},
+			{
+				"min":0,
+				"max":10,
+				"equal_to":"max",
+				"fill":"#E7DC80",
+				"label":"1% - 10%",
+				"stroke":null
+			},
+			{
+				"min":10,
+				"max":20,
+				"equal_to":"max",
+				"fill":"#D0CE74",
+				"label":"11% - 20%",
+				"stroke":null
+			},
+			{
+				"min":20,
+				"max":30,
+				"equal_to":"max",
+				"fill":"#B9C068",
+				"label":"21% - 30%",
+				"stroke":null
+			},
+			{
+				"min":30,
+				"max":40,
+				"equal_to":"max",
+				"fill":"#A1B25D",
+				"label":"31% - 40%",
+				"stroke":null
+			},
+			{
+				"min":40,
+				"max":50,
+				"equal_to":"max",
+				"fill":"#8AA451",
+				"label":"41% - 50%",
+				"stroke":null
+			},
+			{
+				"min":50,
+				"max":60,
+				"equal_to":"max",
+				"fill":"#739645",
+				"label":"51% - 60%",
+				"stroke":null
+			},
+			{
+				"min":60,
+				"max":70,
+				"equal_to":"max",
+				"fill":"#5B883A",
+				"label":"61% - 70%",
+				"stroke":null
+			},
+			{
+				"min":70,
+				"max":80,
+				"equal_to":"max",
+				"fill":"#447A2E",
+				"label":"71% - 80%",
+				"stroke":null
+			},
+			{
+				"min":80,
+				"max":90,
+				"equal_to":"max",
+				"fill":"#2D6C22",
+				"label":"81% - 90%",
+				"stroke":null
+			},
+			{
+				"min":90,
+				"max":100,
+				"equal_to":"max",
+				"fill":"#165E17",
+				"label":"91% - 100%",
+				"stroke":null
+			}
+		
+		]
+	},
+	
+	"FallBP":{
+		"property_name":"FallBP",
+		"property_label":"Fall BP",
+		"property_sublabel":"",
+		"rules":[
+			{
+				"min":null,
+				"max":320,
+				"equal_to":"max",
+				"fill":"#D6D6FF",
+				"label":"less than 320",
+				"stroke":null
+			},
+			{
+				"min":320,
+				"max":330,
+				"equal_to":"max",
+				"fill":"#7B88DB",
+				"label":"320 - 330",
+				"stroke":null
+			},
+			{
+				"min":330,
+				"max":340,
+				"equal_to":"max",
+				"fill":"#3357B8",
+				"label":"330 - 340",
+				"stroke":null
+			},
+			{
+				"min":340,
+				"max":375,
+				"equal_to":"max",
+				"fill":"#003994",
+				"label":"340 - 375",
+				"stroke":null
+			}
+		
+		]
+	},
+	
+	"SpringBP":{
+		"property_name":"SpringBP",
+		"property_label":"Spring BP",
+		"property_sublabel":"",
+		"rules":[
+			{
+				"min":null,
+				"max":40,
+				"equal_to":"max",
+				"fill":"#D6D6FF",
+				"label":"less than 40",
+				"stroke":null
+			},
+			{
+				"min":40,
+				"max":55,
+				"equal_to":"max",
+				"fill":"#7B88DB",
+				"label":"40 - 55",
+				"stroke":null
+			},
+			{
+				"min":55,
+				"max":70,
+				"equal_to":"max",
+				"fill":"#3357B8",
+				"label":"55 - 70",
+				"stroke":null
+			},
+			{
+				"min":70,
+				"max":100,
+				"equal_to":"max",
+				"fill":"#003994",
+				"label":"greater than 70",
+				"stroke":null
+			}
+		
+		]
+	},
+	
+	"SummerBP":{
+		"property_name":"SummerBP",
+		"property_label":"Summer BP",
+		"property_sublabel":"",
+		"rules":[
+			{
+				"min":null,
+				"max":190,
+				"equal_to":"max",
+				"fill":"#D6D6FF",
+				"label":"less than 190",
+				"stroke":null
+			},
+			{
+				"min":190,
+				"max":200,
+				"equal_to":"max",
+				"fill":"#7B88DB",
+				"label":"190 - 200",
+				"stroke":null
+			},
+			{
+				"min":200,
+				"max":210,
+				"equal_to":"max",
+				"fill":"#3357B8",
+				"label":"200 - 210",
+				"stroke":null
+			},
+			{
+				"min":210,
+				"max":300,
+				"equal_to":"max",
+				"fill":"#003994",
+				"label":"greater than 210",
+				"stroke":null
+			}
+		
+		]
+	},
+	
+	"FallSlope":{
+		"property_name":"FallSlope",
+		"property_label":"Falling Temperature Slope",
+		"property_sublabel":"",
+		"rules":[
+			{
+				"min":null,
+				"max":0,
+				"equal_to":"max",
+				"fill":"#D6D6FF",
+				"label":"NA",
+				"stroke":null
+			},
+			{
+				"min":0,
+				"max":0.60,
+				"equal_to":"max",
+				"fill":"#8F97E3",
+				"label":"less than 0.60",
+				"stroke":null
+			},
+			{
+				"min":0.60,
+				"max":0.65,
+				"equal_to":"max",
+				"fill":"#556CC9",
+				"label":"0.60 - 0.65",
+				"stroke":null
+			},
+			{
+				"min":0.65,
+				"max":0.70,
+				"equal_to":"max",
+				"fill":"#244EAD",
+				"label":"0.65 - 0.70",
+				"stroke":null
+			},
+			
+			{
+				"min":0.70,
+				"max":10,
+				"equal_to":"max",
+				"fill":"#003994",
+				"label":"greater than 0.70",
+				"stroke":null
+			}
+		
+		]
+	},
+	
+	"RiseSlope":{
+		"property_name":"RiseSlope",
+		"property_label":"Rising Temperature Slope",
+		"property_sublabel":"",
+		"rules":[
+			{
+				"min":null,
+				"max":0,
+				"equal_to":"max",
+				"fill":"#D6D6FF",
+				"label":"NA",
+				"stroke":null
+			},
+			{
+				"min":0,
+				"max":0.65,
+				"equal_to":"max",
+				"fill":"#8F97E3",
+				"label":"less than 0.65",
+				"stroke":null
+			},
+			{
+				"min":0.65,
+				"max":0.70,
+				"equal_to":"max",
+				"fill":"#556CC9",
+				"label":"0.65 - 0.70",
+				"stroke":null
+			},
+			{
+				"min":0.70,
+				"max":0.75,
+				"equal_to":"max",
+				"fill":"#244EAD",
+				"label":"0.70 - 0.75",
+				"stroke":null
+			},
+			
+			{
+				"min":0.75,
+				"max":10,
+				"equal_to":"max",
+				"fill":"#003994",
+				"label":"0.75 - 1.0",
+				"stroke":null
+			}
+		
+		]
+	},
+	
+	"SyncRange":{
+		"property_name":"SyncRange",
+		"property_label":"Synchronized Temperature Range",
+		"property_sublabel":"",
+		"rules":[
+			{
+				"min":null,
+				"max":0,
+				"equal_to":"max",
+				"fill":"#D6D6FF",
+				"label":"Never Synchronized",
+				"stroke":null
+			},
+			{
+				"min":0,
+				"max":265,
+				"equal_to":"max",
+				"fill":"#8F97E3",
+				"label":"less than 265",
+				"stroke":null
+			},
+			{
+				"min":265,
+				"max":285,
+				"equal_to":"max",
+				"fill":"#556CC9",
+				"label":"265 - 285",
+				"stroke":null
+			},
+			{
+				"min":285,
+				"max":305,
+				"equal_to":"max",
+				"fill":"#244EAD",
+				"label":"285 - 305",
+				"stroke":null
+			},
+			
+			{
+				"min":305,
+				"max":1000,
+				"equal_to":"max",
+				"fill":"#003994",
+				"label":"greater than 305",
+				"stroke":null
+			}
+		
+		]
+	},
+	
+	"num_obs":{
+		"property_name":"num_obs",
+		"property_label":"Number of Observations",
+		"property_sublabel":"Day of Year",
+		"rules":[
+			{
+				"min":null,
+				"max":0,
+				"equal_to":"max",
+				"fill":"#FAFD9A",
+				"label":"NA",
+				"stroke":null
+			},
+			{
+				"min":0,
+				"max":365,
+				"equal_to":"max",
+				"fill":"#FAED80",
+				"label":"less than 365",
+				"stroke":null
+			},
+			{
+				"min":365,
+				"max":730,
+				"equal_to":"max",
+				"fill":"#FBDE66",
+				"label":"365 - 730",
+				"stroke":null
+			},
+			{
+				"min":730,
+				"max":1825,
+				"equal_to":"max",
+				"fill":"#FCCF4D",
+				"label":"730 - 1825",
+				"stroke":null
+			},
+			
+			{
+				"min":1825,
+				"max":3650,
+				"equal_to":"max",
+				"fill":"#FDC033",
+				"label":"1825 - 3650",
+				"stroke":null
+			},
+			
+			{
+				"min":3650,
+				"max":7300,
+				"equal_to":"max",
+				"fill":"#FEB119",
+				"label":"3650 - 7300",
+				"stroke":null
+			},
+			{
+				"min":7350,
+				"max":10000,
+				"equal_to":"max",
+				"fill":"#FFA200",
+				"label":"greater than 7350",
+				"stroke":null
+			}
+		
+		]
+	},
+	
+	"Number_of_":{
+		"property_name":"Number_of_",
+		"property_label":"Number of Days with Observations",
+		"property_sublabel":"Days",
+		"rules":[
+			{
+				"min":null,
+				"max":0,
+				"equal_to":"max",
+				"fill":"#FAFD9A",
+				"label":"NA",
+				"stroke":null
+			},
+			{
+				"min":0,
+				"max":100,
+				"equal_to":"max",
+				"fill":"#FAED80",
+				"label":"less than 100",
+				"stroke":null
+			},
+			{
+				"min":100,
+				"max":200,
+				"equal_to":"max",
+				"fill":"#FBDE66",
+				"label":"100 - 200",
+				"stroke":null
+			},
+			{
+				"min":200,
+				"max":300,
+				"equal_to":"max",
+				"fill":"#FCCF4D",
+				"label":"200 - 300",
+				"stroke":null
+			},
+			
+			{
+				"min":300,
+				"max":400,
+				"equal_to":"max",
+				"fill":"#FDC033",
+				"label":"300 - 400",
+				"stroke":null
+			},
+			
+			{
+				"min":400,
+				"max":500,
+				"equal_to":"max",
+				"fill":"#FEB119",
+				"label":"400 - 500",
+				"stroke":null
+			},
+			{
+				"min":500,
+				"max":10000,
+				"equal_to":"max",
+				"fill":"#FFA200",
+				"label":"greater than 500",
+				"stroke":null
+			}
+		
+		]
+	},
+	
+	"prd_flw":{
+		"property_name":"prd_flw",
+		"property_label":"Mean Annual Flow",
+		"property_sublabel":"",
+		"rules":[
+			{
+				"min":null,
+				"max":0,
+				"equal_to":"max",
+				"fill":"#777777",
+				"label":"NA",
+				"stroke":null
+			},
+			{
+				"min":0,
+				"max":2,
+				"equal_to":"max",
+				"fill":"#BAF3F7",
+				"label":"less than 2",
+				"stroke":null
+			},
+			{
+				"min":2,
+				"max":5,
+				"equal_to":"max",
+				"fill":"#9BD0E1",
+				"label":"2 - 5",
+				"stroke":null
+			},
+			{
+				"min":5,
+				"max":10,
+				"equal_to":"max",
+				"fill":"#7CAECB",
+				"label":"5 - 10",
+				"stroke":null
+			},
+			
+			{
+				"min":10,
+				"max":20,
+				"equal_to":"max",
+				"fill":"#5D8CB6",
+				"label":"10 - 20",
+				"stroke":null
+			},
+			
+			{
+				"min":20,
+				"max":30,
+				"equal_to":"max",
+				"fill":"#3E69A0",
+				"label":"20 - 30",
+				"stroke":null
+			},
+			{
+				"min":30,
+				"max":10000,
+				"equal_to":"max",
+				"fill":"#1E478A",
+				"label":"greater than 30",
+				"stroke":null
+			}
+		
+		]
+	}
+	
+	
+
+
+
+
+}

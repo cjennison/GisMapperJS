@@ -1,0 +1,21 @@
+{
+	"BASEMAPS":[
+		{
+			"source":"Stamen",
+			"layer":"toner",
+			"label":"Stamen Toner"
+			
+		},
+		{
+			"source":"MapQuest",
+			"layer":"sat",
+			"label":"MapQuest"
+		}
+		
+	
+	
+	],
+	"OUTLINES":[],
+	"LAYERS":[]
+
+}

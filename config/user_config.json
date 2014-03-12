@@ -1,0 +1,71 @@
+{
+	"APPLICATIONS":[
+		{
+			"title":"NALCC",
+			"titleLabel":"NALCC/NECSC",
+			"html_title":"NALCC Web Viewer",
+			"dir":"nalcc",
+			"main":"main",
+			"projection":"EPSG:900913",
+			"incoming_projection":"EPSG:4326",
+			"sources":[
+				"layercontrol",
+				"layer"
+			
+			],
+			"partner_sources":[
+			
+			],
+			"GEOSERVER_WORKSPACE":"Streams",
+			"CSSFiles":[
+				"bootstrap.min.css",
+				"main.css",
+				"ui.css"
+			],
+			
+			"LOAD_COORDINATES":[
+				-72.82,
+				42
+			],
+			
+			"LOAD_ZOOM":7,
+			
+			"LAYER_CONFIGURATIONS":{
+				"BASEMAP":0,
+				"FLOWLINE":2,
+				"OUTLINE":1,
+				"LOCAL":3,
+				"UPSTREAM":3
+			},
+			
+			"UNIQUE_LAYERS":[3]
+			
+		},
+		
+		{
+			"title":"EBTJV",
+			"html_title":"EBTJV Web Viewer",
+			"dir":"ebtjv",
+			"main":"main",
+			"projection":"EPSG:900913",
+			"incoming_projection":"EPSG:4326",
+			"sources":[
+			
+			
+			],
+			"partner_sources":[
+			
+			],
+			"GEOSERVER_WORKSPACE":"EBTJV",
+			"CSSFiles":[
+			
+			],
+			
+			"LOAD_COORDINATES":{
+			
+			}
+		
+		}
+
+	]
+}
