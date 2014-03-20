@@ -1,0 +1,293 @@
+{
+	"fid":{
+		"remove":false,
+		"copy":"Feature ID"
+	},
+	
+	"GRIDCODE":{
+		"remove":true
+	},
+	
+	"FEATUREID":{
+		"remove":false,
+		"copy":"Catchment Identifier"
+	},
+	
+	"SOURCEFC":{
+		"remove":true
+	},
+	
+	"AreaSqKM":{
+		"remove":false,
+		"copy":"Area Kilometers<sup>2</sup>"
+	},
+	
+	"TotDASqKM":{
+		"remove":false,
+		"copy":"Total Drainage Area (Kilometers<sup>2</sup>)"
+	},
+	
+	"RchLngthKM":{
+		"remove":false,
+		"copy":"Reach Slope (Kilometers)"
+	},
+	
+	"RchSlpDEG":{
+		"remove":false,
+		"copy":"Reach Slope (Degrees)"
+	},
+	
+	"Forest":{
+		"remove":false,
+		"copy":"Percent Forested"
+	},
+	
+	"Herbacious":{
+		"remove":false,
+		"copy":"Percent Herbacious"	
+	},
+	
+	"Agro":{
+		"remove":false,
+		"copy":"Percent Agricultural"
+	},
+	
+	"HerbOrAg":{
+		"remove":false,
+		"copy":"Percent Herbacious or Agricultural"
+	},
+	
+	"Developed":{
+		"remove":false,
+		"copy":"Percent Developed"
+	},
+	
+	"DevNotOpen":{
+		"remove":false,
+		"copy":"Percent Developed (Not Open)"
+	},
+	
+	"Wetland":{
+		"remove":false,
+		"copy":"Percent Wetland"
+	},
+	
+	"WetOrWater":{
+		"remove":false,
+		"copy":"Percent Weland or Open Water"
+	},
+	
+	"Water":{
+		"remove":false,
+		"copy":"Percent Open Water"
+	},
+	
+	"UndevForst":{
+		"remove":false,
+		"copy":"Percent Undeveloped Forest"
+	},
+	
+	"Impervious":{
+		"remove":false,
+		"copy":"Percent Impervious"
+	},
+	
+	"CONUSOpWtr":{
+		"remove":true
+	},
+	
+	"CONUSWet":{
+		"remove":true
+	},
+	
+	"AnnTmaxC":{
+		"remove":false,
+		"copy":"Annual Max Temperature (C)"
+	},
+	
+	"AnnTminC":{
+		"remove":false,
+		"copy":"Annual Min Temperature (C)"
+	},
+	
+	"WntrPrcpMM":{
+		"remove":false,
+		"copy":"Winter Precipitation (MM)"
+	},
+	
+	"NovPrcpMM":{
+		"remove":false,
+		"copy":"Fall Precipitation (MM)"
+	},
+	
+	"AnnPrcpMM":{
+		"remove":false,
+		"copy":"Annual Average Precipitation"
+	},
+	
+	"AtmDepNO3":{
+		"remove":false,
+		"copy":"Atmospheric Deposition of Nitrate (kg/ha)"
+	},
+	
+	"AtmDepSO4":{
+		"remove":false,
+		"copy":"Atmospheric Deposition of Sulfate (kg/ha)"
+	},
+	
+	"BasnSlpDEG":{
+		"remove":false,
+		"copy":"Basin Slope (Degrees)"
+	},
+	
+	"DrainClass":{
+		"remove":false,
+		"copy":"Drainage Class"
+	},
+	
+	"HydroGrpA":{
+		"remove":false,
+		"copy":"Soil Hydrology Group A"
+	},
+	
+	"HydroGrpAB":{
+		"remove":false,
+		"copy":"Soil Hydrology Group A and B"
+	},
+	
+	"HydroGrpCD":{
+		"remove":false,
+		"copy":"Soil Hydrology Group C and D"
+	},
+	
+	"HydroGrpD4":{
+		"remove":false,
+		"copy":"Soil Hydrology Group D4"
+	},
+	
+	"HydroGrpD1":{
+		"remove":false,
+		"copy":"Soil Hydrology Group D1"
+	},
+	
+	"SurfCrseA":{
+		"remove":true
+	},
+	
+	"SurfCrseB":{
+		"remove":true
+	},
+	
+	"SurfCrseC":{
+		"remove":false,
+		"copy":"Surface Coarseness"
+	},
+	
+	"SurfCrseD":{
+		"remove":true
+	},
+	
+	"PcntSandy":{
+		"remove":false,
+		"copy":"Percent Sandy"
+	},
+	
+	"RchElevM":{
+		"remove":false,
+		"copy":"Reach Elevation (Meters)"
+	},
+	
+	"BasnElevM":{
+		"remove":false,
+		"copy":"Basin Elevation (Meters)"
+	},
+	
+	"PresAbsnce":{
+		"remove":false,
+		"copy":"Presence of Brook Trout"	
+	},
+	
+	"SumrPrcpMM":{
+		"remove":false,
+		"copy":"Summer Precipitation (Millimeters)"
+	},
+	
+	"RchSlpPCT":{
+		"remove":false,
+		"copy":"Reach Slope (%)"
+	},
+	
+	"BasnSlpPCT":{
+		"remove":false,
+		"copy":"Basin Slope (%)"
+	},
+	
+	"AnnTminF":{
+		"remove":false,
+		"copy":"Annual Temperature Min (Fahrenheit)"
+	},
+	
+	"AnnTmaxF":{
+		"remove":false,
+		"copy":"Annual Temperature Max (Fahrenheit)"
+	},
+	
+	"WntrPrcpIN":{
+		"remove":true
+	},
+	
+	"AnnPrcpIN":{
+		"remove":true
+	},
+	
+	"RchElevFT":{
+		"remove":true
+	},
+	
+	"BasnElevFT":{
+		"remove":true
+	},
+	
+	"TotDASqMI":{
+		"remove":true
+	},
+	
+	"AreaSqMI":{
+		"remove":true
+	},
+	
+	"RchLngthMI":{
+		"remove":true
+	},
+	
+	"SumrPrcpIN":{
+		"remove":true
+	},
+	
+	"current":{
+		"remove":true
+	},
+	
+	"plus2":{
+		"remove":true
+	},
+	
+	"plus4":{
+		"remove":true
+	},
+	
+	"plus6":{
+		"remove":true
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

@@ -7,7 +7,7 @@ GisMap.Core = {
     Application: null,
 
     initialize: function (application) {
-    	
+		
     	GisMap.Tasks.init();
     	
         //Set the document title

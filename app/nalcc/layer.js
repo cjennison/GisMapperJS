@@ -1,6 +1,8 @@
 AppLayer = {
 	
 	
+	cursorState:"pan",
+	
 	/**
 	 * Generates a layer from an element 
  	 * @param {Object} el
@@ -23,10 +25,47 @@ AppLayer = {
 			serverType:"geoserver"
 		});
 		
-		GisMap.Layer.createNewLayer(layerType, nLay);
+		
+		//Local
+		GisMap.Layer.createNewLayer(layerType, nLay, function(layer){
+			var collect = GisMap.Map.map.getLayers();
+			var thisLayer = collect.removeAt(collect.a.length-1);
+			collect.insertAt(1, thisLayer);
+			
+			LayerControl.localLayer = layer;
+			
+		});
+		
+		if(ID == "Catchments"){
+			
+			
+			GisMap.Map.map.removeLayer(LayerControl.upstreamLayer);
+			var uLay = new LayerOptions({
+				name:layerName,
+				source: ol.source.TileWMS,
+				url: 'http://felek.cns.umass.edu:8080/geoserver/wms',
+				params: {
+					'LAYERS' : 'Streams:' + layerName + "_Upstream", 'TILED':true},
+				serverType:"geoserver"
+			});
+			GisMap.Layer.createNewLayer("OTHER", uLay, function(layer){
+				layer.e.visible = false;				
+				LayerControl.upstreamLayer = layer;
+			});
+			
+			GisMap.UI.resetRadioButtons();
+			
+			
+		}
+		
+		
+		
 		GisMap.UI.createJSONLegend(null, RULES, layerName, {draggable:true}, function(){
 			$(".legend_toggle").prop("checked",true);
 			LayerControl.legend_toggled = true;
+			
+			GisMap.UI.showLegend(true);
+			
 		});
 		$("#legend-close").attr('onclick', "GisMap.UI.hideLegend(true,disableLegend())");
 		
@@ -41,13 +80,63 @@ AppLayer = {
 		
 	},
 	
+	
+	//Creates a WMS Layer and sets it's opacity to 0 on return
+	createWMSLayer:function(){
+		
+		
+		var wmsSource = new ol.source.TileWMS({
+			url:'http://felek.cns.umass.edu:8080/geoserver/wms',
+			params: {
+				'LAYERS' : 'Streams:NENY_NHDCatchments_LocalStats_2' }
+		});
+		
+		var wmsLayer = new ol.layer.Tile({
+			source: wmsSource
+		})
+		
+		GisMap.Map.map.addLayer(wmsLayer);
+		wmsLayer.e.opacity = 0;
+		
+		var viewProjection = /** @type {ol.proj.Projection} */
+   			 (GisMap.Map.map.getView().getProjection());
+   			 
+   			 
+		GisMap.Map.map.on('singleclick', function(evt){
+			
+			if(AppLayer.cursorState != "delin") return;
+			
+			Data.createCatchmentPopup(evt.coordinate);
+			var viewResolution = /** @type {number} */ (GisMap.Map.map.getView().getResolution());
+			  var url = wmsSource.getGetFeatureInfoUrl(
+			      evt.coordinate, viewResolution, viewProjection,
+			      {'INFO_FORMAT': 'application/json'});
+			  if (url) {
+			  	 console.log(url)
+			  	 $.getJSON(url, function(d){
+			  	 	Data.populatePopup(d);
+			  	 })
+			  } else {
+			  	console.log("Uh Oh, something went wrong.");
+			  }
+		})
+		
+		
+		
+	},
+	
 	/**
 	 * returns the html used for this layer 
 	 * @param {Object} layer
 	 */
 	getLayerControls:function(layer){
 		
-	}
+	},
+	
+	
+	
+	
+	
 	
 	
 	

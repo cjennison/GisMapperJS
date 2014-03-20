@@ -19,6 +19,14 @@ GisMap.UI = {
 		$(btn).click(function(e){
 			opts.event(e);
 		});
+		
+		if(opts.tooltip){
+			$(btn).attr("data-toggle", "tooltip");
+			$(btn).attr("data-placement", opts.tooltip.placement);
+			$(btn).attr("title", opts.tooltip.text);
+			$(btn).tooltip();
+		}
+		
 
 		if (opts.list) {
 			var li = $("<li></li>");
@@ -27,6 +35,10 @@ GisMap.UI = {
 			$(container).find("ul").append(li);
 		} else
 			$(container).append(btn);
+
+		if(cb){
+			cb(btn);
+		}
 
 		return {
 			div : btn
@@ -195,8 +207,6 @@ GisMap.UI = {
 	 */
 	updateDropdown : function(dropdown, list) {
 		$(dropdown).empty();
-		console.log(list);
-		console.log(dropdown);
 		$(dropdown).append(list);
 		$(dropdown).html(list);
 	},
@@ -244,7 +254,6 @@ GisMap.UI = {
 		var groupDiv = $("<div class='" + name + "-container' ></div>");
 		for (var g in groupD) {
 			group.push(groupD[g])
-			console.log(groupD[g])
 			$(groupD[g]).css("display", "none");
 			$(groupDiv).append(groupD[g]);
 
@@ -277,6 +286,23 @@ GisMap.UI = {
 		$(t).css("display", "block");
 
 	},
+	
+	/**
+	 * spawns a geolocator panel. Call GisMap.GIS.calculateLocation with the string from the input. 
+	 */
+	spawnGeoLocator:function(container, Sclass, cb){
+		var search = $("<div class='" + Sclass + "'> <span class='glyphicon glyphicon-globe'></span> </div>");
+		$(search).append("<input class='search_query' type='text' style='width:65%' placeholder='1 Migratory Way, Turners Falls MA'></input>")
+		
+		$(container).append(search);
+		
+		if(cb)
+			cb(search);
+		
+		return search;
+		
+	},
+	
 
 	/**
 	 * adds a lat/lon panel
@@ -286,17 +312,37 @@ GisMap.UI = {
 	addLatLon : function(container, declared_class) {
 		var latlonbox = $("<div class='" + declared_class + "'>Latitude:<span class='lat'>0</span><br />Longitude:<span class='lon'>0</span></div>")
 		$(container).append(latlonbox);
+		
+		var mousePositionControl = new ol.control.MousePosition({
+			 coordinateFormat: ol.coordinate.createStringXY(4),
+  			 projection: 'EPSG:4326',
+  			  className: 'custom-mouse-position',
+			  target: document.getElementById('mouse-position'),
+			  undefinedHTML: '&nbsp;'
+		})
+		
+		GisMap.Map.map.addControl(mousePositionControl);
 
-		GisMap.Map.map.on('mousemove', function(e) {
-			var coord = ol.proj.transform([e.coordinate[0], e.coordinate[1]], 'EPSG:900913', 'EPSG:4326');
-			$(latlonbox).find(".lat").html(coord[1]);
-			$(latlonbox).find(".lon").html(coord[0]);
-		});
+		//TODO: need better way to catch coordinates..
+		setInterval(function(){
+			var string = $(".custom-mouse-position").html();
+			string = string.split(",");
+			if(string.length == 1) return;
+			$(latlonbox).find(".lat").html(string[1]);
+			$(latlonbox).find(".lon").html(string[0]);
+			
+			
+			
+			
+		},10)
 
 	},
 
 	//TODO: implement
 	addScale : function(container, declared_class) {
-
+		var scaleLine = new ol.control.ScaleLine();
+		
+		GisMap.Map.map.addControl(scaleLine);
+		
 	}
 }

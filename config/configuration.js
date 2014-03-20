@@ -10,7 +10,8 @@ var dd;
 		"map",
 		"interface",
 		"external",
-		"tasks"
+		"tasks",
+		"gis"
 	]
 
 	//GisMapper Library Files

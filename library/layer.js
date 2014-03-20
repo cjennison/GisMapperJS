@@ -41,7 +41,9 @@ GisMap.Layer = {
 	createNewLayer : function(layerType, layerOptions, cb){
 		if(layerType == null)
 			throw new Error("BAD LAYER");
-			
+		
+		console.log("TYPE: " + layerType);
+		
 		var newLayer = new ol.layer.Tile({
 			source: new layerOptions.source((
 				{
@@ -58,7 +60,7 @@ GisMap.Layer = {
 		
 		GisMap.Map.addLayer(newLayer, cb);
 		
-			
+		
 	}
 	
 	

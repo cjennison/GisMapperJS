@@ -1,4 +1,7 @@
 {
+	"Instructions":"Insert each layer added from Geoserver into this list. Remember to put a comma at the end of each entry EXCEPT FOR THE LAST ENTRY",
+
+
 	"BASEMAPS":[
 		{
 			"source":"Stamen",
@@ -10,12 +13,689 @@
 			"source":"MapQuest",
 			"layer":"sat",
 			"label":"MapQuest"
+		},
+		{
+			"source":"OSM",
+			"layer":null,
+			"label":"OpenStreet Maps"
 		}
 		
 	
 	
 	],
-	"OUTLINES":[],
-	"LAYERS":[]
+	"OUTLINES":[
+		{
+			"Layer":"OutlineHUC4_Website_Version_Blue",
+			"Label":"Huc 4 Blue",
+			"DataType":"OUTLINE",
+			"FeatureType":"Hucs",
+			"Category":"Huc 4"
+		},
+
+        {
+			"Layer":"OutlineHUC4_Website_Version_Green",
+			"Label":"Huc 4 Green",
+			"DataType":"OUTLINE",
+			"FeatureType":"Hucs",
+			"Category":"Huc 4"
+		},
+		{
+            "Layer":"OutlineHUC4_Website_Version_Grey",
+			"Label":"Huc 4 Grey",
+			"DataType":"OUTLINE",
+			"FeatureType":"Hucs",
+			"Category":"Huc 4"
+		},
+		{
+            "Layer":"OutlineHUC4_Website_Version_Red",
+			"Label":"Huc 4 Red",
+			"DataType":"OUTLINE",
+			"FeatureType":"Hucs",
+			"Category":"Huc 4"
+		},
+		{
+            "Layer":"OutlineHUC8_Website_Version_Blue",
+			"Label":"Huc 8 Blue",
+			"DataType":"OUTLINE",
+			"FeatureType":"Hucs",
+			"Category":"Huc 8"
+		},
+		{
+            "Layer":"OutlineHUC8_Website_Version_Green",
+			"Label":"Huc 8 Green",
+			"DataType":"OUTLINE",
+			"FeatureType":"Hucs",
+			"Category":"Huc 8"
+		},
+		{
+            "Layer":"OutlineHUC8_Website_Version_Grey",
+			"Label":"Huc 8 Grey",
+			"DataType":"OUTLINE",
+			"FeatureType":"Hucs",
+			"Category":"Huc 8"
+		},
+		{
+            "Layer":"OutlineHUC8_Website_Version_Red",
+			"Label":"Huc 8 Red",
+			"DataType":"OUTLINE",
+			"FeatureType":"Hucs",
+			"Category":"Huc 8"
+		},	
+		{
+            "Layer":"OutlineHUC12_Website_Version_Blue",
+			"Label":"Huc 12 Blue",
+			"DataType":"OUTLINE",
+			"FeatureType":"Hucs",
+			"Category":"Huc 12"
+		},
+		{
+            "Layer":"OutlineHUC12_Website_Version_Green",
+			"Label":"Huc 12 Greed",
+			"DataType":"OUTLINE",
+			"FeatureType":"Hucs",
+			"Category":"Huc 12"
+		},
+		{
+            "Layer":"OutlineHUC4_Website_Version_Grey",
+			"Label":"Huc 12 Grey",
+			"DataType":"OUTLINE",
+			"FeatureType":"Hucs",
+			"Category":"Huc 12"
+		},
+		{
+            "Layer":"OutlineHUC4_Website_Version_Red",
+			"Label":"Huc 12 Red",
+			"DataType":"OUTLINE",
+			"FeatureType":"Hucs",
+			"Category":"Huc 12"
+		},
+		{
+            "Layer":"Outline_NENY_NHD_Catchments_Local_Stats_2_Blue",
+			"Label":"Catchments Blue",
+			"DataType":"OUTLINE",
+			"FeatureType":"Catchments",
+			"Category":"Catchments"
+		},
+		{
+            "Layer":"Outline_NENY_NHD_Catchments_Local_Stats_2_Green",
+			"Label":"Catchments Green",
+			"DataType":"OUTLINE",
+			"FeatureType":"Catchments",
+			"Category":"Catchments"
+
+		},	
+		{
+            "Layer":"Outline_NENY_NHD_Catchments_Local_Stats_2_Grey",
+			"Label":"Catchments Grey",
+			"DataType":"OUTLINE",
+			"FeatureType":"Catchments",
+			"Category":"Catchments"
+		},
+		{
+            "Layer":"Outline_NENY_NHD_Catchments_Local_Stats_2_Red",
+			"Label":"Catchments Red",
+			"DataType":"OUTLINE",
+			"FeatureType":"Catchments",
+			"Category":"Catchments"
+		},
+		{
+            "Layer":"Outline_Stream_Order_4_nUP_Blue",
+			"Label":"Order Blue ",
+			"DataType":"OUTLINE",
+			"FeatureType":"Order",
+			"Category":"Order"
+		},
+		{
+            "Layer":"Outline_Stream_Order_4_nUP_Green",
+			"Label":"Order Green",
+			"DataType":"OUTLINE",
+			"FeatureType":"Order",
+			"Category":"Order"
+
+		},
+		{
+            "Layer":"Outline_Stream_Order_4_nUP_Grey",
+			"Label":"Order Grey ",
+			"DataType":"OUTLINE",
+			"FeatureType":"Order",
+			"Category":"Order"
+		},
+		{
+            "Layer":"Outline_Stream_Order_4_nUP_Red",
+			"Label":"Order Red ",
+			"DataType":"OUTLINE",
+			"FeatureType":"Order",
+			"Category":"Order"
+		}
+
+	],
+	"LAYERS":[
+		{
+			"Layer":"Agriculture_Upstream",
+			"Label":"Agriculture Upstream",
+			"DataType":"UPSTREAM",
+			"FeatureType":"Catchments",
+			"Category":"Land Use"
+		},
+		{
+			"Layer":"Agriculture",
+			"Label":"Percent Agriculture",
+			"DataType":"LOCAL",
+			"FeatureType":"Catchments",
+			"Category":"Land Use"
+		},
+		{
+			"Layer":"Annual_Precipitation_Upstream",
+			"Label":"Annual Precipitation Upstream",
+			"DataType":"UPSTREAM",
+			"FeatureType":"Catchments",
+			"Category":"Climate"
+		},
+		{
+			"Layer":"Annual_Precipitation",
+			"Label":"Annual Precipitation",
+			"DataType":"LOCAL",
+			"FeatureType":"Catchments",
+			"Category":"Climate"
+		},
+		{
+			"Layer":"Annual_Temperature_Maximum_Upstream",
+			"Label":"Annual Temperature Maximum Upstream",
+			"DataType":"UPSTREAM",
+			"FeatureType":"Catchments",
+			"Category":"Climate"
+		},
+		{
+			"Layer":"Annual_Temperature_Maximum",
+			"Label":"Annual Temperature Maximum",
+			"DataType":"LOCAL",
+			"FeatureType":"Catchments",
+			"Category":"Climate"
+		},
+		{
+			"Layer":"Annual_Temperature_Minimum_Upstream",
+			"Label":"Annual Temperature Minimum Upstream",
+			"DataType":"UPSTREAM",
+			"FeatureType":"Catchments",
+			"Category":"Climate"
+		},
+		{
+			"Layer":"Annual_Temperature_Minimum",
+			"Label":"Annual Temperature Minimum",
+			"DataType":"LOCAL",
+			"FeatureType":"Catchments",
+			"Category":"Climate"
+		},
+		{
+			"Layer":"Current_Upstream",
+			"Label":"Current Upstream",
+			"DataType":"UPSTREAM",
+			"FeatureType":"CHRISHELPME"
+		},
+		{
+			"Layer":"Current",
+			"Label":"Current",
+			"DataType":"LOCAL",
+			"FeatureType":"null",
+			"Category":"Observed"
+		},
+		{
+			"Layer":"Deposition_of_Nitrogen_Upstream",
+			"Label":"Deposition of Nitrogen Upstream",
+			"DataType":"UPSTREAM",
+			"FeatureType":"Catchments",
+			"Category":"Climate"
+		},
+		{
+			"Layer":"Deposition_of_Nitrogen",
+			"Label":"Deposition of NO3",
+			"DataType":"LOCAL",
+			"FeatureType":"Catchments",
+			"Category":"Climate"
+		},
+		{
+			"Layer":"Developed_Upstream",
+			"Label":"Developed_Upstream",
+			"DataType":"UPSTREAM",
+			"FeatureType":"Catchments",
+			"Category":"Land Use"
+		},
+		{
+			"Layer":"Developed",
+			"Label":"Developed",
+			"DataType":"LOCAL",
+			"FeatureType":"Catchments",
+			"Category":"Land Use"
+		},
+		{
+			"Layer":"Developed_Not_Open_Upstream",
+			"Label":"Developed Not Open Upstream",
+			"DataType":"UPSTREAM",
+			"FeatureType":"Catchments",
+			"Category":"Land Use"
+		},
+		{
+			"Layer":"Developed_Not_Open",
+			"Label":"Percent Developed (Not Open)",
+			"DataType":"LOCAL",
+			"FeatureType":"Catchments",
+			"Category":"Land Use"
+		},
+		{
+			"Layer":"Drainage_Class_Upstream",
+			"Label":"Drainage Class Upstream",
+			"DataType":"UPSTREAM",
+			"FeatureType":"Catchments",
+			"Category":"Geology"
+		},
+		{
+			"Layer":"Drainage_Class",
+			"Label":"Drainage Class",
+			"DataType":"LOCAL",
+			"FeatureType":"Catchments",
+			"Category":"Geology"
+		},
+		{
+			"Layer":"Fall_Break_Point",
+			"Label":"Fall Breakpoints",
+			"DataType":"LOCAL",
+			"FeatureType":"null",
+			"Category":"Stream Temp"
+		},
+		{
+			"Layer":"Fall_Slope",
+			"Label":"Falling Limb Slope",
+			"DataType":"LOCAL",
+			"FeatureType":"null",
+			"Category":"Stream Temp"
+		},
+		{
+			"Layer":"Forest_Upstream",
+			"Label":"Forest Upstream",
+			"DataType":"UPSTREAM",
+			"FeatureType":"Catchments",
+			"Category":"Land Use"
+		},
+		{
+			"Layer":"Forest",
+			"Label":"Percent Forested",
+			"DataType":"LOCAL",
+			"FeatureType":"Catchments",
+			"Category":"Land Use"
+		},
+		{
+			"Layer":"Herbacious_Upstream",
+			"Label":"Herbacious Upstream",
+			"DataType":"UPSTREAM",
+			"FeatureType":"Catchments",
+			"Category":"Land Use"
+		},
+		{
+			"Layer":"Herbacious",
+			"Label":"Percent Herbacious",
+			"DataType":"LOCAL",
+			"FeatureType":"Catchments",
+			"Category":"Land Use"
+		},
+		{
+			"Layer":"Herbacious_or_Agriculture_Upstream",
+			"Label":"Herbacious or Agriculture Upstream",
+			"DataType":"UPSTREAM",
+			"FeatureType":"Catchments",
+			"Category":"Land Use"
+		},
+		{
+			"Layer":"Herbacious_or_Agriculture",
+			"Label":"Percent Herbacious or Agriculture",
+			"DataType":"LOCAL",
+			"FeatureType":"Catchments",
+			"Category":"Land Use"
+		},
+		{
+			"Layer":"Impervious_Upstream",
+			"Label":"Impervious Upstream",
+			"DataType":"UPSTREAM",
+			"FeatureType":"Catchments",
+			"Category":"Land Use"
+		},
+		{
+			"Layer":"Impervious",
+			"Label":"Percent Impervious",
+			"DataType":"LOCAL",
+			"FeatureType":"Catchments",
+			"Category":"Land Use"
+		},
+		{
+			"Layer":"Max_Temperature_Probability_30",
+			"Label":"Max Temperature Probability 30",
+			"DataType":"LOCAL",
+			"FeatureType":"null",
+			"Category":"Resilience"
+		},
+		{
+			"Layer":"Max_Temperature_Probability_50",
+			"Label":"Max Temperature Probability 50",
+			"DataType":"LOCAL",
+			"FeatureType":"null",
+			"Category":"Resilience"
+		},
+		{
+			"Layer":"Max_Temperature_Probability_70",
+			"Label":"Max Temperature Probability 70",
+			"DataType":"LOCAL",
+			"FeatureType":"null",
+			"Category":"Resilience"
+		},
+		{
+			"Layer":"Number_Observations",
+			"Label":"Number of Observations",
+			"DataType":"LOCAL",
+			"FeatureType":"null",
+			"Category":"Stream Flow"
+		},
+		{
+			"Layer":"flow_pred_hw_01_2014",
+			"Label":"Mean Annual Flow",
+			"DataType":"LOCAL",
+			"FeatureType":"null",
+			"Category":"Stream Flow"
+		},
+		{
+			"Layer":"Number_of_Observations",
+			"Label":"Number of Days with Observations",
+			"DataType":"LOCAL",
+			"FeatureType":"null",
+			"Category":"Stream Temp"
+		},
+		{
+			"Layer":"Occupancy",
+			"Label":"Occupancy",
+			"DataType":"LOCALM",
+			"FeatureType":"CHRISHELPME"
+		},
+		{
+			"Layer":"Plus_20",
+			"Label":"Plus 20",
+			"DataType":"LOCAL",
+			"FeatureType":"null",
+			"Category":"Probability"
+		},
+		{
+			"Layer":"Plus_40",
+			"Label":"Plus 40",
+			"DataType":"LOCAL",
+			"FeatureType":"null",
+			"Category":"Probability"
+		},
+		{
+			"Layer":"Plus_60",
+			"Label":"Plus 60",
+			"DataType":"LOCAL",
+			"FeatureType":"null",
+			"Category":"Probability"
+		},
+		{
+			"Layer":"Presence_Absence",
+			"Label":"Presence/Absence",
+			"DataType":"LOCAL",
+			"FeatureType":"null",
+			"Category":"Observed"
+		},
+		{
+			"Layer":"Reach_Length_in_Kilometers_Upstream",
+			"Label":"Reach_Length_in_Kilometers_Upstream",
+			"DataType":"UPSTREAM",
+			"FeatureType":"Catchments",
+			"Category":"Topography"
+		},
+		{
+			"Layer":"Reach_Length_in_Kilometers",
+			"Label":"Reach Length",
+			"DataType":"LOCAL",
+			"FeatureType":"Catchments",
+			"Category":"Topography"
+		},
+		{
+			"Layer":"Reach_Slope_Upstream",
+			"Label":"Reach Slope Upstream",
+			"DataType":"UPSTREAM",
+			"FeatureType":"Catchments",
+			"Category":"Topography"
+		},
+		{
+			"Layer":"Reach_Slope",
+			"Label":"Reach Slope",
+			"DataType":"LOCAL",
+			"FeatureType":"Catchments",
+			"Category":"Topography"
+		},
+		{
+			"Layer":"Rise_Slope",
+			"Label":"Rising Limb Slope",
+			"DataType":"LOCAL",
+			"FeatureType":"null",
+			"Category":"Stream Temp"
+		},
+		{
+			"Layer":"Sulfate_Deposition_Upstream",
+			"Label":"Sulfate Deposition Upstream",
+			"DataType":"UPSTREAM",
+			"FeatureType":"Catchments",
+			"Category":"Climate"
+		},
+		{
+			"Layer":"Sulfate_Deposition",
+			"Label":"Deposition of SO4",
+			"DataType":"LOCAL",
+			"FeatureType":"Catchments",
+			"Category":"Climate"
+		},
+		{
+			"Layer":"Spring_Break_Point",
+			"Label":"Spring Breakoints",
+			"DataType":"LOCAL",
+			"FeatureType":"null",
+			"Category":"Stream Temp"
+		},
+		{
+			"Layer":"Summer_Break_Point",
+			"Label":"Summer Breakoints",
+			"DataType":"LOCAL",
+			"FeatureType":"null",
+			"Category":"Stream Temp"
+		},
+		{
+			"Layer":"Surficial_Courseness_Upstream",
+			"Label":"Surficial Courseness Upstream",
+			"DataType":"UPSTREAM",
+			"FeatureType":"Catchments"
+		},
+		{
+			"Layer":"Surficial_Courseness",
+			"Label":"Surficial Courseness",
+			"DataType":"LOCAL",
+			"FeatureType":"Catchments"
+		},
+		{
+			"Layer":"Sync_Range",
+			"Label":"Synchronized Temperature Range",
+			"DataType":"LOCAL",
+			"FeatureType":"null",
+			"Category":"Stream Temp"
+		},
+		{
+			"Layer":"Total_Drainage_Area_in_Square_Kilometers_Upstream",
+			"Label":"Total Drainage Area in Square Kilometers Upstream",
+			"DataType":"UPSTREAM",
+			"FeatureType":"Catchments",
+			"Category":"Topography"
+		},
+		{
+			"Layer":"Total_Drainage_Area_in_Square_Kilometers",
+			"Label":"Total Drainage Area in Square Kilometers",
+			"DataType":"LOCAL",
+			"FeatureType":"Catchments",
+			"Category":"Topography"
+		},
+		{
+			"Layer":"Percent_Undeveloped_Forest_Upstream",
+			"Label":"Percent Undeveloped Forest Upstream",
+			"DataType":"UPSTREAM",
+			"FeatureType":"Catchments",
+			"Category":"Land Use"
+		},
+		{
+			"Layer":"Percent_Undeveloped_Forest",
+			"Label":"Percent Undeveloped Forested",
+			"DataType":"LOCAL",
+			"FeatureType":"Catchments",
+			"Category":"Land Use"
+		},
+		{
+			"Layer":"Upstream_Drainage_Area",
+			"Label":"Upstream Drainage Area",
+			"DataType":"LOCAL",
+			"FeatureType":"CHRISHELPME",
+			"Category":"Geology"
+		},
+		{
+			"Layer":"Water_Upstream",
+			"Label":"Water Upstream",
+			"DataType":"UPSTREAM",
+			"FeatureType":"Catchments",
+			"Category":"Land Use"
+		},
+		{
+			"Layer":"Water",
+			"Label":"Percent Open Water",
+			"DataType":"LOCAL",
+			"FeatureType":"Catchments",
+			"Category":"Land Use"
+		},
+		{
+			"Layer":"Wetland_Upstream",
+			"Label":"Wetland Upstream",
+			"DataType":"UPSTREAM",
+			"FeatureType":"Catchments",
+			"Category":"Land Use"
+		},
+		{
+			"Layer":"Wetland",
+			"Label":"Percent Wetland",
+			"DataType":"LOCAL",
+			"FeatureType":"Catchments",
+			"Category":"Land Use"
+		},
+		{
+			"Layer":"Winter_Precipitation_in_Millimeters_Upstream",
+			"Label":"Winter Precipitation in Millimeters Upstream ",
+			"DataType":"UPSTREAM",
+			"FeatureType":"Catchments",
+			"Category":"Climate"
+		},
+		{
+			"Layer":"Winter_Precipitation_in_Millimeters",
+			"Label":"Winter Precipitation",
+			"DataType":"LOCAL",
+			"FeatureType":"Catchments",
+			"Category":"Climate"
+		}
+
+	],
+	
+	"CATEGORIES":{
+		"BASIN":[
+			"Climate",
+			"Land Use",
+			"Geology",
+			"Topography"
+		],
+		
+		"STREAM":[
+			"Stream Flow",
+			"Stream Temp"
+		],
+		
+		"FISH":[
+			"Brook Trout Occupancy_LABEL",
+			"Observed",
+			"Probability",
+			"Resilience"
+		]
+	}
 
 }
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

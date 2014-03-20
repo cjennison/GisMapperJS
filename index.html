@@ -5,17 +5,23 @@
 			GisMapper Initializing..
 		</title>
 		
+		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<!-- Required Libraries -->
 		<script src="http://code.jquery.com/jquery-2.0.3.min.js"> </script>
  		<script src="http://codeorigin.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
     	<script src="http://ol3js.org/en/master/build/ol.js" type="text/javascript"></script>
  		<script src='./components/bootstrap.min.js' type='text/javascript'></script>
  		<script src='./components/jquery_download.js' type='text/javascript'></script>
- 		<!-- LOADER FILE -->
+		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script> 		
+
+		<!-- LOADER FILE -->
         <script data-main="./config/configuration" src="./library/require.js"></script>
  		
- 		
+ 		<link rel='stylesheet' href='./components/ol.css' />
+ 		<link rel='stylesheet' href='./style/gismappercss/gismapper.css' />
  		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+ 		
+ 		
  		
  		<style>
  			#gismap-logo{
@@ -30,6 +36,16 @@
  			}
  			
  		</style>
+ 		
+ 		<script>
+	 		window.addEventListener("load",function() {
+				// Set a timeout...
+				setTimeout(function(){
+					// Hide the address bar!
+					window.scrollTo(0, 1);
+				}, 0);
+			});
+		</script>
 	</head>
 	<body>
 		<div id='gismap-logo'>

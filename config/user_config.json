@@ -10,7 +10,13 @@
 			"incoming_projection":"EPSG:4326",
 			"sources":[
 				"layercontrol",
-				"layer"
+				"layer",
+				"tools",
+				"user",
+				"data",
+				"nalcc_models",
+				"basemaps",
+				"interface"
 			
 			],
 			"partner_sources":[
@@ -38,7 +44,8 @@
 				"UPSTREAM":3
 			},
 			
-			"UNIQUE_LAYERS":[3]
+			"UNIQUE_LAYERS":[3],
+			"PARTNER_LAYERS":[3]
 			
 		},
 		

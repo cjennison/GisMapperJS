@@ -3,7 +3,7 @@
 	
 	},
 	
-	"maxTprob30":{
+	"Max_Temperature_Probability_30":{
 		"property_name":"maxTprob30",
 		"property_label":"Temperature Increase Tolerated",
 		"property_sublabel":"Target 30% Probability Occurrence",
@@ -92,7 +92,7 @@
 		]
 	},
 	
-	"maxTprob50":{
+	"Max_Temperature_Probability_50":{
 		"property_name":"maxTprob50",
 		"property_label":"Temperature Increase Tolerated",
 		"property_sublabel":"Target 50% Probability Occurrence",
@@ -181,7 +181,7 @@
 		]
 	},
 	
-	"maxTprob70":{
+	"Max_Temperature_Probability_70":{
 		"property_name":"maxTprob70",
 		"property_label":"Temperature Increase Tolerated",
 		"property_sublabel":"Target 70% Probability Occurrence",
@@ -270,7 +270,7 @@
 		]
 	},
 	
-	"current":{
+	"Current":{
 		"property_name":"current",
 		"property_label":"Probability of Brook Trout Occupancy",
 		"property_sublabel":"Historic Conditions",
@@ -367,7 +367,7 @@
 		]
 	},
 	
-	"plus20":{
+	"Plus_20":{
 		"property_name":"plus20",
 		"property_label":"Probability of Brook Trout Occupancy",
 		"property_sublabel":"Under 2&degC Temperature Increase",
@@ -464,7 +464,7 @@
 		]
 	},
 	
-	"plus40":{
+	"Plus_40":{
 		"property_name":"plus40",
 		"property_label":"Probability of Brook Trout Occupancy",
 		"property_sublabel":"Under 4&degC Temperature Increase",
@@ -561,7 +561,7 @@
 		]
 	},
 	
-	"plus60":{
+	"Plus_60":{
 		"property_name":"plus60",
 		"property_label":"Probability of Brook Trout Occupancy",
 		"property_sublabel":"Under 6&degC Temperature Increase",
@@ -852,7 +852,7 @@
 		]
 	},
 	
-	"Reach_Slop":{
+	"Reach_Slope":{
 		"property_name":"Reach_Slop",
 		"property_label":"Reach Slope",
 		"property_sublabel":"",
@@ -957,7 +957,7 @@
 		]
 	},
 	
-	"TotDASqKM":{
+	"Total_Drainage_Area_in_Square_Kilometers":{
 		"property_name":"TotDASqKM",
 		"property_label":"Total Drainage Area Square Kilometers",
 		"property_sublabel":"Kilometers<sup>2</sup>",
@@ -1038,7 +1038,7 @@
 		]
 	},
 	
-	"UpstreamDA":{
+	"Upstream_Drainage_Area":{
 		"property_name":"UpstreamDA",
 		"property_label":"Upstream Area Square Kilometers",
 		"property_sublabel":"",
@@ -1119,7 +1119,7 @@
 		]
 	},
 	
-	"Annual_Pre":{
+	"Annual_Precipitation":{
 		"property_name":"AnnPrcpMM",
 		"property_label":"Annual Precipitation",
 		"property_sublabel":"Millimeters",
@@ -1418,7 +1418,7 @@
 		]
 	},
 	
-	"Annual_Tma":{
+	"Annual_Temperature_Maximum":{
 		"property_name":"AnnTmaxC",
 		"property_label":"Annual Max Temperature",
 		"property_sublabel":"Centigrade",
@@ -1555,7 +1555,7 @@
 		]
 	},
 	
-	"Annual_Tmi":{
+	"Annual_Temperature_Minimum":{
 		"property_name":"AnnTminC",
 		"property_label":"Annual Minimum Temperature",
 		"property_sublabel":"Centigrade",
@@ -1692,7 +1692,7 @@
 		]
 	},
 	
-	"Drainage_C":{
+	"Drainage_Class":{
 		"property_name":"Drainage_C",
 		"property_label":"Soil Drainage Class",
 		"property_sublabel":"",
@@ -1759,7 +1759,7 @@
 		]
 	},
 	
-	"herbacious":{
+	"Herbacious":{
 		"property_name":"herbacious",
 		"property_label":"Percent Herbacious",
 		"property_sublabel":"",
@@ -1953,7 +1953,7 @@
 		]
 	},
 	
-	"developed":{
+	"Developed":{
 		"property_name":"developed",
 		"property_label":"Percent Developed",
 		"property_sublabel":"",
@@ -2050,7 +2050,7 @@
 		]
 	},
 	
-	"impervious":{
+	"Impervious":{
 		"property_name":"impervious",
 		"property_label":"Percent Impervious",
 		"property_sublabel":"",
@@ -2147,7 +2147,7 @@
 		]
 	},
 	
-	"PresenceAb":{
+	"Presence_Absence":{
 		"property_name":"PresenceAb",
 		"property_label":"Presence and Absence",
 		"property_sublabel":"",
@@ -2172,7 +2172,7 @@
 		]
 	},
 	
-	"WntrPrcpMM":{
+	"Winter_Precipitation_in_Millimeters":{
 		"property_name":"WntrPrcpMM",
 		"property_label":"Winter Precipitation",
 		"property_sublabel":"Millimeters",
@@ -2278,7 +2278,7 @@
 		]
 	},
 	
-	"so4_dep":{
+	"Sulfate_Deposition":{
 		"property_name":"dep_so4",
 		"property_label":"Atmospheric Deposition of SO4",
 		"property_sublabel":"Kilograms per Hectare",
@@ -2368,7 +2368,7 @@
 		]
 	},
 	
-	"dep_no3":{
+	"Deposition_of_Nitrogen":{
 		"property_name":"dep_no3",
 		"property_label":"Atmospheric Deposition of NO3",
 		"property_sublabel":"Kilograms per Hectare",
@@ -2555,7 +2555,7 @@
 		]
 	},
 	
-	"SurfCrseC":{
+	"Surficial_Courseness":{
 		"property_name":"SurfCrseC",
 		"property_label":"Surficial Coarseness",
 		"property_sublabel":"",
@@ -2652,7 +2652,7 @@
 		]
 	},
 	
-	"RchLngthKM":{
+	"Reach_Length_in_Kilometers":{
 		"property_name":"RchLngthKM",
 		"property_label":"Stream Reach Length",
 		"property_sublabel":"Kilometers",
@@ -2758,7 +2758,7 @@
 		]
 	},
 	
-	"HerbOrAg":{
+	"Herbacious_or_Agriculture":{
 		"property_name":"HerbOrAg",
 		"property_label":"Percent Herbacious or Agricultural",
 		"property_sublabel":"",
@@ -2855,7 +2855,7 @@
 		]
 	},
 	
-	"DevNotOpen":{
+	"Developed_Not_Open":{
 		"property_name":"DevNotOpen",
 		"property_label":"Percent Developed Not Open",
 		"property_sublabel":"",
@@ -2954,7 +2954,7 @@
 		
 	},
 	
-	"UndevForst":{
+	"Percent_Undeveloped_Forest":{
 		"property_name":"UndevForst",
 		"property_label":"Percent Undeveloped Forested",
 		"property_sublabel":"",
@@ -3051,7 +3051,7 @@
 		]
 	},
 	
-	"FallBP":{
+	"Fall_Break_Point":{
 		"property_name":"FallBP",
 		"property_label":"Fall BP",
 		"property_sublabel":"",
@@ -3092,7 +3092,7 @@
 		]
 	},
 	
-	"SpringBP":{
+	"Spring_Break_Point":{
 		"property_name":"SpringBP",
 		"property_label":"Spring BP",
 		"property_sublabel":"",
@@ -3133,7 +3133,7 @@
 		]
 	},
 	
-	"SummerBP":{
+	"Summer_Break_Point":{
 		"property_name":"SummerBP",
 		"property_label":"Summer BP",
 		"property_sublabel":"",
@@ -3174,7 +3174,7 @@
 		]
 	},
 	
-	"FallSlope":{
+	"Fall_Slope":{
 		"property_name":"FallSlope",
 		"property_label":"Falling Temperature Slope",
 		"property_sublabel":"",
@@ -3224,7 +3224,7 @@
 		]
 	},
 	
-	"RiseSlope":{
+	"Rise_Slope":{
 		"property_name":"RiseSlope",
 		"property_label":"Rising Temperature Slope",
 		"property_sublabel":"",
@@ -3274,7 +3274,7 @@
 		]
 	},
 	
-	"SyncRange":{
+	"Sync_Range":{
 		"property_name":"SyncRange",
 		"property_label":"Synchronized Temperature Range",
 		"property_sublabel":"",
@@ -3324,7 +3324,7 @@
 		]
 	},
 	
-	"num_obs":{
+	"Number_Observations":{
 		"property_name":"num_obs",
 		"property_label":"Number of Observations",
 		"property_sublabel":"Day of Year",
@@ -3391,7 +3391,7 @@
 		]
 	},
 	
-	"Number_of_":{
+	"Number_of_Observations":{
 		"property_name":"Number_of_",
 		"property_label":"Number of Days with Observations",
 		"property_sublabel":"Days",
@@ -3458,7 +3458,7 @@
 		]
 	},
 	
-	"prd_flw":{
+	"flow_pred_hw_01_2014":{
 		"property_name":"prd_flw",
 		"property_label":"Mean Annual Flow",
 		"property_sublabel":"",
