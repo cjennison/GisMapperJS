@@ -3054,38 +3054,46 @@
 	"Fall_Break_Point":{
 		"property_name":"FallBP",
 		"property_label":"Fall BP",
-		"property_sublabel":"",
+		"property_sublabel":"Days of Year",
 		"rules":[
 			{
 				"min":null,
-				"max":320,
+				"max":200,
 				"equal_to":"max",
-				"fill":"#D6D6FF",
-				"label":"less than 320",
+				"fill":"#b6edf0",
+				"label":"less than 200",
 				"stroke":null
 			},
 			{
-				"min":320,
-				"max":330,
+				"min":200,
+				"max":250,
 				"equal_to":"max",
-				"fill":"#7B88DB",
-				"label":"320 - 330",
+				"fill":"#74b4e8",
+				"label":"200 - 250",
 				"stroke":null
 			},
 			{
-				"min":330,
-				"max":340,
+				"min":250,
+				"max":300,
 				"equal_to":"max",
-				"fill":"#3357B8",
-				"label":"330 - 340",
+				"fill":"#1f83e0",
+				"label":"250 - 300",
 				"stroke":null
 			},
 			{
-				"min":340,
-				"max":375,
+				"min":300,
+				"max":350,
 				"equal_to":"max",
-				"fill":"#003994",
-				"label":"340 - 375",
+				"fill":"#1d44b8",
+				"label":"300 - 350",
+				"stroke":null
+			},
+			{
+				"min":350,
+				"max":500,
+				"equal_to":"max",
+				"fill":"#090991",
+				"label":"greater than 350",
 				"stroke":null
 			}
 		
@@ -3095,38 +3103,46 @@
 	"Spring_Break_Point":{
 		"property_name":"SpringBP",
 		"property_label":"Spring BP",
-		"property_sublabel":"",
+		"property_sublabel":"Days of Week",
 		"rules":[
 			{
 				"min":null,
-				"max":40,
-				"equal_to":"max",
-				"fill":"#D6D6FF",
-				"label":"less than 40",
-				"stroke":null
-			},
-			{
-				"min":40,
 				"max":55,
 				"equal_to":"max",
-				"fill":"#7B88DB",
-				"label":"40 - 55",
+				"fill":"#b6edf0",
+				"label":"less than 55",
 				"stroke":null
 			},
 			{
 				"min":55,
+				"max":60,
+				"equal_to":"max",
+				"fill":"#74b4e8",
+				"label":"55 - 60",
+				"stroke":null
+			},
+			{
+				"min":60,
+				"max":65,
+				"equal_to":"max",
+				"fill":"#1f83e0",
+				"label":"60 - 65",
+				"stroke":null
+			},
+			{
+				"min":65,
 				"max":70,
 				"equal_to":"max",
-				"fill":"#3357B8",
-				"label":"55 - 70",
+				"fill":"#1d44b8",
+				"label":"65 - 70",
 				"stroke":null
 			},
 			{
 				"min":70,
 				"max":100,
 				"equal_to":"max",
-				"fill":"#003994",
-				"label":"greater than 70",
+				"fill":"#090991",
+				"label":"70 - 90",
 				"stroke":null
 			}
 		
@@ -3140,34 +3156,42 @@
 		"rules":[
 			{
 				"min":null,
-				"max":190,
+				"max":55,
 				"equal_to":"max",
-				"fill":"#D6D6FF",
-				"label":"less than 190",
+				"fill":"#b6edf0",
+				"label":"less than 175",
 				"stroke":null
 			},
 			{
-				"min":190,
-				"max":200,
+				"min":55,
+				"max":60,
 				"equal_to":"max",
-				"fill":"#7B88DB",
-				"label":"190 - 200",
+				"fill":"#74b4e8",
+				"label":"175 - 185",
 				"stroke":null
 			},
 			{
-				"min":200,
-				"max":210,
+				"min":60,
+				"max":65,
 				"equal_to":"max",
-				"fill":"#3357B8",
-				"label":"200 - 210",
+				"fill":"#1f83e0",
+				"label":"185 - 195",
 				"stroke":null
 			},
 			{
-				"min":210,
-				"max":300,
+				"min":65,
+				"max":70,
 				"equal_to":"max",
-				"fill":"#003994",
-				"label":"greater than 210",
+				"fill":"#1d44b8",
+				"label":"195 - 205",
+				"stroke":null
+			},
+			{
+				"min":70,
+				"max":100,
+				"equal_to":"max",
+				"fill":"#090991",
+				"label":"greater than 205",
 				"stroke":null
 			}
 		
@@ -3183,40 +3207,49 @@
 				"min":null,
 				"max":0,
 				"equal_to":"max",
-				"fill":"#D6D6FF",
+				"fill":"#FFFFFF",
 				"label":"NA",
 				"stroke":null
 			},
 			{
 				"min":0,
-				"max":0.60,
+				"max":0.4,
 				"equal_to":"max",
-				"fill":"#8F97E3",
-				"label":"less than 0.60",
+				"fill":"#b6edf0",
+				"label":"less than 0.40",
 				"stroke":null
 			},
 			{
-				"min":0.60,
-				"max":0.65,
+				"min":0.4,
+				"max":0.5,
 				"equal_to":"max",
-				"fill":"#556CC9",
-				"label":"0.60 - 0.65",
+				"fill":"#74b4e8",
+				"label":"0.40 - 0.50",
 				"stroke":null
 			},
 			{
-				"min":0.65,
-				"max":0.70,
+				"min":0.5,
+				"max":0.6,
 				"equal_to":"max",
-				"fill":"#244EAD",
-				"label":"0.65 - 0.70",
+				"fill":"#1f83e0",
+				"label":"0.50 - 0.60",
 				"stroke":null
 			},
 			
 			{
-				"min":0.70,
-				"max":10,
+				"min":0.6,
+				"max":0.7,
 				"equal_to":"max",
-				"fill":"#003994",
+				"fill":"#1d44b8",
+				"label":"0.60 - 0.70",
+				"stroke":null
+			},
+			
+			{
+				"min":0.7,
+				"max":1.0,
+				"equal_to":"max",
+				"fill":"#090991",
 				"label":"greater than 0.70",
 				"stroke":null
 			}
@@ -3233,41 +3266,50 @@
 				"min":null,
 				"max":0,
 				"equal_to":"max",
-				"fill":"#D6D6FF",
+				"fill":"#FFFFFF",
 				"label":"NA",
 				"stroke":null
 			},
 			{
 				"min":0,
-				"max":0.65,
+				"max":0.4,
 				"equal_to":"max",
-				"fill":"#8F97E3",
-				"label":"less than 0.65",
+				"fill":"#b6edf0",
+				"label":"less than 0.40",
 				"stroke":null
 			},
 			{
-				"min":0.65,
-				"max":0.70,
+				"min":0.4,
+				"max":0.5,
 				"equal_to":"max",
-				"fill":"#556CC9",
-				"label":"0.65 - 0.70",
+				"fill":"#74b4e8",
+				"label":"0.40 - 0.50",
 				"stroke":null
 			},
 			{
-				"min":0.70,
-				"max":0.75,
+				"min":0.5,
+				"max":0.6,
 				"equal_to":"max",
-				"fill":"#244EAD",
-				"label":"0.70 - 0.75",
+				"fill":"#1f83e0",
+				"label":"0.50 - 0.60",
 				"stroke":null
 			},
 			
 			{
-				"min":0.75,
-				"max":10,
+				"min":0.6,
+				"max":0.7,
 				"equal_to":"max",
-				"fill":"#003994",
-				"label":"0.75 - 1.0",
+				"fill":"#1d44b8",
+				"label":"0.60 - 0.70",
+				"stroke":null
+			},
+			
+			{
+				"min":0.7,
+				"max":1.0,
+				"equal_to":"max",
+				"fill":"#090991",
+				"label":"greater than 0.70",
 				"stroke":null
 			}
 		
@@ -3277,47 +3319,311 @@
 	"Sync_Range":{
 		"property_name":"SyncRange",
 		"property_label":"Synchronized Temperature Range",
+		"property_sublabel":"Days",
+		"rules":[
+			{
+				"min":null,
+				"max":0,
+				"equal_to":"max",
+				"fill":"#FFFFFF",
+				"label":"Never Synchronized",
+				"stroke":null
+			},
+			{
+				"min":0,
+				"max":100,
+				"equal_to":"max",
+				"fill":"#b6edf0",
+				"label":"less than 100",
+				"stroke":null
+			},
+			{
+				"min":100,
+				"max":150,
+				"equal_to":"max",
+				"fill":"#81c0eb",
+				"label":"100 - 150",
+				"stroke":null
+			},
+			{
+				"min":150,
+				"max":200,
+				"equal_to":"max",
+				"fill":"#4695e3",
+				"label":"150 - 200",
+				"stroke":null
+			},
+			
+			{
+				"min":200,
+				"max":250,
+				"equal_to":"max",
+				"fill":"#216bd1",
+				"label":"200 - 250",
+				"stroke":null
+			},
+			{
+				"min":250,
+				"max":300,
+				"equal_to":"max",
+				"fill":"#1c3ab0",
+				"label":"250 - 300",
+				"stroke":null
+			},
+			{
+				"min":300,
+				"max":1000,
+				"equal_to":"max",
+				"fill":"#0a0a91",
+				"label":"greater than 300",
+				"stroke":null
+			}
+		
+		]
+	},
+	
+	"Rising_Slope_CL":{
+		"property_name":"RisingCL",
+		"property_label":"Rising Slope CI",
 		"property_sublabel":"",
 		"rules":[
 			{
 				"min":null,
 				"max":0,
 				"equal_to":"max",
-				"fill":"#D6D6FF",
-				"label":"Never Synchronized",
+				"fill":"#FFFFFF",
+				"label":"NA",
 				"stroke":null
 			},
 			{
 				"min":0,
-				"max":265,
+				"max":0.025,
 				"equal_to":"max",
-				"fill":"#8F97E3",
-				"label":"less than 265",
+				"fill":"#b6edf0",
+				"label":"less than 0.050",
 				"stroke":null
 			},
 			{
-				"min":265,
-				"max":285,
+				"min":0.025,
+				"max":0.050,
 				"equal_to":"max",
-				"fill":"#556CC9",
-				"label":"265 - 285",
+				"fill":"#81c0eb",
+				"label":"0.050 - 0.075",
 				"stroke":null
 			},
 			{
-				"min":285,
-				"max":305,
+				"min":0.050,
+				"max":0.075,
 				"equal_to":"max",
-				"fill":"#244EAD",
-				"label":"285 - 305",
+				"fill":"#4695e3",
+				"label":"0.075 - 0.100",
 				"stroke":null
 			},
 			
 			{
-				"min":305,
+				"min":0.075,
+				"max":0.100,
+				"equal_to":"max",
+				"fill":"#216bd1",
+				"label":"0.100 - 0.125",
+				"stroke":null
+			},
+			{
+				"min":0.100,
+				"max":0.150,
+				"equal_to":"max",
+				"fill":"#1c3ab0",
+				"label":"greater than 0.100",
+				"stroke":null
+			}
+		
+		]
+	},
+	
+	"Falling_Slope_CL":{
+		"property_name":"Falling_Slope_CL",
+		"property_label":"Falling Slope CI",
+		"property_sublabel":"",
+		"rules":[
+			{
+				"min":null,
+				"max":0,
+				"equal_to":"max",
+				"fill":"#FFFFFF",
+				"label":"NA",
+				"stroke":null
+			},
+			{
+				"min":0,
+				"max":0.050,
+				"equal_to":"max",
+				"fill":"#b6edf0",
+				"label":"less than 0.050",
+				"stroke":null
+			},
+			{
+				"min":0.050,
+				"max":0.075,
+				"equal_to":"max",
+				"fill":"#81c0eb",
+				"label":"0.050 - 0.075",
+				"stroke":null
+			},
+			{
+				"min":0.075,
+				"max":0.100,
+				"equal_to":"max",
+				"fill":"#4695e3",
+				"label":"0.075 - 0.100",
+				"stroke":null
+			},
+			
+			{
+				"min":0.100,
+				"max":0.125,
+				"equal_to":"max",
+				"fill":"#216bd1",
+				"label":"0.100 - 0.125",
+				"stroke":null
+			},
+			{
+				"min":0.125,
+				"max":0.150,
+				"equal_to":"max",
+				"fill":"#1c3ab0",
+				"label":"0.125 - 0.150",
+				"stroke":null
+			},
+			{
+				"min":0.150,
 				"max":1000,
 				"equal_to":"max",
-				"fill":"#003994",
-				"label":"greater than 305",
+				"fill":"#0a0a91",
+				"label":"greater than 0.150",
+				"stroke":null
+			}
+		
+		]
+	},
+	
+	"Summer_Max_Temp":{
+		"property_name":"Summer_Max_Temp",
+		"property_label":"Summer Max Temperature",
+		"property_sublabel":"",
+		"rules":[
+			{
+				"min":null,
+				"max":0,
+				"equal_to":"max",
+				"fill":"#FFFFFF",
+				"label":"NA",
+				"stroke":null
+			},
+			{
+				"min":0,
+				"max":0,
+				"equal_to":"max",
+				"fill":"#b6edf0",
+				"label":"less than 0",
+				"stroke":null
+			},
+			{
+				"min":0,
+				"max":10,
+				"equal_to":"max",
+				"fill":"#81c0eb",
+				"label":"0 - 10",
+				"stroke":null
+			},
+			{
+				"min":0.50,
+				"max":0.75,
+				"equal_to":"max",
+				"fill":"#4695e3",
+				"label":"10 - 15",
+				"stroke":null
+			},
+			
+			{
+				"min":0.75,
+				"max":0.100,
+				"equal_to":"max",
+				"fill":"#216bd1",
+				"label":"15 - 20",
+				"stroke":null
+			},
+			{
+				"min":0.75,
+				"max":0.100,
+				"equal_to":"max",
+				"fill":"#214AD1",
+				"label":"20 - 25",
+				"stroke":null
+			},
+			{
+				"min":0.100,
+				"max":0.150,
+				"equal_to":"max",
+				"fill":"#1c3ab0",
+				"label":"greater than 25",
+				"stroke":null
+			}
+		
+		]
+	},
+	
+	"Summer_Max_Temp_CL":{
+		"property_name":"Summer_Max_Temp_CL",
+		"property_label":"Summer Max Temperature CI",
+		"property_sublabel":"",
+		"rules":[
+			{
+				"min":null,
+				"max":0,
+				"equal_to":"max",
+				"fill":"#FFFFFF",
+				"label":"NA",
+				"stroke":null
+			},
+			{
+				"min":0,
+				"max":0.25,
+				"equal_to":"max",
+				"fill":"#b6edf0",
+				"label":"less than 0.25",
+				"stroke":null
+			},
+			{
+				"min":0.25,
+				"max":0.50,
+				"equal_to":"max",
+				"fill":"#81c0eb",
+				"label":"0.25 - 0.50",
+				"stroke":null
+			},
+			{
+				"min":0.50,
+				"max":0.75,
+				"equal_to":"max",
+				"fill":"#4695e3",
+				"label":"0.50 - 0.75",
+				"stroke":null
+			},
+			
+			{
+				"min":0.75,
+				"max":0.100,
+				"equal_to":"max",
+				"fill":"#216bd1",
+				"label":"0.75 - 1.00",
+				"stroke":null
+			},
+			{
+				"min":0.100,
+				"max":0.150,
+				"equal_to":"max",
+				"fill":"#1c3ab0",
+				"label":"greater than 1.00",
 				"stroke":null
 			}
 		
@@ -3458,7 +3764,7 @@
 		]
 	},
 	
-	"flow_pred_hw_01_2014":{
+	"flow_pred_hw_03_2014":{
 		"property_name":"prd_flw",
 		"property_label":"Mean Annual Flow",
 		"property_sublabel":"",

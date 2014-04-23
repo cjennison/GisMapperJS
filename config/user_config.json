@@ -26,7 +26,8 @@
 			"CSSFiles":[
 				"bootstrap.min.css",
 				"main.css",
-				"ui.css"
+				"ui.css",
+				"data.css"
 			],
 			
 			"LOAD_COORDINATES":[

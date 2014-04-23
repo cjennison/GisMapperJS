@@ -99,7 +99,7 @@ var User = {
 		
 		//TODO: This is really bad.. dont do this.. fix it please
 		setTimeout(function(){
-			vectorLayer.e.visible = false;		
+			vectorLayer.f.visible = false;		
 			vectorLayer.IDENTIFICATION = id;
 			GisMap.Map.map.addLayer(vectorLayer);
 			User.basin_layers.push(vectorLayer);
@@ -119,7 +119,7 @@ var User = {
 		for(var b in User.basin_layers){
 			//console.log(User.basin_layers[b].IDENTIFICATION);
 			if(User.basin_layers[b].IDENTIFICATION == id){
-				User.basin_layers[b].e.visible = $(el).prop('checked');
+				User.basin_layers[b].f.visible = $(el).prop('checked');
 				GisMap.Map.map.render();
 				break;
 			}

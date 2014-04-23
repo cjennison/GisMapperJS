@@ -216,6 +216,32 @@ function STARTAPPLICATION() {
 	});
 	*/	
 	
+	
+	
+	GisMap.Tasks.push(function(cb){
+		if(localStorage.beenHereBefore != "true"){
+			//localStorage.setItem("beenHereBefore", 'true'); //TODO: REMOVE WHEN READY
+			console.log("So you are new here?");
+			//spawnWelcomePage();
+			
+		}
+		
+		
+		
+		cb();
+	});
+	
+}
+
+
+function spawnWelcomePage(){
+	var welcome = $("<div class='jumbotron welcome'><h1>Welcome!</h1><h6>To the NALCC/DECSC Web Mapping Application.</h6><p>This is a paragraph that contains things that I would imagine are somewhat helpful to understanding what the silly application is. Perhaps if one read this paragraph that would be able to decipher the uses of the application, or perhaps view a tutorial. Now that would be something, wouldn't it?'</div>");
+	
+	//$(welcome)
+	
+	
+	$("body").append(welcome);
+	
 }
 
 //This is a legend disabled via the button
@@ -258,13 +284,15 @@ function buildPanelDropdowns(){
 				var id = lay.Layer.split("_");
 				if(id[id.length-1] == "Upstream") break;
 				
-				basinSubs[sub].list.push("<li data-layer='" + lay.Layer + "' data-type='" + lay.DataType + "' data-id='"+ lay.FeatureType +"'  onclick='AppLayer.generateLayer(this)'>" + lay.Label + "</li>")
+				var li = "<li draggable='true' data-layer='" + lay.Layer + "' data-type='" + lay.DataType + "' data-id='"+ lay.FeatureType +"'  onclick='AppLayer.generateLayer(this)'>" + lay.Label + "</li>";
+				
+				basinSubs[sub].list.push(li)
+				
 				break;
 			}
 		}
 		
 	}
-	
 	
 	
 	
@@ -294,7 +322,7 @@ function buildPanelDropdowns(){
 		var lay = layers[l];
 		for(var sub in streamSubs){
 			if(lay.Category == streamSubs[sub].link){
-				streamSubs[sub].list.push("<li data-layer='" + lay.Layer + "' data-type='" + lay.DataType + "' data-id='"+ lay.FeatureType +"'  onclick='AppLayer.generateLayer(this)'>" + lay.Label + "</li>")
+				streamSubs[sub].list.push("<li draggable='true' data-layer='" + lay.Layer + "' data-type='" + lay.DataType + "' data-id='"+ lay.FeatureType +"'  onclick='AppLayer.generateLayer(this)'>" + lay.Label + "</li>")
 				break;
 			}
 		}
@@ -319,7 +347,7 @@ function buildPanelDropdowns(){
 		link:"Observed",	
 		list:[],
 	},{
-		link:"Probability",	
+		link:"Future",	
 		list:[],
 	},{
 		link:"Resilience",	
@@ -333,7 +361,7 @@ function buildPanelDropdowns(){
 		var lay = layers[l];
 		for(var sub in fishSubs){
 			if(lay.Category == fishSubs[sub].link){
-				fishSubs[sub].list.push("<li data-layer='" + lay.Layer + "' data-type='" + lay.DataType + "' data-id='"+ lay.FeatureType +"'  onclick='AppLayer.generateLayer(this)'>" + lay.Label + "</li>")
+				fishSubs[sub].list.push("<li draggable='true' data-layer='" + lay.Layer + "' data-type='" + lay.DataType + "' data-id='"+ lay.FeatureType +"'  onclick='AppLayer.generateLayer(this)'>" + lay.Label + "</li>")
 				break;
 			}
 		}
@@ -389,7 +417,10 @@ function buildPanelDropdowns(){
 	
 	
 	
-	
+	//Drag Event
+	$(".dropdownpanel .sub-list li").on('dragstart', function(e){
+		LayerControl.dragTarget = this;
+	})
 	
 	
 	

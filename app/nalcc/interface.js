@@ -73,9 +73,14 @@ GisMap.UI.createPanelDropdown = function(master_list, sub_lists, opts, cb){
 	$(div).append(description_panel);
 	
 	
+	$(description_panel).find(".downloaddata-btn").click(function(e){		
+		Data.downloadData($(this).parent().parent().attr("targ"))
+	})
+	
+	
 	$(".sub-list li").bind('mouseover',function(e){
 		$(div).find(".header").html($(this).html());
-		$(div).attr("targ", $(this).attr("data-layer"));
+		$(div).attr("targ", $(this).attr("data-id"));
 		$(div).find(".downloaddata-btn").css('display','block')
 	});
 	

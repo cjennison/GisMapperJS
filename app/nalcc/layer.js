@@ -27,6 +27,8 @@ AppLayer = {
 		
 		
 		//Local
+		
+		/* TODO: Turn back on if not done..
 		GisMap.Layer.createNewLayer(layerType, nLay, function(layer){
 			var collect = GisMap.Map.map.getLayers();
 			var thisLayer = collect.removeAt(collect.a.length-1);
@@ -57,6 +59,8 @@ AppLayer = {
 			
 			
 		}
+		
+		*/
 		
 		
 		
@@ -96,7 +100,7 @@ AppLayer = {
 		})
 		
 		GisMap.Map.map.addLayer(wmsLayer);
-		wmsLayer.e.opacity = 0;
+		wmsLayer.f.opacity = 0;
 		
 		var viewProjection = /** @type {ol.proj.Projection} */
    			 (GisMap.Map.map.getView().getProjection());

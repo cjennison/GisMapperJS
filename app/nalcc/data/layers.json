@@ -178,7 +178,7 @@
 			"Category":"Land Use"
 		},
 		{
-			"Layer":"Agriculture",
+			"Layer":"Agricultural",
 			"Label":"Percent Agriculture",
 			"DataType":"LOCAL",
 			"FeatureType":"Catchments",
@@ -234,9 +234,9 @@
 		},
 		{
 			"Layer":"Current",
-			"Label":"Current",
+			"Label":"Historic Occupancy",
 			"DataType":"LOCAL",
-			"FeatureType":"null",
+			"FeatureType":"BrookTrout",
 			"Category":"Observed"
 		},
 		{
@@ -262,7 +262,7 @@
 		},
 		{
 			"Layer":"Developed",
-			"Label":"Developed",
+			"Label":"Percent Developed",
 			"DataType":"LOCAL",
 			"FeatureType":"Catchments",
 			"Category":"Land Use"
@@ -299,14 +299,14 @@
 			"Layer":"Fall_Break_Point",
 			"Label":"Fall Breakpoints",
 			"DataType":"LOCAL",
-			"FeatureType":"null",
+			"FeatureType":"CTPreds",
 			"Category":"Stream Temp"
 		},
 		{
 			"Layer":"Fall_Slope",
 			"Label":"Falling Limb Slope",
 			"DataType":"LOCAL",
-			"FeatureType":"null",
+			"FeatureType":"CTPreds",
 			"Category":"Stream Temp"
 		},
 		{
@@ -367,44 +367,44 @@
 		},
 		{
 			"Layer":"Max_Temperature_Probability_30",
-			"Label":"Max Temperature Probability 30",
+			"Label":"Target Occupancy 30%",
 			"DataType":"LOCAL",
-			"FeatureType":"null",
+			"FeatureType":"BrookTrout",
 			"Category":"Resilience"
 		},
 		{
 			"Layer":"Max_Temperature_Probability_50",
-			"Label":"Max Temperature Probability 50",
+			"Label":"Target Occupancy 50%",
 			"DataType":"LOCAL",
-			"FeatureType":"null",
+			"FeatureType":"BrookTrout",
 			"Category":"Resilience"
 		},
 		{
 			"Layer":"Max_Temperature_Probability_70",
-			"Label":"Max Temperature Probability 70",
+			"Label":"Target Occupancy 70%",
 			"DataType":"LOCAL",
-			"FeatureType":"null",
+			"FeatureType":"BrookTrout",
 			"Category":"Resilience"
 		},
 		{
 			"Layer":"Number_Observations",
 			"Label":"Number of Observations",
 			"DataType":"LOCAL",
-			"FeatureType":"null",
+			"FeatureType":"Fobs",
 			"Category":"Stream Flow"
 		},
 		{
-			"Layer":"flow_pred_hw_01_2014",
+			"Layer":"flow_pred_hw_03_2014",
 			"Label":"Mean Annual Flow",
 			"DataType":"LOCAL",
-			"FeatureType":"null",
+			"FeatureType":"MeanFlow",
 			"Category":"Stream Flow"
 		},
 		{
 			"Layer":"Number_of_Observations",
 			"Label":"Number of Days with Observations",
 			"DataType":"LOCAL",
-			"FeatureType":"null",
+			"FeatureType":"Stemp",
 			"Category":"Stream Temp"
 		},
 		{
@@ -415,30 +415,30 @@
 		},
 		{
 			"Layer":"Plus_20",
-			"Label":"Plus 20",
+			"Label":"Probability under 2°C Increase",
 			"DataType":"LOCAL",
-			"FeatureType":"null",
-			"Category":"Probability"
+			"FeatureType":"BrookTrout",
+			"Category":"Future"
 		},
 		{
 			"Layer":"Plus_40",
-			"Label":"Plus 40",
+			"Label":"Probability under 4°C Increase",
 			"DataType":"LOCAL",
-			"FeatureType":"null",
-			"Category":"Probability"
+			"FeatureType":"BrookTrout",
+			"Category":"Future"
 		},
 		{
 			"Layer":"Plus_60",
-			"Label":"Plus 60",
+			"Label":"Probability under 6°C Increase",
 			"DataType":"LOCAL",
-			"FeatureType":"null",
-			"Category":"Probability"
+			"FeatureType":"BrookTrout",
+			"Category":"Future"
 		},
 		{
 			"Layer":"Presence_Absence",
 			"Label":"Presence/Absence",
 			"DataType":"LOCAL",
-			"FeatureType":"null",
+			"FeatureType":"BrookTrout",
 			"Category":"Observed"
 		},
 		{
@@ -473,7 +473,7 @@
 			"Layer":"Rise_Slope",
 			"Label":"Rising Limb Slope",
 			"DataType":"LOCAL",
-			"FeatureType":"null",
+			"FeatureType":"CTPreds",
 			"Category":"Stream Temp"
 		},
 		{
@@ -492,16 +492,16 @@
 		},
 		{
 			"Layer":"Spring_Break_Point",
-			"Label":"Spring Breakoints",
+			"Label":"Spring Breakpoints",
 			"DataType":"LOCAL",
-			"FeatureType":"null",
+			"FeatureType":"CTPreds",
 			"Category":"Stream Temp"
 		},
 		{
 			"Layer":"Summer_Break_Point",
-			"Label":"Summer Breakoints",
+			"Label":"Summer Breakpoints",
 			"DataType":"LOCAL",
-			"FeatureType":"null",
+			"FeatureType":"CTPreds",
 			"Category":"Stream Temp"
 		},
 		{
@@ -520,7 +520,35 @@
 			"Layer":"Sync_Range",
 			"Label":"Synchronized Temperature Range",
 			"DataType":"LOCAL",
-			"FeatureType":"null",
+			"FeatureType":"CTPreds",
+			"Category":"Stream Temp"
+		},
+		{
+			"Layer":"Rising_Slope_CL",
+			"Label":"Rising Slope CI",
+			"DataType":"LOCAL",
+			"FeatureType":"CTPreds",
+			"Category":"Stream Temp"
+		},
+		{
+			"Layer":"Falling_Slope_CL",
+			"Label":"Falling Slope CI",
+			"DataType":"LOCAL",
+			"FeatureType":"CTPreds",
+			"Category":"Stream Temp"
+		},
+		{
+			"Layer":"Summer_Max_Temp",
+			"Label":"Summer Max Temp",
+			"DataType":"LOCAL",
+			"FeatureType":"CTPreds",
+			"Category":"Stream Temp"
+		},
+		{
+			"Layer":"Summer_Max_Temp_CL",
+			"Label":"Summer Max Temp CI",
+			"DataType":"LOCAL",
+			"FeatureType":"CTPreds",
 			"Category":"Stream Temp"
 		},
 		{
@@ -551,13 +579,13 @@
 			"FeatureType":"Catchments",
 			"Category":"Land Use"
 		},
-		{
-			"Layer":"Upstream_Drainage_Area",
-			"Label":"Upstream Drainage Area",
-			"DataType":"LOCAL",
-			"FeatureType":"CHRISHELPME",
-			"Category":"Geology"
-		},
+		
+		
+		
+		
+		
+		
+		
 		{
 			"Layer":"Water_Upstream",
 			"Label":"Water Upstream",
@@ -619,7 +647,7 @@
 		"FISH":[
 			"Brook Trout Occupancy_LABEL",
 			"Observed",
-			"Probability",
+			"Future",
 			"Resilience"
 		]
 	}

@@ -220,6 +220,8 @@ GisMap.UI = {
 
 		var div = $("<div class='slider-container'></div>");
 		$(div).html(html);
+		
+		//console.log(container);
 
 		$(container).append(div);
 
@@ -344,5 +346,32 @@ GisMap.UI = {
 		
 		GisMap.Map.map.addControl(scaleLine);
 		
+	},
+	
+	
+	
+	spawnUpdate:function(text){
+		var box = $("<div class='updater-box'>" + text + "</div>");
+		
+		
+		$(box).css("left", Math.round(Math.random() * 10) + 40 + "%");
+		setTimeout(function(){
+			$(box).css("bottom", Math.round(Math.random() * 50) + 20);
+			setTimeout(function(){
+				$(box).css("bottom",-50);
+				setTimeout(function(){
+					$(box).remove();
+				},1000);
+			},1000);
+		},100)
+		
+		
+		
+		
+		$("body").append(box);
 	}
+	
+	
+	
+	
 }

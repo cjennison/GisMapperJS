@@ -4,17 +4,37 @@ var Data = {
 	ID : null,
 	COORD : null,
 	DELINEATED_ID:null,
+	WORKING:false,
+	EXTENT:null,
+	
+	DOWNLOAD:{
+		format:"csv",
+		features:50
+	},
+	
+	CATCHMENT_LAYER:null,
+	BASIN_LAYER:null,
+	VECTOR_LAYER:null,
+	DRAW_CONTROL:null,
 
 	//Creates a popup from the WMS request
 	createCatchmentPopup : function(coordinate) {
+		
+		console.log("COORDINATES:");
+		console.log(coordinate);
+		
 		if (Data.popup) {
 			$(Data.popup).remove();
 
 		}
+		
+		this.WORKING = true;
 
 		Data.popup = GisMap.Map.spawnPopup(coordinate);
 		Data.popup.append("<h4>Loading Information..</h4>");
 		Data.popup.append('<div class="progress progress-striped active"><div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div>');
+		
+	
 		
 		Data.COORD = ol.proj.transform(coordinate, GisMap.Core.Application.projection, GisMap.Core.Application.incoming_projection);
 
@@ -22,8 +42,84 @@ var Data = {
 
 	populatePopup : function(data) {
 		console.log(data);
+		
+		/*
+		var catchment = $.getJSON("http://felek.cns.umass.edu:8080/geoserver/Streams/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=Streams%3ANENY_NHDCatchments_LocalStats_2&featureID=" + data.features[0].id + "&propertyName=&maxfeatures=50&outputformat=json", function(data){
+			console.log(data);
+		})
+		*/
+		
+		this.EXTENT = this.calculateExtent(data.features[0].geometry.coordinates[0][0]);
+
+		
+		var vectorSource = new ol.source.GeoJSON(
+			/** @type {olx.source.GeoJSONOptions} */ ({
+				object:data
+			})
+		);
+		var styleCache = {};
+
+		if(this.CATCHMENT_LAYER != null)
+			GisMap.Map.map.removeLayer(this.CATCHMENT_LAYER);
+
+		this.CATCHMENT_LAYER = new ol.layer.Vector({
+		  source: vectorSource,
+		  style: function(feature, resolution) {
+		    var text = resolution < 5000 ? feature.get('name') : '';
+		    if (!styleCache[text]) {
+		      styleCache[text] = [new ol.style.Style({
+		        fill: new ol.style.Fill({
+		          color: 'rgba(255, 255, 255, 0.1)'
+		        }),
+		        stroke: new ol.style.Stroke({
+		          color: '#319FD3',
+		          width: 1
+		        }),
+		        text: new ol.style.Text({
+		          font: '12px Calibri,sans-serif',
+		          text: text,
+		          fill: new ol.style.Fill({
+		            color: '#000'
+		          }),
+		          stroke: new ol.style.Stroke({
+		            color: '#fff',
+		            width: 3
+		          })
+		        }),
+		        zIndex:999
+		      })];
+		    }
+		    return styleCache[text];
+		  }
+		});
+		setTimeout(function(){
+			GisMap.Map.map.addLayer(Data.CATCHMENT_LAYER);
+		
+		},1000)
+		
+		console.log(vectorSource);
+		
+		
+		
+		//"NENY_NHDCatchments_LocalStats_2.44806"
+		//Extract Panel
+		var tempPanel = $(Data.popup).clone();
+		$(Data.popup).remove();
+		$("body").append(tempPanel);
+		$(tempPanel).draggable({
+			containment:'parent'
+		})
+		Data.popup = tempPanel;
+		$(Data.popup).css("top", "20%");
+		$(Data.popup).css("left", "65%");
+		
+		
 
 		$(Data.popup).find("h4").html(data.features[0].properties.FEATUREID);
+		
+		$(Data.popup).append("<button class='datamaximize btn btn-primary' onclick='Data.initFullData()'> <span class='glyphicon glyphicon-fullscreen'></span></button>")
+		$(Data.popup).append("<button class='zoomtoextent btn btn-default' onclick='Data.zoomToExtent()'>Zoom</button>");
+		
 		Data.ID = data.features[0].properties.FEATUREID;
 
 		$(Data.popup).find(".progress").remove();
@@ -56,7 +152,7 @@ var Data = {
 		var mod = $("<div class='basin-mod-toggle pop-tab' data-tab='models'><button class='btn btn-default tabbtn' data-tab='models' onclick='Data.toggleTab(this);'>Models</button></div>");
 		$(mod).append("<div class='basin-mod sub-panel' style='display:none'></div>");
 		
-		var occu = $("<span><b>Occupancy:</b></br> </span><button class='btn btn-primary occupancy-btn' onclick='Data.organizeOcc()'>Run Occupancy Model</button><div class='occu-container'></div>")
+		var occu = $("<span><b>Brook Trout Occupancy:</b></br> </span><button class='btn btn-primary occupancy-btn' onclick='Data.organizeOcc()'>Generate Response Surface</button><div class='occu-container'></div>")
 		$(mod).find('.sub-panel').append(occu);
 
  		////////////// Application
@@ -74,7 +170,21 @@ var Data = {
 		$(Data.popup).append(chars);
 		$(Data.popup).append(mod);
 		$(Data.popup).append(app);
-		$(".support-system").prop("disabled", true)
+		$(".support-system").prop("disabled", true);
+		
+		
+		$(Data.popup).resizable({
+			maxHeight: 637,
+	      maxWidth: 503,
+	      minHeight: 150,
+	      minWidth: 319
+		});
+		setInterval(function(){
+			var w = $(".popup").css("width");
+			var h = $(".popup").css("height");
+			$(".sub-panel").css("width", ((parseFloat(w) - 10)));
+			$(".sub-panel").css("height", ((parseFloat(h) - 80)));
+		},10)
 	},
 	
 	organizeOcc:function(){
@@ -117,7 +227,10 @@ var Data = {
 	
 	placeDelineatedBasin:function(id){
 		var styleCache = {};
-		var vectorLayer = new ol.layer.Vector({
+		if(this.BASIN_LAYER != null)
+			GisMap.Map.map.removeLayer(this.BASIN_LAYER);
+		
+		this.BASIN_LAYER = new ol.layer.Vector({
 		  source: new ol.source.GeoJSON({
 		    projection: 'EPSG:3857',
 		    url: "http://felek.cns.umass.edu:8888/" + id + "/catchment.geojson"
@@ -151,12 +264,21 @@ var Data = {
 		  }
 		});
 		
+		
 		//TODO: This is really bad.. dont do this.. fix it please
 		setTimeout(function(){
-			vectorLayer.IDENTIFICATION = id;
-			GisMap.Map.map.addLayer(vectorLayer);
+			Data.BASIN_LAYER.IDENTIFICATION = id;
+			GisMap.Map.map.addLayer(Data.BASIN_LAYER);
 			GisMap.Map.map.render();
-		},1000)
+		},1000);
+		
+		$.getJSON("http://felek.cns.umass.edu:8888/" + id + "/catchment.geojson", function(d){
+			console.log(d);
+			Data.EXTENT = Data.calculateExtent(d.features[0].geometry.coordinates[0], true);
+		})
+		
+		
+		
 	},
 	
 	organizeSystemSupport:function(){
@@ -172,5 +294,289 @@ var Data = {
 		$(".sub-panel").css('display', "none");
 		$("[data-tab=" + tab + "]").find(".sub-panel").css("display", "block");
 
+	},
+	
+	
+	
+	downloadData:function(id){
+		if($(".download-panel").length > 0){
+			$(".download-panel").remove();
+			Data.DOWNLOAD.format = "csv";
+			Data.DOWNLOAD.features = 50;
+		}
+		
+		console.log(id);
+		var link = "";
+		var base = "";
+		switch (id){
+			
+			case "Catchments":
+				link = "http://felek.cns.umass.edu:8080/geoserver/Streams/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=Streams%3ANENY_NHDCatchments_LocalStats_2&maxfeatures=50&outputformat=csv";
+				base = "http://felek.cns.umass.edu:8080/geoserver/Streams/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=Streams%3ANENY_NHDCatchments_LocalStats_2";
+				break;
+				
+			case "BrookTrout":
+				link = "http://felek.cns.umass.edu:8080/geoserver/Streams/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=Streams%3ACurrent&maxfeatures=50&outputformat=csv";
+				base = "http://felek.cns.umass.edu:8080/geoserver/Streams/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=Streams%3ACurrent";
+				break;
+				
+			case "CTPreds":
+				link = "http://felek.cns.umass.edu:8080/geoserver/Streams/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=Streams%3AFall_Slope&maxfeatures=50&outputformat=csv";
+				base = "http://felek.cns.umass.edu:8080/geoserver/Streams/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=Streams%3AFall_Slope";
+				break;
+				
+			case "MeanFlow":
+				link = "http://felek.cns.umass.edu:8080/geoserver/Streams/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=Streams%3Aflow_pred_hw_01_2014&maxfeatures=50&outputformat=csv";
+				base = "http://felek.cns.umass.edu:8080/geoserver/Streams/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=Streams%3Aflow_pred_hw_01_2014";
+				break;
+				
+			case "Stemp":
+				link = "http://felek.cns.umass.edu:8080/geoserver/Streams/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=Streams%3ANumber_of_Observations&maxfeatures=50&outputformat=csv";
+				base = "http://felek.cns.umass.edu:8080/geoserver/Streams/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=Streams%3ANumber_of_Observations";
+				break;
+				
+			case "Fobs":
+				link = "http://felek.cns.umass.edu:8080/geoserver/Streams/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=Streams%3ANumber_Observations&maxfeatures=50&outputformat=csv";
+				base = "http://felek.cns.umass.edu:8080/geoserver/Streams/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=Streams%3ANumber_Observations";
+				break;
+			
+			default:
+				break;
+		}
+		
+		var downloadPanel = GisMap.UI.spawnPanel({class:"download-panel"}, function(ret){
+			console.log(ret.div);
+			$(ret.div).draggable({containment:'parent'})
+			$(ret.div).append("<h3 style='font-weight:400;margin-left: 20px;margin-top: 9px;'>Download Data</h3>");
+			$(ret.div).append("<div id='options-close' class='btn btn-danger' onclick='ToolBar.hideThis(this)'><span class='glyphicon glyphicon-remove'></span></div>");
+			
+			
+			var downloadForm = $("<div class='downloadForm'></div>");
+			$(downloadForm).append("Format: <select class='form-control format-select'><option value='csv' selected>CSV</option><option value='SHAPE-ZIP'>ShapeFile</option><option value='json'>GeoJSON</option><option value='application%2Fjson'>JSON</option></select> <br />")
+			$(downloadForm).append('Max Features: <div id="slider" class="numFeaturesSlider"></div><span class="num_features">: 50</span>')
+			$(downloadForm).append('<button class="btn btn-default" onclick="Data.startDraw(this);" style="position:relative; top:34px;">Draw Bounding Box</button>')
+			$(ret.div).append(downloadForm);
+			
+			$(".format-select").change(function(e){
+				console.log(e);
+				Data.DOWNLOAD.format = $(".format-select :selected").val()
+				 Data.updateDownloadLink(base);
+			})
+			
+			
+			$(".numFeaturesSlider").slider({
+	            range: "min",
+	            value: 50,
+	            min: 1,
+	            max: 1000,
+	            slide: function (event, ui) {
+	                $(".num_features").html(": " + ui.value);
+	                Data.DOWNLOAD.features = ui.value;
+	                Data.updateDownloadLink(base);
+	            }
+	        });
+			
+			$(ret.div).append("<a class='dnld-lnk' href=' " + link + "'><button class='btn btn-primary'>Download</button></a>")
+		});
+		
+		
+	},
+	
+	startDraw:function(el){
+		console.log("DRAW");
+		
+		var source = new ol.source.Vector();
+		
+		this.VECTOR_LAYER = new ol.layer.Vector({
+			source:source,
+			style: new ol.style.Style({
+			    fill: new ol.style.Fill({
+			      color: 'rgba(255, 255, 255, 0.2)'
+			    }),
+			    stroke: new ol.style.Stroke({
+			      color: '#ffcc33',
+			      width: 2
+			    }),
+			    image: new ol.style.Circle({
+			      radius: 7,
+			      fill: new ol.style.Fill({
+			        color: '#ffcc33'
+			      })
+			    })
+			  })
+			
+		});
+		
+		GisMap.UI.spawnUpdate("Entered Drawing Mode");
+		GisMap.Map.map.addLayer(this.VECTOR_LAYER);
+		
+		GisMap.Map.map.on('mousedown', function(evt){
+			console.log(evt.coordinate);
+			
+			
+		})
+		
+		GisMap.Map.map.on('mouseup', function(evt){
+			console.log(evt.coordinate);
+			
+			
+		})
+		
+		
+		
+		//
+		
+		//this.DRAW_CONTROL = new ol.interaction.DragBox({
+		//	source: source,
+		//});
+		
+		//GisMap.Map.map.addInteraction(this.DRAW_CONTROL);
+		
+		
+		$(el).addClass("btn-danger");
+		$(el).html("Exit Drawing Mode");
+		$(el).attr("onclick", "Data.exitDrawingMode(this)");
+		
+		
+		
+	},
+	
+	exitDrawingMode:function(el){
+		//GisMap.Map.map.removeInteraction(this.DRAW_CONTROL);
+		GisMap.Map.map.removeLayer(this.VECTOR_LAYER);
+		$(el).removeClass("btn-danger");
+		$(el).html("Draw Bounding Box");
+		$(el).attr("onclick", "Data.startDraw(this)");
+	},
+	
+	updateDownloadLink:function(base){
+		var link = base + "&maxfeatures=" + Data.DOWNLOAD.features + "&outputformat=" + Data.DOWNLOAD.format;
+		
+		$(".dnld-lnk").attr("href", link);
+	},
+	
+	
+	
+	calculateExtent:function(points, transform){
+		console.log(points);
+		
+		var minx = points[0][0],
+			maxx = points[1][0];
+			miny = points[0][1];
+			maxy = points[1][1];
+			
+		var LON = 0;
+		var LAT = 1;
+			
+		for(var p in points){
+			var c = points[p];
+			if(c[LON] < minx){
+				//New Lon is less than the min
+				minx = c[LON];
+			}
+			
+			if(c[LON] > maxx){
+				//new lon is greater than the max
+				maxx = c[LON];
+			}
+			
+			if(c[LAT] < miny){
+				//New Lon is less than the min
+				miny = c[LAT];
+			}
+			
+			if(c[LAT] > maxy){
+				//new lon is greater than the max
+				maxy = c[LAT];
+			}
+			
+		}
+		
+		
+		var ext = {
+			minLon:minx,
+			maxLon:maxx,
+			minLat:miny,
+			maxLat:maxy
+		}
+		//ol.proj.transform([cc.list1.num0,cc.list0.num0], GisMap.Core.Application.incoming_projection, GisMap.Core.Application.projection),	
+		var extent = {
+			point1:[ext.minLon, ext.minLat], 				
+			point2:[ext.maxLon, ext.maxLat],
+		}
+		
+		
+		if(transform){
+			var extent = {
+				point1:ol.proj.transform([ext.minLon, ext.minLat], GisMap.Core.Application.incoming_projection, GisMap.Core.Application.projection),				
+				point2:ol.proj.transform([ext.maxLon, ext.maxLat], GisMap.Core.Application.incoming_projection, GisMap.Core.Application.projection)
+			}
+		}
+		console.log(extent);
+		
+
+		
+		return extent;
+		
+	},
+	
+	zoomToExtent:function(){
+		GisMap.Map.map.getView().fitExtent([this.EXTENT.point1[0],this.EXTENT.point1[1],this.EXTENT.point2[0],this.EXTENT.point2[1]], GisMap.Map.map.getSize())
+
+		//GisMap.Map.flyToPoint(this.EXTENT);
+	},
+	
+	initFullData:function(){
+		var datawindow = $("<div class='shadowbox'><div class='datawindow'></div></div>");
+		$(datawindow).append(Data.popup);
+		
+		
+		this.toggleFullScreen();
+		
+		
+		
+		$("body").append(datawindow);
+	},
+	
+	
+	toggleFullScreen:function(){
+		var maxbtn = $(Data.popup).find(".datamaximize");
+		$(maxbtn).find("span").removeClass("glyphicon-fullscreen");
+		$(maxbtn).find("span").addClass("glyphicon-minus");
+		
+		$(maxbtn).attr("onclick", "Data.toggleSmallScreen();")
+		
+		$(Data.popup).css("opacity", "1");
+		$(Data.popup).css("width", "500px");
+		$(Data.popup).css("left", "35%");
+		$(Data.popup).css("top", "17%");
+		$(Data.popup).css("height", "80%");
+		$(Data.popup).resizable('disable');
+		$(Data.popup).draggable( 'disable' );
+		
+		$(Data.popup).find("#options-close").attr("onclick", "ToolBar.hideThis(this); Data.hideShadow();");
+	},
+	
+	toggleSmallScreen:function(){
+		var maxbtn = $(Data.popup).find(".datamaximize");
+		$(maxbtn).find("span").removeClass("glyphicon-minus");
+		$(maxbtn).find("span").addClass("glyphicon-fullscreen");
+		
+		$(Data.popup).css("width", "319px");
+		$(Data.popup).css("height", "325px");
+
+		$(maxbtn).attr("onclick", "Data.initFullData();")
+	
+		$('body').append(Data.popup);
+		$(Data.popup).resizable('enable');
+		$(Data.popup).draggable( 'enable' )
+		$(".shadowbox").remove();
+		$(Data.popup).find("#options-close").attr("onclick", "ToolBar.hideThis(this);");
+	},
+	
+	hideShadow:function(){
+		$(".shadowbox").remove();
 	}
+	
+	
 }

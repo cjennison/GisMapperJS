@@ -5,6 +5,14 @@
 
 ## Changelog
 
+
+### v 0.11
+> - Fixed an issue where the layer control text wouldn't update
+> - If a layer was set to a specific opacity and then swapped it, the opacity is retained
+> - Added Updated Stream Environment Data
+> - Added Full Screen option for viewing catchment data
+
+
 ### v 0.1
 > - Changed NALCC Title
 > - Added a Toggle to Layer Types

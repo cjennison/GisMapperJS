@@ -25,6 +25,29 @@
 	display:none;
 }
 
+
+.updater-box{
+	position:absolute;
+	bottom:-50px;
+	left:40%;
+	
+	border-radius:10px;
+	
+	opacity:.9;
+	
+	width:auto;
+	padding:10px;
+	border:3px solid rgb(100,100,255);
+	background:white;
+	
+	-o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+
 .dropdown-submenu{position:relative;}
 .dropdown-submenu>.dropdown-menu{top:0;left:100%;margin-top:-6px;margin-left:-1px;-webkit-border-radius:0 6px 6px 6px;-moz-border-radius:0 6px 6px 6px;border-radius:0 6px 6px 6px;}
 .dropdown-submenu:hover>.dropdown-menu{display:block;}

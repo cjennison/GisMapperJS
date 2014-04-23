@@ -17,12 +17,14 @@ var ToolBar = {
 		
 		if($("." + btnclass).hasClass("delin-btn")){
 			AppLayer.cursorState = "delin";
+			GisMap.UI.spawnUpdate("Changed to Delineation Mode");
 			if(this.WMSLayerLoaded == false){
 				AppLayer.createWMSLayer();
 				this.WMSLayerLoaded = true;
 			}
 		} else {
 			AppLayer.cursorState = "pan";
+			GisMap.UI.spawnUpdate("Changed to Panner Mode");
 		}
 		
 		//var cursorChange =$

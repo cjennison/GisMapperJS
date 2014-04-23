@@ -13,6 +13,7 @@ GisMap.Map = {
 
 	//Function for returning the current screen image
 	imageSave : null,
+	context: null,
 
 	/**
 	 * init Initializes the map with information from user config
@@ -33,8 +34,11 @@ GisMap.Map = {
 		});
 
 		this.map.once('postcompose', function(event) {
+			GisMap.Map.context  = event.context;
+			
 			GisMap.Map.imageSave = function() {
 				var info = event.context.canvas.toDataURL('image/png');
+				
 				return info;
 			};
 		})
@@ -72,6 +76,8 @@ GisMap.Map = {
 
 	},
 	
+	
+	
 	/**\
 	 * Adds an already created basemap to the map 
 	 */
@@ -98,6 +104,7 @@ GisMap.Map = {
 		for (var l in this.layers) {
 			if (this.layers[l].LAYER_TYPE == layerType) {
 				this.layers[l].setOpacity(opacity);
+				this.map.render();
 			}
 		}
 	},
@@ -110,9 +117,9 @@ GisMap.Map = {
 	toggleLayerByType : function(layerType, state) {
 		for (var l in this.layers) {
 			if (this.layers[l].LAYER_TYPE = layerType) {
-				if (this.layers[l].e.visible == null)
+				if (this.layers[l].f.visible == null)
 					throw new Error("Visible Property Not Found")
-				this.layers[l].e.visible = state;
+				this.layers[l].f.visible = state;
 				GisMap.Map.map.render();
 			}
 		}
@@ -122,7 +129,7 @@ GisMap.Map = {
 	 * Sets basemap opacity
 	 */
 	setBasemapOpacity : function(state) {
-		this.basemap.e.visible = state;
+		this.basemap.f.visible = state;
 		GisMap.Map.map.render();
 	},
 
