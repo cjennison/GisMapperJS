@@ -31,6 +31,12 @@ var ToolBar = {
 		//$("body").append
 	},
 	
+	togglePanner:function(){
+		$(".delin-btn").removeClass("btn-success");
+		$(".pan-btn").addClass("btn-success");
+		AppLayer.cursorState = "pan";
+	},
+	
 	
 	toggleOptions:function(){
 		$(".options-panel").css('display','block');

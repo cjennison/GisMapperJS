@@ -5,6 +5,11 @@
 
 ## Changelog
 
+### v 0.2
+> - Added Download Data Panel
+> - Improved Functionality of Layer Control
+> - Added Zoom Bar
+> - Implemented Bounding Box Controls and WFS BBox for GeoServer
 
 ### v 0.11
 > - Fixed an issue where the layer control text wouldn't update

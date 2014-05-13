@@ -117,9 +117,9 @@ GisMap.Map = {
 	toggleLayerByType : function(layerType, state) {
 		for (var l in this.layers) {
 			if (this.layers[l].LAYER_TYPE = layerType) {
-				if (this.layers[l].f.visible == null)
+				if (this.layers[l].setVisible == null)
 					throw new Error("Visible Property Not Found")
-				this.layers[l].f.visible = state;
+				this.layers[l].setVisible(state);
 				GisMap.Map.map.render();
 			}
 		}
@@ -129,7 +129,7 @@ GisMap.Map = {
 	 * Sets basemap opacity
 	 */
 	setBasemapOpacity : function(state) {
-		this.basemap.f.visible = state;
+		this.basemap.setVisible( state );
 		GisMap.Map.map.render();
 	},
 

@@ -16,7 +16,8 @@
 				"data",
 				"nalcc_models",
 				"basemaps",
-				"interface"
+				"interface",
+				"download"
 			
 			],
 			"partner_sources":[
@@ -27,7 +28,8 @@
 				"bootstrap.min.css",
 				"main.css",
 				"ui.css",
-				"data.css"
+				"data.css",
+				"download.css"
 			],
 			
 			"LOAD_COORDINATES":[

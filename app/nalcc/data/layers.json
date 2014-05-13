@@ -614,6 +614,22 @@
 			"FeatureType":"Catchments",
 			"Category":"Land Use"
 		},
+		
+		{
+			"Layer":"Percent_Sand",
+			"Label":"Percent Sandy",
+			"DataType":"LOCAL",
+			"FeatureType":"Catchments",
+			"Category":"Geology"
+		},
+		{
+			"Layer":"Percent_Sand_Upstream",
+			"Label":"Percent Sandy",
+			"DataType":"LOCAL",
+			"FeatureType":"Catchments",
+			"Category":"Geology"
+		},
+		
 		{
 			"Layer":"Winter_Precipitation_in_Millimeters_Upstream",
 			"Label":"Winter Precipitation in Millimeters Upstream ",
@@ -621,9 +637,41 @@
 			"FeatureType":"Catchments",
 			"Category":"Climate"
 		},
+		
 		{
 			"Layer":"Winter_Precipitation_in_Millimeters",
 			"Label":"Winter Precipitation",
+			"DataType":"LOCAL",
+			"FeatureType":"Catchments",
+			"Category":"Climate"
+		},
+		{
+			"Layer":"November_Precipitation_in_Millimeters_Upstream",
+			"Label":"November Precipitation in Millimeters Upstream ",
+			"DataType":"UPSTREAM",
+			"FeatureType":"Catchments",
+			"Category":"Climate"
+		},
+		
+		{
+			"Layer":"November_Precipitation_in_Millimeters",
+			"Label":"November Precipitation",
+			"DataType":"LOCAL",
+			"FeatureType":"Catchments",
+			"Category":"Climate"
+		},
+		
+		{
+			"Layer":"Summer_Precipitation_in_Millimeters_Upstream",
+			"Label":"Summer Precipitation in Millimeters Upstream ",
+			"DataType":"UPSTREAM",
+			"FeatureType":"Catchments",
+			"Category":"Climate"
+		},
+		
+		{
+			"Layer":"Summer_Precipitation_in_Millimeters",
+			"Label":"Summer Precipitation",
 			"DataType":"LOCAL",
 			"FeatureType":"Catchments",
 			"Category":"Climate"

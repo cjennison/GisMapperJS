@@ -100,7 +100,7 @@ AppLayer = {
 		})
 		
 		GisMap.Map.map.addLayer(wmsLayer);
-		wmsLayer.f.opacity = 0;
+		wmsLayer.setOpacity(0);
 		
 		var viewProjection = /** @type {ol.proj.Projection} */
    			 (GisMap.Map.map.getView().getProjection());

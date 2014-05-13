@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SLD GEN: Chris jennison</title>
+		<script src="http://code.jquery.com/jquery-2.0.3.min.js"> </script>
+ 		<script src="http://codeorigin.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+    	<script src="http://ol3js.org/en/master/build/ol.js" type="text/javascript"></script>
+    	<link rel='stylesheet' href='../../components/ol.css' />
+ 		<link rel='stylesheet' href='../../style/gismappercss/gismapper.css' />
+ 		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+ 		<script src='http://felek.cns.umass.edu:8080/geoserver/www/data_viewer/js/style.js'></script>
+	</head>
+	<script>
+	
+		var rule_data;
+		function init(){
+			$.getJSON('http://felek.cns.umass.edu:8080/geoserver/www/gismapper/app/nalcc/data/rules.json', function(e){
+				rule_data = e;
+				
+				var key = $(".jsonkey").val();
+				var layerName = $('.shpname').val();
+				
+				
+				if(key==null || layerName==null){
+					console.log("SOME PARAM IS NULL");
+					return;
+				}
+				
+				$(".output").html(setStyleWithRules(key, layerName));
+			})
+		}
+	</script>
+	<body>
+		<h1>LAYER NAME</h1>
+		<input class='shpname' value='Streams:NENY_NHDCatchments_LocalStats_2'></input>
+		
+		<h1>RULES.JSON KEY</h1>
+		<input class='jsonkey'></input>
+		
+		<button onclick='init()'>GENERATE</button>
+		<br />
+		<span class='output'></span>
+	</body>
+</html>

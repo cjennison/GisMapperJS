@@ -1,0 +1,74 @@
+.download-panel h2 {
+	font-family: Helvetica;
+	margin-top: 3px;
+	color: rgb(75, 92, 90);
+	text-align: center;
+}
+
+.download-panel {
+	text-align: center;
+}
+
+.download-panel .btn-large {
+	text-align: center;
+	margin-top: 10px;
+}
+
+.extent-input {
+	text-align: center;
+}
+
+.layer-input {
+	text-align: center;
+	margin-top: 10px;
+}
+
+.download-panel .btn.active {
+	background: rgb(150, 236, 150);
+}
+
+.selector-panel {
+	position: absolute;
+	background: white;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	width: 235px;
+	height: 126px;
+	top: 0px;
+	left: 263px;
+}
+
+.selector-panel .alert {
+	padding: 5px;
+	width: 93%;
+	margin: 0 auto;
+	margin-top: 3px;
+}
+
+.layer-panel {
+	position: absolute;
+	background: white;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	width: 235px;
+	height: 174px;
+	top: 126px;
+	left: 263px;
+}
+
+.layer-panel .alert {
+	padding: 5px;
+	width: 93%;
+	margin: 0 auto;
+	margin-top: 3px;
+}
+
+.instructions-panel {
+	width: 200px;
+	height: 150px;
+	background: white;
+	position: absolute;
+	top: 400px;
+	left: 300px;
+	border-radius: 5px;
+}

@@ -1321,8 +1321,8 @@
 		]
 	},
 	
-	"Percent_Sa":{
-		"property_name":"Percent_Sa",
+	"Percent_Sand":{
+		"property_name":"PcntSandy",
 		"property_label":"Percent Sand",
 		"property_sublabel":"",
 		"rules":[
@@ -2272,6 +2272,218 @@
 				"equal_to":"max",
 				"fill":"#0000FF",
 				"label":"greater than 350",
+				"stroke":null
+			}
+		
+		]
+	},
+	
+	"November_Precipitation_in_Millimeters":{
+		"property_name":"NovPrcpMM",
+		"property_label":"November Precipitation",
+		"property_sublabel":"Millimeters",
+		"rules":[
+			
+			{
+				"min":null,
+				"max":50,
+				"equal_to":"max",
+				"fill":"#F75757",
+				"label":"less than 50",
+				"stroke":null
+			},
+			{
+				"min":50,
+				"max":60,
+				"equal_to":"max",
+				"fill":"#F97941",
+				"label":"50 - 60",
+				"stroke":null
+			},
+			{
+				"min":60,
+				"max":70,
+				"equal_to":"max",
+				"fill":"#FB9C2B",
+				"label":"60 - 70",
+				"stroke":null
+			},
+			{
+				"min":70,
+				"max":80,
+				"equal_to":"max",
+				"fill":"#FDBE15",
+				"label":"70 - 80",
+				"stroke":null
+			},
+			{
+				"min":80,
+				"max":90,
+				"equal_to":"max",
+				"fill":"#FFE100",
+				"label":"80 - 90",
+				"stroke":null
+			},
+			{
+				"min":90,
+				"max":100,
+				"equal_to":"max",
+				"fill":"#BFDB09",
+				"label":"90 - 100",
+				"stroke":null
+			},
+			{
+				"min":100,
+				"max":110,
+				"equal_to":"max",
+				"fill":"#7FD612",
+				"label":"100 - 110",
+				"stroke":null
+			},
+			{
+				"min":110,
+				"max":120,
+				"equal_to":"max",
+				"fill":"#3FD11B",
+				"label":"110 - 120",
+				"stroke":null
+			},
+			{
+				"min":120,
+				"max":130,
+				"equal_to":"max",
+				"fill":"#00CC25",
+				"label":"120 - 130",
+				"stroke":null
+			},
+			{
+				"min":130,
+				"max":140,
+				"equal_to":"max",
+				"fill":"#00886D",
+				"label":"130 - 140",
+				"stroke":null
+			},
+			{
+				"min":140,
+				"max":150,
+				"equal_to":"max",
+				"fill":"#0044B6",
+				"label":"140 - 150",
+				"stroke":null
+			},
+			{
+				"min":150,
+				"max":160,
+				"equal_to":"max",
+				"fill":"#0000FF",
+				"label":"greater than 150",
+				"stroke":null
+			}
+		
+		]
+	},
+	
+	"Summer_Precipitation_in_Millimeters":{
+		"property_name":"SumrPrcpMM",
+		"property_label":"Summer Precipitation",
+		"property_sublabel":"Millimeters",
+		"rules":[
+			
+			{
+				"min":null,
+				"max":200,
+				"equal_to":"max",
+				"fill":"#F75757",
+				"label":"less than 200",
+				"stroke":null
+			},
+			{
+				"min":200,
+				"max":210,
+				"equal_to":"max",
+				"fill":"#F97941",
+				"label":"200 - 210",
+				"stroke":null
+			},
+			{
+				"min":210,
+				"max":220,
+				"equal_to":"max",
+				"fill":"#FB9C2B",
+				"label":"210 - 220",
+				"stroke":null
+			},
+			{
+				"min":220,
+				"max":230,
+				"equal_to":"max",
+				"fill":"#FDBE15",
+				"label":"220 - 230",
+				"stroke":null
+			},
+			{
+				"min":230,
+				"max":240,
+				"equal_to":"max",
+				"fill":"#FFE100",
+				"label":"230 - 240",
+				"stroke":null
+			},
+			{
+				"min":240,
+				"max":250,
+				"equal_to":"max",
+				"fill":"#BFDB09",
+				"label":"240 - 250",
+				"stroke":null
+			},
+			{
+				"min":250,
+				"max":260,
+				"equal_to":"max",
+				"fill":"#7FD612",
+				"label":"250 - 260",
+				"stroke":null
+			},
+			{
+				"min":270,
+				"max":280,
+				"equal_to":"max",
+				"fill":"#3FD11B",
+				"label":"270 - 280",
+				"stroke":null
+			},
+			{
+				"min":280,
+				"max":290,
+				"equal_to":"max",
+				"fill":"#00CC25",
+				"label":"280 - 290",
+				"stroke":null
+			},
+			{
+				"min":290,
+				"max":300,
+				"equal_to":"max",
+				"fill":"#00886D",
+				"label":"290 - 300",
+				"stroke":null
+			},
+			{
+				"min":300,
+				"max":310,
+				"equal_to":"max",
+				"fill":"#0044B6",
+				"label":"300 - 310",
+				"stroke":null
+			},
+			{
+				"min":310,
+				"max":320,
+				"equal_to":"max",
+				"fill":"#0000FF",
+				"label":"greater than 310",
 				"stroke":null
 			}
 		

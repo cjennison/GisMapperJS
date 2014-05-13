@@ -5,6 +5,21 @@ body{
 	user-select: none;
 }
 
+.custom-zoomslider{
+	position: absolute;
+	top: 67px;
+	left: 8px;
+	background: #eee;
+	background: rgba(255,255,255,0.4);
+	border-radius: 4px;
+	width: 28px;
+	height: 200px;
+	outline: none;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+}
+
 #panel {
 	position: absolute;
 	width: 80%;
@@ -26,6 +41,9 @@ body{
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2ac2d3', endColorstr='#84f4a5',GradientType=0 ); /* IE6-9 */
 }
 
+.dl-btn + .tooltip{
+	margin-left:-10px;
+}
 
 #panel h3 {
 	font-family: Helvetica;
@@ -43,7 +61,7 @@ body{
 .tools {
 	position: absolute;
 	right: 20px;
-	top: 200px;
+	top: 150px;
 }
 
 .tools ul {
@@ -569,7 +587,7 @@ body{
 	left: 50%;
 	background: white;
 	border-radius: 5px;
-	height: 270px;
+	height: 300px;
 	width: 270px;
 	box-shadow: 0px 0px 7px;
 }
@@ -589,10 +607,37 @@ body{
 .welcome {
 	position: absolute;
 	left: 50%;
-	top: 200px;
-	width: 400px;
+	top: 50%;
+	height: 400px;
+	width: 650px;
 	text-align: center;
-	margin-left: -200px;
+	margin-left: -325px;
+	margin-top: -200px;
+	background: rgba(255, 255, 255, 0.83);
+	border-radius: 5px;
+	box-shadow: black 2px 4px 7px;
+}
+
+.welcome button{
+	position: absolute;
+	bottom: 8px;
+	left: 50%;
+	margin-left: -83px;
+}
+
+.welcome button.closebtn-tutorial {
+	position: absolute;
+	bottom: 8px;
+	left: 50%;
+	margin-left: 10px;
+}
+
+
+
+
+.welcome span{
+	position: absolute;
+	left: 11px;
 }
 
 [draggable] {

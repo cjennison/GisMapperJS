@@ -316,15 +316,17 @@ GisMap.UI = {
 		$(container).append(latlonbox);
 		
 		var mousePositionControl = new ol.control.MousePosition({
-			 coordinateFormat: ol.coordinate.createStringXY(4),
+			 coordinateFormat: ol.coordinate.createStringXY(6),
   			 projection: 'EPSG:4326',
   			  className: 'custom-mouse-position',
 			  target: document.getElementById('mouse-position'),
 			  undefinedHTML: '&nbsp;'
 		})
 		
+		
+		
 		GisMap.Map.map.addControl(mousePositionControl);
-
+		
 		//TODO: need better way to catch coordinates..
 		setInterval(function(){
 			var string = $(".custom-mouse-position").html();
@@ -332,6 +334,7 @@ GisMap.UI = {
 			if(string.length == 1) return;
 			$(latlonbox).find(".lat").html(string[1]);
 			$(latlonbox).find(".lon").html(string[0]);
+			
 			
 			
 			
@@ -345,6 +348,22 @@ GisMap.UI = {
 		var scaleLine = new ol.control.ScaleLine();
 		
 		GisMap.Map.map.addControl(scaleLine);
+		
+	},
+	
+	addZoomSlider:function(){
+		var zoomSlider = new ol.control.ZoomSlider({
+			
+		});
+		GisMap.Map.map.addControl(zoomSlider);
+		
+		
+		setTimeout(function(){
+			$(".ol-zoomslider").css("left","auto");
+			$(".ol-zoomslider").css("right","24px");
+			$(".ol-zoomslider").css("bottom", "79px");
+			$(".ol-zoomslider").css("top","auto");
+		},1000)
 		
 	},
 	

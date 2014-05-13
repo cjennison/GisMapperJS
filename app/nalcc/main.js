@@ -100,7 +100,7 @@ function STARTAPPLICATION() {
 		
 		var imgButton = GisMap.UI.spawnButton(obj.div, {
 			class	:"btn btn-default btn-sm img-btn ", 	//class of th ebutton
-			text	:"<span class='glyphicon glyphicon-floppy-disk'></span>", 	//text for the button
+			text	:"<span class='glyphicon glyphicon-picture'></span>", 	//text for the button
 			list	:true, 		
 			tooltip : {
 				placement:"left",
@@ -112,6 +112,22 @@ function STARTAPPLICATION() {
 				  $(".downloader").addClass("active");
 			} //click function
 		}, null);
+		
+		var dataButton = GisMap.UI.spawnButton(obj.div, {
+			class	:"btn btn-default btn-sm dl-btn ", 	//class of th ebutton
+			text	:"<span class='glyphicon glyphicon-floppy-disk'></span>", 	//text for the button
+			list	:true, 		
+			tooltip : {
+				placement:"left",
+				text:"Download Data"
+			},						//if the button is part of a list
+			event	:function(e){
+				  //TODO: DOWNLOAD
+				  Downloader.init();
+			} //click function
+		}, function(e){
+			$(e).parent().css("margin-top", "-1px");
+		});
 		
 		var download = $("<a href='#' target='_blank'><div class='downloader'>Click to download your file!</div></a>");
 		$(download).on('click', function(){
@@ -142,6 +158,11 @@ function STARTAPPLICATION() {
 	})
 	
 	
+	//TODO; This is bad..
+	setInterval(function(){
+		$(".dl-btn + .tooltip").css('margin-left', '-20px');
+	},100);
+	
 	/*
 	//A WMS Layer!
 	var nLay = new LayerOptions({
@@ -166,6 +187,11 @@ function STARTAPPLICATION() {
 	})
 	
 	*/
+	
+	GisMap.Tasks.push(function(cb){
+		GisMap.UI.addZoomSlider();
+		cb();
+	})
 	
 	GisMap.Tasks.push(function(cb){
 		buildLayerPanel();
@@ -220,7 +246,7 @@ function STARTAPPLICATION() {
 	
 	GisMap.Tasks.push(function(cb){
 		if(localStorage.beenHereBefore != "true"){
-			//localStorage.setItem("beenHereBefore", 'true'); //TODO: REMOVE WHEN READY
+			//v //TODO: REMOVE WHEN READY
 			console.log("So you are new here?");
 			//spawnWelcomePage();
 			
@@ -236,12 +262,17 @@ function STARTAPPLICATION() {
 
 function spawnWelcomePage(){
 	var welcome = $("<div class='jumbotron welcome'><h1>Welcome!</h1><h6>To the NALCC/DECSC Web Mapping Application.</h6><p>This is a paragraph that contains things that I would imagine are somewhat helpful to understanding what the silly application is. Perhaps if one read this paragraph that would be able to decipher the uses of the application, or perhaps view a tutorial. Now that would be something, wouldn't it?'</div>");
-	
-	//$(welcome)
-	
-	
+	$(welcome).append("<button class='btn btn-primary closebtn-welcome' onclick='toggleWelcome();ToolBar.hideThis(this); '>Close</button>");
+	$(welcome).append("<button class='btn btn-success closebtn-tutorial' onclick='toggleWelcome();ToolBar.hideThis(this); '>View Tutorial</button>");
+	$(welcome).append("<span><input type='checkbox'> Don't show this again.</input><span>");
 	$("body").append(welcome);
 	
+}
+
+function toggleWelcome(){
+	if($(".welcome").find('input').prop('checked')){
+		localStorage.setItem("beenHereBefore", 'true');
+	}
 }
 
 //This is a legend disabled via the button

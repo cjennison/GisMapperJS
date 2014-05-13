@@ -1,131 +1,115 @@
 LayerControl = {
 
-	container : null,
+container : null,
 
-	currentLayer : "No Layer Selected",
-	previousLayer : [],
-	opacity : true,
-	local_upstream_radio : false,
-	t_flowlines : false,
-	t_outline : false,
-	t_basemap : true,
-	t_legend : false,
-	t_tutorial : false,
-	t_loader : false,
+currentLayer : "No Layer Selected",
+previousLayer : [],
+opacity : true,
+local_upstream_radio : false,
+t_flowlines : false,
+t_outline : false,
+t_basemap : true,
+t_legend : false,
+t_tutorial : false,
+t_loader : false,
 
-	layerHistory : [],
-	layerHistoryDiv : null,
+layerHistory : [],
+layerHistoryDiv : null,
 
-	legend_toggled : false,
-	basemap_toggled : true,
+legend_toggled : false,
+basemap_toggled : true,
 
-	outline : null,
-	flowline : null,
+outline : null,
+flowline : null,
 
-	localLayer : null,
-	upstreamLayer : null,
-	layerBoxes : [],
-	dragTarget : null,
-	dragDeleteTarget : null,
-	toggledBox : null,
+localLayer : null,
+upstreamLayer : null,
+layerBoxes : [],
+dragTarget : null,
+dragDeleteTarget : null,
+toggledBox : null,
 
-	layer_1 : {
-		default : null,
-		other : null,
-		opacity: 100,
-	},
-	layer_2 : {
-		default : null,
-		other : null,
-		opacity: 100,
-	},
-
-	init : function(container) {
+layer_1 : {
+default : null,
+other : null,
+opacity: 100,
+}, layer_2 : {
+	default : null,
+	other : null,
+	opacity: 100,
+	}, init : function(container) {
 		this.container = container;
 
 		this.createLayerBox(container, "active", true, "ONE");
 		this.createLayerBox(container, null, false, "TWO");
-		
+
 		//We have to create 2 blank shape files to be placed in themap
 		var nLay = new LayerOptions({
-			name:"BlankShapefil",
-			source: ol.source.TileWMS,
-			url: 'http://felek.cns.umass.edu:8080/geoserver/wms',
-			params: {
-				'LAYERS' : 'Streams:BlankShapefile', 'TILED':true},
-			serverType:"geoserver"
-		});
-		
-		GisMap.Layer.createNewLayer("LOCAL_ONE", nLay, function(layer){
-			
-			var collect = GisMap.Map.map.getLayers();
-			var thisLayer = collect.removeAt(collect.a.length-1);
-			collect.insertAt(1, thisLayer);
-			
-			
-			
-			LayerControl.layer_1.default = layer;
-			
-			
+			name : "BlankShapefil",
+			source : ol.source.TileWMS,
+			url : 'http://felek.cns.umass.edu:8080/geoserver/wms',
+			params : {
+				'LAYERS' : 'Streams:BlankShapefile',
+				'TILED' : true
+			},
+			serverType : "geoserver"
 		});
 
-		GisMap.Layer.createNewLayer("LOCAL_TWO", nLay, function(layer){
-			
+		GisMap.Layer.createNewLayer("LOCAL_ONE", nLay, function(layer) {
+
 			var collect = GisMap.Map.map.getLayers();
-			var thisLayer = collect.removeAt(collect.a.length-1);
+			var thisLayer = collect.removeAt(collect.a.length - 1);
+			collect.insertAt(1, thisLayer);
+
+			LayerControl.layer_1.default = layer;
+
+		});
+
+		GisMap.Layer.createNewLayer("LOCAL_TWO", nLay, function(layer) {
+
+			var collect = GisMap.Map.map.getLayers();
+			var thisLayer = collect.removeAt(collect.a.length - 1);
 			collect.insertAt(3, thisLayer);
 
-			
-			
 			LayerControl.layer_2.default = layer;
-			
-			
+
 		});
-		
-		GisMap.Layer.createNewLayer("LOCAL_ONE_UPSTREAM", nLay, function(layer){
-			
+
+		GisMap.Layer.createNewLayer("LOCAL_ONE_UPSTREAM", nLay, function(layer) {
+
 			var collect = GisMap.Map.map.getLayers();
-			var thisLayer = collect.removeAt(collect.a.length-1);
+			var thisLayer = collect.removeAt(collect.a.length - 1);
 			collect.insertAt(2, thisLayer);
-								layer.f.visible = false;
+			layer.setVisible(false);
 
-			
-			
 			LayerControl.layer_1.other = layer;
-			
-			
+
 		});
 
-		GisMap.Layer.createNewLayer("LOCAL_TWO_UPSTREAM", nLay, function(layer){
-			
+		GisMap.Layer.createNewLayer("LOCAL_TWO_UPSTREAM", nLay, function(layer) {
+
 			var collect = GisMap.Map.map.getLayers();
-			var thisLayer = collect.removeAt(collect.a.length-1);
+			var thisLayer = collect.removeAt(collect.a.length - 1);
 			collect.insertAt(4, thisLayer);
-								layer.f.visible = false;
-			
-			
+			layer.setVisible(false);
+
 			LayerControl.layer_2.other = layer;
-			
-			
+
 		});
-	
+
 		/*
-		var layername = $("<div id='layer-label'><input type='checkbox' checked='true' toggled='true' style='margin:5px'></input><span>" + this.currentLayer + "</span></div>");
-		$(this.container).append(layername);
-		$(layername).find(":checkbox").change(function() {
-			LayerControl.toggleCurrentLayer(this);
-		});
-		
-		*/
+		 var layername = $("<div id='layer-label'><input type='checkbox' checked='true' toggled='true' style='margin:5px'></input><span>" + this.currentLayer + "</span></div>");
+		 $(this.container).append(layername);
+		 $(layername).find(":checkbox").change(function() {
+		 LayerControl.toggleCurrentLayer(this);
+		 });
+
+		 */
 
 		this.layerHistoryDiv = GisMap.UI.spawnDropdown(this.container, '', {
 			name : "historic_views",
 			label : "Previously Viewed"
 		});
-		
-		
-
-		
 
 		var local_upstream = $("<div class='upstream-local sub-container' data-group='LOCAL'></div>");
 		var local_r = $("<p class='l-u-radio'><input type='radio' name='basin' value='local' onclick='LayerControl.changeLayer(this)' checked='checked'></input>Local</p>");
@@ -171,8 +155,7 @@ LayerControl = {
 
 		this.loadInitialLayers();
 
-	},
-	createLayerBox : function(container, addition_classes, toggled, layer) {
+	}, createLayerBox : function(container, addition_classes, toggled, layer) {
 		var box = $("<div class='layerbox'></div>");
 		if (addition_classes != null) {
 			$(box).addClass(addition_classes);
@@ -184,22 +167,21 @@ LayerControl = {
 			$(this).addClass("active");
 
 			LayerControl.toggledBox = this;
-			
-			if($(this).find(".box-organs").length > 0){
-				GisMap.UI.createJSONLegend(null, RULES, $(this).find(".box-organs").attr("layer-name"), {draggable:true}, function(){
-					$(".legend_toggle").prop("checked",true);
+
+			if ($(this).find(".box-organs").length > 0) {
+				GisMap.UI.createJSONLegend(null, RULES, $(this).find(".box-organs").attr("layer-name"), {
+					draggable : true
+				}, function() {
+					$(".legend_toggle").prop("checked", true);
 					LayerControl.legend_toggled = true;
-					
+
 					GisMap.UI.showLegend(true);
-					
+
 				});
 				$("#legend-close").attr('onclick', "GisMap.UI.hideLegend(true,disableLegend())");
-				
+
 			}
-			
-			
-			
-			
+
 		})
 
 		$(box).on('dragenter', function(e) {
@@ -222,7 +204,7 @@ LayerControl = {
 			}
 
 		})
-		
+
 		$(box).attr("BOX-ID", layer);
 
 		$(container).append(box);
@@ -231,30 +213,27 @@ LayerControl = {
 		if (toggled) {
 			LayerControl.toggledBox = box;
 		}
-	},
-
-	setLayerBox : function(box, target) {
-		if(target == undefined)
+	}, setLayerBox : function(box, target) {
+		if (target == undefined)
 			return;
-		
-		
+
 		var layerName = $(target).attr("data-layer");
 		var layerType = $(target).attr("data-type");
-		var layerLabel = $(target).html(); 
-		var ID		   = $(target).attr("data-id");
-		
+		var layerLabel = $(target).html();
+		var ID = $(target).attr("data-id");
+
 		var target = {
-			layerName:layerName,
-			layerType:layerType,
-			layerLabel:layerLabel,
-			layerID:ID,
+			layerName : layerName,
+			layerType : layerType,
+			layerLabel : layerLabel,
+			layerID : ID,
 		}
-		
+
 		console.log(target)
-		
+
 		$(box).empty();
 		$(box).append("<div class='box-organs' layer-name='" + layerName + "' draggable='true'></div>");
-		
+
 		//Label
 		$(box).find('.box-organs').append("<h3><span>" + target.layerLabel + "</span></h3>")
 
@@ -269,36 +248,33 @@ LayerControl = {
 			}
 
 		})
-		
 		var op = 0;
 		$("#map").on('drop', function(e) {
 			console.log(LayerControl.dragDeleteTarget);
-			
+
 			var box = $(LayerControl.dragDeleteTarget).attr("box-id");
 			console.log(box);
-			if(box == "ONE"){
+			if (box == "ONE") {
 				console.log("BOX ONE")
-				 GisMap.Map.map.removeLayer(LayerControl.layer_1.default);
+				GisMap.Map.map.removeLayer(LayerControl.layer_1.default);
 			} else {
 				console.log("BOX TWO")
 				GisMap.Map.map.removeLayer(LayerControl.layer_2.default);
 			}
-			
+
 			$(LayerControl.dragDeleteTarget).empty();
-			
+
 			$(LayerControl.dragDeleteTarget).css("height", 103);
-			
 
 		});
-		
-		
-		if($(box).attr("BOX-ID") == "ONE"){
-			op = LayerControl.layer_2.opacity;	
+
+		if ($(box).attr("BOX-ID") == "ONE") {
+			op = LayerControl.layer_2.opacity;
 		} else {
-			op = LayerControl.layer_1.opacity;	
+			op = LayerControl.layer_1.opacity;
 		}
-		
-				console.log(" ------------------------------ " + op);
+
+		console.log(" ------------------------------ " + op);
 
 		GisMap.UI.createSlider($(box).find('.box-organs'), "Opacity", {
 			spanclass : 'l-opac' + $(box).attr("BOX-ID")
@@ -313,14 +289,14 @@ LayerControl = {
 					$(el).find(".l-opac" + $(box).attr("BOX-ID")).html(": " + ui.value + "%");
 					GisMap.Map.changeOpacityOfType("LOCAL_" + $(box).attr("BOX-ID"), ui.value / 100)
 					GisMap.Map.changeOpacityOfType("LOCAL_" + $(box).attr("BOX-ID") + "_UPSTREAM", ui.value / 100)
-					if($(box).attr("BOX-ID") == "ONE"){
+					if ($(box).attr("BOX-ID") == "ONE") {
 						var diff = 100 - ui.value;
 						LayerControl.layer_1.opacity = ui.value;
 						LayerControl.layer_2.opacity = diff;
-						GisMap.Map.changeOpacityOfType("LOCAL_TWO", diff/100);
-						GisMap.Map.changeOpacityOfType("LOCAL_TWO_UPSTREAM", diff/100);
-						$(".layerbox[box-id=TWO] #slider").slider( "option", "value", diff );
-						
+						GisMap.Map.changeOpacityOfType("LOCAL_TWO", diff / 100);
+						GisMap.Map.changeOpacityOfType("LOCAL_TWO_UPSTREAM", diff / 100);
+						$(".layerbox[box-id=TWO] #slider").slider("option", "value", diff);
+
 						$(".l-opacTWO").html(": " + LayerControl.layer_2.opacity + "%");
 						console.log($(el).find(".l-opacTWO"));
 
@@ -328,49 +304,52 @@ LayerControl = {
 						LayerControl.layer_2.opacity = ui.value;
 						var diff = 100 - ui.value;
 						LayerControl.layer_1.opacity = diff;
-						GisMap.Map.changeOpacityOfType("LOCAL_ONE", diff/100);
-						GisMap.Map.changeOpacityOfType("LOCAL_ONE_UPSTREAM", diff/100);
-						
+						GisMap.Map.changeOpacityOfType("LOCAL_ONE", diff / 100);
+						GisMap.Map.changeOpacityOfType("LOCAL_ONE_UPSTREAM", diff / 100);
+
 						$(".l-opacONE").html(": " + LayerControl.layer_1.opacity + "%");
 
-						$(".layerbox[box-id=ONE] #slider").slider( "option", "value", diff );
+						$(".layerbox[box-id=ONE] #slider").slider("option", "value", diff);
 					}
-				
+
 				}
 			});
-			
-			if($(box).attr("BOX-ID") == "ONE"){
-					$(el).find(".l-opac" + $(box).attr("BOX-ID")).html(": " + 	LayerControl.layer_1.opacity + "%");
-			}else{
-					$(el).find(".l-opac" + $(box).attr("BOX-ID")).html(": " + 	LayerControl.layer_2.opacity + "%");
+
+			if ($(box).attr("BOX-ID") == "ONE") {
+				$(el).find(".l-opac" + $(box).attr("BOX-ID")).html(": " + LayerControl.layer_1.opacity + "%");
+			} else {
+				$(el).find(".l-opac" + $(box).attr("BOX-ID")).html(": " + LayerControl.layer_2.opacity + "%");
 			}
-			
-			
+
 		});
-		GisMap.UI.createJSONLegend(null, RULES, layerName, {draggable:true}, function(){
-			$(".legend_toggle").prop("checked",true);
+		GisMap.UI.createJSONLegend(null, RULES, layerName, {
+			draggable : true
+		}, function() {
+			$(".legend_toggle").prop("checked", true);
 			LayerControl.legend_toggled = true;
-			
+
 			GisMap.UI.showLegend(true);
-			
+
 		});
 		$("#legend-close").attr('onclick', "GisMap.UI.hideLegend(true,disableLegend())");
-		
-		
-		
-		if($(box).attr("BOX-ID") == "ONE"){
-			
-			$("[box-id=ONE]").find("#slider").slider({value:LayerControl.layer_1.opacity});
-			
+
+		if ($(box).attr("BOX-ID") == "ONE") {
+
+			$("[box-id=ONE]").find("#slider").slider({
+				value : LayerControl.layer_1.opacity
+			});
+
 			target.box = "ONE";
 			this.createLayerToBox(target);
 		} else {
-			$("[box-id=TWO]").find("#slider").slider({value:LayerControl.layer_2.opacity});
+			$("[box-id=TWO]").find("#slider").slider({
+				value : LayerControl.layer_2.opacity
+			});
 
 			target.box = "TWO";
 			this.createLayerToBox(target);
 		}
-		
+
 		var local_upstream = $("<div class='upstream-local sub-container' data-group='LOCAL'></div>");
 		var local_r = $("<button class='btn btn-default btn-success' onclick='LayerControl.changeLayer(this)'>Local</button>");
 		var upstream_r = $("<button class='btn btn-default' onclick='LayerControl.changeLayer(this)'>Upstream</button>");
@@ -379,19 +358,17 @@ LayerControl = {
 		$(local_upstream).append(upstream_r);
 
 		GisMap.UI.createUIGroup($(box).find(".box-organs"), [local_upstream, "<div class='other sub-container' data-group='OTHER'></div>"], "Layer", null);
-		if(target.layerID == "Catchments"){
+		if (target.layerID == "Catchments") {
 			$(box).find(".upstream-local").css("display", "block");
 		}
-		
+
 		$(box).css("height", "auto");
 
-	},
-	
-	setLayerBox_withobject : function(box, target) {
+	}, setLayerBox_withobject : function(box, target) {
 		console.log(target);
 		$(box).empty();
 		$(box).append("<div class='box-organs' layer-name='" + target.layerName + "' draggable='true'></div>");
-		
+
 		//Label
 		$(box).find('.box-organs').append("<h3><span>" + target.layerLabel + "</span></h3>")
 
@@ -409,32 +386,31 @@ LayerControl = {
 
 		$("#map").on('drop', function(e) {
 			console.log(LayerControl.dragDeleteTarget);
-			
+
 			var box = $(LayerControl.dragDeleteTarget).attr("box-id");
 			console.log(box);
-			if(box == "ONE"){
+			if (box == "ONE") {
 				console.log("BOX ONE")
-				 GisMap.Map.map.removeLayer(LayerControl.layer_1.default);
+				GisMap.Map.map.removeLayer(LayerControl.layer_1.default);
 			} else {
 				console.log("BOX TWO")
 				GisMap.Map.map.removeLayer(LayerControl.layer_2.default);
 			}
-			
-			$(LayerControl.dragDeleteTarget).empty();
-						$(LayerControl.dragDeleteTarget).css("height", 103);
 
+			$(LayerControl.dragDeleteTarget).empty();
+			$(LayerControl.dragDeleteTarget).css("height", 103);
 
 		});
-		
+
 		var op = 0;
-		if($(box).attr("BOX-ID") == "ONE"){
-			op = LayerControl.layer_2.opacity;	
+		if ($(box).attr("BOX-ID") == "ONE") {
+			op = LayerControl.layer_2.opacity;
 		} else {
-			op = LayerControl.layer_1.opacity;	
+			op = LayerControl.layer_1.opacity;
 		}
-		
+
 		console.log(" ------------------------------ " + op);
-		
+
 		GisMap.UI.createSlider($(box).find('.box-organs'), "Opacity", {
 			spanclass : 'l-opac' + $(box).attr("BOX-ID")
 		}, function(el) {
@@ -448,50 +424,53 @@ LayerControl = {
 					$(el).find(".l-opac" + $(box).attr("BOX-ID")).html(": " + ui.value + "%");
 					GisMap.Map.changeOpacityOfType("LOCAL_" + $(box).attr("BOX-ID"), ui.value / 100)
 					GisMap.Map.changeOpacityOfType("LOCAL_" + $(box).attr("BOX-ID") + "_UPSTREAM", ui.value / 100)
-					if($(box).attr("BOX-ID") == "ONE"){
+					if ($(box).attr("BOX-ID") == "ONE") {
 						var diff = 100 - ui.value;
 						LayerControl.layer_1.opacity = ui.value;
 						LayerControl.layer_2.opacity = diff;
-						GisMap.Map.changeOpacityOfType("LOCAL_TWO", diff/100);
-						GisMap.Map.changeOpacityOfType("LOCAL_TWO_UPSTREAM", diff/100);
+						GisMap.Map.changeOpacityOfType("LOCAL_TWO", diff / 100);
+						GisMap.Map.changeOpacityOfType("LOCAL_TWO_UPSTREAM", diff / 100);
 						$(".layerbox[box-id=TWO] .slider-container span").html(": " + diff + "%");
-						$(".layerbox[box-id=TWO] #slider").slider( "option", "value", diff );
+						$(".layerbox[box-id=TWO] #slider").slider("option", "value", diff);
 						$(el).find(".l-opacTWO").html(": " + LayerControl.layer_2.opacity + "%");
 
 					} else {
 						var diff = 100 - ui.value;
 						LayerControl.layer_2.opacity = ui.value;
 						LayerControl.layer_1.opacity = diff;
-						GisMap.Map.changeOpacityOfType("LOCAL_ONE", diff/100);
-						GisMap.Map.changeOpacityOfType("LOCAL_ONE_UPSTREAM", diff/100);
+						GisMap.Map.changeOpacityOfType("LOCAL_ONE", diff / 100);
+						GisMap.Map.changeOpacityOfType("LOCAL_ONE_UPSTREAM", diff / 100);
 						$(".layerbox[box-id=ONE] .slider-container span").html(": " + diff + "%");
-						$(".layerbox[box-id=ONE] #slider").slider( "option", "value", diff );
+						$(".layerbox[box-id=ONE] #slider").slider("option", "value", diff);
 						$(el).find(".l-opacONE").html(": " + LayerControl.layer_1.opacity + "%");
 					}
-				
+
 				}
 			});
-			
-			if($(box).attr("BOX-ID") == "ONE"){
-					$(el).find(".l-opac" + $(box).attr("BOX-ID")).html(": " + 	LayerControl.layer_1.opacity + "%");
-			}else{
-					$(el).find(".l-opac" + $(box).attr("BOX-ID")).html(": " + 	LayerControl.layer_2.opacity + "%");
+
+			if ($(box).attr("BOX-ID") == "ONE") {
+				$(el).find(".l-opac" + $(box).attr("BOX-ID")).html(": " + LayerControl.layer_1.opacity + "%");
+			} else {
+				$(el).find(".l-opac" + $(box).attr("BOX-ID")).html(": " + LayerControl.layer_2.opacity + "%");
 			}
 		});
-		
-		
-		if($(box).attr("BOX-ID") == "ONE"){
-						$("[box-id=ONE]").find("#slider").slider({value:LayerControl.layer_1.opacity});
+
+		if ($(box).attr("BOX-ID") == "ONE") {
+			$("[box-id=ONE]").find("#slider").slider({
+				value : LayerControl.layer_1.opacity
+			});
 
 			target.box = "ONE";
 			this.createLayerToBox(target);
 		} else {
-						$("[box-id=TWO]").find("#slider").slider({value:LayerControl.layer_2.opacity});
+			$("[box-id=TWO]").find("#slider").slider({
+				value : LayerControl.layer_2.opacity
+			});
 
 			target.box = "TWO";
 			this.createLayerToBox(target);
 		}
-		
+
 		var local_upstream = $("<div class='upstream-local sub-container' data-group='LOCAL'></div>");
 		var local_r = $("<button class='btn btn-default btn-success' onclick='LayerControl.changeLayer(this)'>Local</button>");
 		var upstream_r = $("<button class='btn btn-default' onclick='LayerControl.changeLayer(this)'>Upstream</button>");
@@ -500,131 +479,120 @@ LayerControl = {
 		$(local_upstream).append(upstream_r);
 
 		GisMap.UI.createUIGroup($(box).find(".box-organs"), [local_upstream, "<div class='other sub-container' data-group='OTHER'></div>"], "Layer", null);
-		if(target.layerID == "Catchments"){
+		if (target.layerID == "Catchments") {
 			$(box).find(".upstream-local").css("display", "block");
 		}
-		
+
 		$(box).css("height", "auto");
-	},
-	
-	
-	createLayerToBox:function(opts){
+	}, createLayerToBox:function(opts) {
 		console.log(opts);
-		
-		if(opts.box == "ONE"){
-			if(LayerControl.layer_1.default){
+
+		if (opts.box == "ONE") {
+			if(LayerControl.layer_1.default) {
 				GisMap.Map.map.removeLayer(LayerControl.layer_1.default);
 			}
-			if(LayerControl.layer_1.other){
+			if (LayerControl.layer_1.other) {
 				GisMap.Map.map.removeLayer(LayerControl.layer_1.other);
 			}
 		} else {
-			if(LayerControl.layer_2.default){
+			if(LayerControl.layer_2.default) {
 				GisMap.Map.map.removeLayer(LayerControl.layer_2.default);
 			}
-			if(LayerControl.layer_2.other){
+			if (LayerControl.layer_2.other) {
 				GisMap.Map.map.removeLayer(LayerControl.layer_2.other);
 			}
 		}
-		
-		
+
 		var nLay = new LayerOptions({
-			name:opts.layerName,
-			source: ol.source.TileWMS,
-			url: 'http://felek.cns.umass.edu:8080/geoserver/wms',
-			params: {
-				'LAYERS' : 'Streams:' + opts.layerName, 'TILED':true},
-			serverType:"geoserver"
+			name : opts.layerName,
+			source : ol.source.TileWMS,
+			url : 'http://felek.cns.umass.edu:8080/geoserver/wms',
+			params : {
+				'LAYERS' : 'Streams:' + opts.layerName,
+				'TILED' : true
+			},
+			serverType : "geoserver"
 		});
-		
-		GisMap.Layer.createNewLayer("LOCAL_" + opts.box, nLay, function(layer){
-			
+
+		GisMap.Layer.createNewLayer("LOCAL_" + opts.box, nLay, function(layer) {
+
 			var collect = GisMap.Map.map.getLayers();
-			var thisLayer = collect.removeAt(collect.a.length-1);
-			
-			
-			
-			
-			if(opts.box == "ONE"){
-				LayerControl.layer_1.default = layer;
+			var thisLayer = collect.removeAt(collect.a.length - 1);
+
+			if (opts.box == "ONE") {
+				LayerControl.layer_1.default =layer;
 				collect.insertAt(1, thisLayer);
 			} else {
-				LayerControl.layer_2.default = layer;
+				LayerControl.layer_2.default =layer;
 				collect.insertAt(3, thisLayer);
 
 			}
-			
-			
-			if(opts.layerID == "Catchments"){
+
+			if (opts.layerID == "Catchments") {
 				var uLay = new LayerOptions({
-					name:opts.layerName,
-					source: ol.source.TileWMS,
-					url: 'http://felek.cns.umass.edu:8080/geoserver/wms',
-					params: {
-						'LAYERS' : 'Streams:' + opts.layerName + "_Upstream", 'TILED':true},
-					serverType:"geoserver"
+					name : opts.layerName,
+					source : ol.source.TileWMS,
+					url : 'http://felek.cns.umass.edu:8080/geoserver/wms',
+					params : {
+						'LAYERS' : 'Streams:' + opts.layerName + "_Upstream",
+						'TILED' : true
+					},
+					serverType : "geoserver"
 				});
-				GisMap.Layer.createNewLayer("LOCAL_" + opts.box + "_UPSTREAM", uLay, function(layer){
-					
+				GisMap.Layer.createNewLayer("LOCAL_" + opts.box + "_UPSTREAM", uLay, function(layer) {
+
 					var collect = GisMap.Map.map.getLayers();
-					var thisLayer = collect.removeAt(collect.a.length-1);
-					layer.f.visible = false;
-					
-					
-					
-					if(opts.box == "ONE"){
+					var thisLayer = collect.removeAt(collect.a.length - 1);
+					layer.setVisible(false);
+
+					if (opts.box == "ONE") {
 						LayerControl.layer_1.other = layer;
 						collect.insertAt(2, thisLayer);
 					} else {
 						LayerControl.layer_2.other = layer;
 						collect.insertAt(4, thisLayer);
-		
+
 					}
-				
+
 				});
 			}
-			
-			
-		});
-		
-		
-	},
 
-	changeLayer : function(el) {
+		});
+
+	}, changeLayer : function(el) {
 		console.log(el);
 		var parent = $(el).parent();
 		var container = $(parent).parent().parent().parent();
-		
+
 		$(parent).find("button").removeClass("btn-success");
 		$(el).addClass("btn-success")
-		
+
 		console.log(container);
 		var id = $(container).attr("box-id")
-		if(id == "ONE"){
-			this.layer_1.default.f.visible = !this.layer_1.default.f.visible;
-			this.layer_1.other.f.visible = !this.layer_1.other.f.visible;
+		if (id == "ONE") {
+
+			this.layer_1.default.setVisible( !this.layer_1.default.getVisible());
+			this.layer_1.other.setVisible(!this.layer_1.other.getVisible());
 		} else {
-			this.layer_2.default.f.visible = !this.layer_2.default.f.visible;
-			this.layer_2.other.f.visible = !this.layer_2.other.f.visible;
+			this.layer_2.default.setVisible( !this.layer_2.default.getVisible());
+			this.layer_2.other.setVisible(!this.layer_2.other.getVisible());
 		}
-		
 
 		/*
-		var val = $(el).val();
-		console.log(val);
-		if (val == "upstream") {
-			this.localLayer.f.visible = false;
-			this.upstreamLayer.f.visible = true;
-		} else {
-			this.localLayer.f.visible = true;
-			this.upstreamLayer.f.visible = false;
-		}
-		*/
+		 var val = $(el).val();
+		 console.log(val);
+		 if (val == "upstream") {
+		 this.localLayer.f.visible = false;
+		 this.upstreamLayer.f.visible = true;
+		 } else {
+		 this.localLayer.f.visible = true;
+		 this.upstreamLayer.f.visible = false;
+		 }
+		 */
 
 		GisMap.Map.map.render();
 
-	},
-	loadInitialLayers : function() {
+	}, loadInitialLayers : function() {
 
 		var oLay = new LayerOptions({
 			name : 'Huc 4 Grey',
@@ -640,7 +608,7 @@ LayerControl = {
 			var collect = GisMap.Map.map.getLayers();
 			var thisLayer = collect.removeAt(collect.a.length - 1);
 			collect.insertAt(5, thisLayer);
-			layer.f.visible = false;
+			layer.setVisible(false);
 			GisMap.Map.map.render();
 			LayerControl.outline = layer;
 
@@ -658,8 +626,8 @@ LayerControl = {
 				var collect = GisMap.Map.map.getLayers();
 				var thisLayer = collect.removeAt(collect.a.length - 1);
 				collect.insertAt(6, thisLayer);
-				layer.f.visible = false;
-				layer.f.opacity = .6;
+				layer.setVisible(false);
+				layer.setOpacity(.6);
 				GisMap.Map.map.render();
 				LayerControl.flowline = layer;
 			});
@@ -688,8 +656,7 @@ LayerControl = {
 		}
 
 		return li;
-	},
-	buildOutlineList : function() {
+	}, buildOutlineList : function() {
 		var outlines = LAYERS.OUTLINES;
 		var li = "";
 		var cat;
@@ -713,24 +680,22 @@ LayerControl = {
 		li += "</ul></li>"
 
 		return li;
-	},
-	toggleOutline : function() {
+	}, toggleOutline : function() {
 		if (this.outline == null)
 			return;
 
 		//Outline is false
 		if (this.t_outline == false) {
-			this.outline.f.visible = true;
+			this.outline.setVisible(true);
 			this.t_outline = true;
 			GisMap.Map.map.render();
 			return;
 		}
 
-		this.outline.f.visible = false;
+		this.outline.setVisible(false);
 		this.t_outline = false;
 		GisMap.Map.map.render();
-	},
-	toggleFlowline : function() {
+	}, toggleFlowline : function() {
 		if (this.flowline == null)
 			return;
 
@@ -738,13 +703,13 @@ LayerControl = {
 
 		//Outline is false
 		if (this.t_flowlines == false) {
-			this.flowline.f.visible = true;
+			this.flowline.setVisible(true);
 			this.t_flowlines = true;
 			GisMap.Map.map.render();
 			return;
 		}
 
-		this.flowline.f.visible = false;
+		this.flowline.setVisible(false);
 		this.t_flowlines = false;
 		GisMap.Map.map.render();
 	},
@@ -752,8 +717,7 @@ LayerControl = {
 	/**
 	 * places a basemap from a dropdown element
 	 * @param {Object} el
-	 */
-	placeBasemap : function(el) {
+	 */ placeBasemap : function(el) {
 		var src = $(el).attr("data-source");
 		var lay = $(el).attr("data-layer");
 
@@ -764,8 +728,7 @@ LayerControl = {
 
 		$("#basemap_dropdown .btn_label").html("Basemap: " + $(el).html());
 
-	},
-	placeOutline : function(el) {
+	}, placeOutline : function(el) {
 		if (this.outline) {
 			GisMap.Map.map.removeLayer(this.outline);
 		}
@@ -790,7 +753,7 @@ LayerControl = {
 			var collect = GisMap.Map.map.getLayers();
 			var thisLayer = collect.removeAt(collect.a.length - 1);
 			collect.insertAt(2, thisLayer);
-			layer.f.visible = LayerControl.t_outline;
+			layer.setVisible(LayerControl.t_outline);
 			LayerControl.outline = layer;
 		});
 
@@ -801,8 +764,7 @@ LayerControl = {
 	/**
 	 * updates the layer controls after adding a new layer
 	 * @param {Object} opts
-	 */
-	updateInterface : function(opts) {
+	 */ updateInterface : function(opts) {
 		console.log(opts);
 		this.t_legend = opts.t_legend;
 		$(".legend_toggle").prop("disabled", !this.t_legend);
@@ -834,8 +796,7 @@ LayerControl = {
 		//UPDATE LAYER BOX
 		this.setLayerBox_withobject(LayerControl.toggledBox, opts);
 
-	},
-	buildHistoryList : function() {
+	}, buildHistoryList : function() {
 		var li = "";
 		for (var h in this.layerHistory) {
 			li += "<li role='presentation'>"
