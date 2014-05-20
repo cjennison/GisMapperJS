@@ -303,17 +303,7 @@ body{
 	right: 1px;
 }
 
-.user-panel {
-	position: absolute;
-	right: 0px;
-	bottom: 0px;
-	width: 300px;
-	background: rgba(255,255,255,.6);
-	padding: 4px;
-	box-shadow: 0px 0px 7px;
-	border-radius: 3px;
-	font-family: Helvetica;
-}
+
 
 .user-basins {
 	position: absolute;
@@ -588,7 +578,7 @@ body{
 	background: white;
 	border-radius: 5px;
 	height: 300px;
-	width: 270px;
+	width: 300px;
 	box-shadow: 0px 0px 7px;
 }
 

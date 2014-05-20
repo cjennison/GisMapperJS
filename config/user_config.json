@@ -29,7 +29,8 @@
 				"main.css",
 				"ui.css",
 				"data.css",
-				"download.css"
+				"download.css",
+				"user.css"
 			],
 			
 			"LOAD_COORDINATES":[

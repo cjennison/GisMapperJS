@@ -69,7 +69,9 @@ GisMap.UI.createPanelDropdown = function(master_list, sub_lists, opts, cb){
 	var description_panel = $("<div class='desc-panel'></div>");
 	$(description_panel).append("<div class='desc-label'><span>INFORMATION<span></div>")
 	$(description_panel).append("<h3 class='header'>Mouse over a layer for more information.</h3");
-	$(description_panel).append("<button class='btn btn-default downloaddata-btn'><span class='glyphicon glyphicon-save'></span>&nbsp;Download Data</button>")
+	/*$(description_panel).append("<button class='btn btn-default downloaddata-btn'><span class='glyphicon glyphicon-save'></span>&nbsp;Download Data</button>")
+	*/
+	
 	$(div).append(description_panel);
 	
 	

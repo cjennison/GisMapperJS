@@ -1,0 +1,65 @@
+.login-panel{
+	
+	background: white;
+	border-radius: 5px;
+	position: absolute;
+	width: 300px;
+	display: inline-block;
+	left: 40%;
+	top: 30%;
+	
+}
+
+.user-panel {
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	width: 500px;
+	background: rgba(255,255,255,.6);
+	padding: 4px;
+	box-shadow: 0px 0px 7px;
+	border-radius: 3px;
+	font-family: Helvetica;
+}
+
+.user-panel a, #text_username{
+	
+	position:relative;
+	top:25%;
+	margin-left:10px;
+	color:black;
+	background: rgba(255,255,255,.2);
+	padding: 4px;
+	
+}
+
+#form_register .form-control{
+	width:90%;
+	margin-left:5px;
+	margin-bottom:3px;
+}
+
+.login-panel .alert{
+	position:absolute;
+	left:104%;
+	width:350px;
+	border-bottom-left-radius:0px;
+	margin-top:-126px;
+}
+
+.arrow-left {
+	position:absolute;
+	left:-3%;
+	top:63%;
+	width: 0; 
+	height: 0;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-right:10px solid #fcf8e3; 
+}
+
+
+.user-panel.active{
+	height:42px;
+}
+

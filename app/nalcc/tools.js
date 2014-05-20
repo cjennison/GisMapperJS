@@ -9,7 +9,7 @@ var ToolBar = {
 	
 	toggleCursor:function(el){
 		$(".cursorBtn").removeClass("btn-success");
-		
+				
 		var btnclass = el.class.split(" ");
 		btnclass = btnclass[btnclass.length-2];
 		$("." + btnclass).addClass("btn-success");

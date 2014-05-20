@@ -3,7 +3,10 @@ var RULES,
 	LAYERS,
 	INFO_FORMAT;
 
-
+var organized_layers = [];
+var BASIN_CHARS = [];
+var STREAM_ENV = [];
+var FISH = [];
 
 //This application should at most only contain methods that formulate the interface of your map.
 //To avoid clutter, use additional files and load them in.
@@ -305,6 +308,21 @@ function buildPanelDropdowns(){
 		list:[],
 	}];
 	
+	BASIN_CHARS = [
+	{
+		link:"Climate",	
+		list:[],
+	},{
+		link:"Land Use",	
+		list:[],
+	},{
+		link:"Geology",	
+		list:[],
+	},{
+		link:"Topography",	
+		list:[],
+	}];
+	
 	
 	var layers = LAYERS.LAYERS;
 	for(var l in layers){
@@ -318,6 +336,7 @@ function buildPanelDropdowns(){
 				var li = "<li draggable='true' data-layer='" + lay.Layer + "' data-type='" + lay.DataType + "' data-id='"+ lay.FeatureType +"'  onclick='AppLayer.generateLayer(this)'>" + lay.Label + "</li>";
 				
 				basinSubs[sub].list.push(li)
+				BASIN_CHARS[sub].list.push(lay);
 				
 				break;
 			}
@@ -347,6 +366,14 @@ function buildPanelDropdowns(){
 		list:[],
 	}];
 	
+	STREAM_ENV = [
+	{
+		link:"Stream Flow",	
+		list:[],
+	},{
+		link:"Stream Temp",	
+		list:[],
+	}];
 	
 	var layers = LAYERS.LAYERS;
 	for(var l in layers){
@@ -354,6 +381,7 @@ function buildPanelDropdowns(){
 		for(var sub in streamSubs){
 			if(lay.Category == streamSubs[sub].link){
 				streamSubs[sub].list.push("<li draggable='true' data-layer='" + lay.Layer + "' data-type='" + lay.DataType + "' data-id='"+ lay.FeatureType +"'  onclick='AppLayer.generateLayer(this)'>" + lay.Label + "</li>")
+				STREAM_ENV[sub].list.push(lay);
 				break;
 			}
 		}
@@ -383,9 +411,19 @@ function buildPanelDropdowns(){
 	},{
 		link:"Resilience",	
 		list:[],
-	}
+	}];
 	
-	];
+	FISH = [
+	{
+		link:"Observed",	
+		list:[],
+	},{
+		link:"Future",	
+		list:[],
+	},{
+		link:"Resilience",	
+		list:[],
+	}];
 	
 	var layers = LAYERS.LAYERS;
 	for(var l in layers){
@@ -393,6 +431,7 @@ function buildPanelDropdowns(){
 		for(var sub in fishSubs){
 			if(lay.Category == fishSubs[sub].link){
 				fishSubs[sub].list.push("<li draggable='true' data-layer='" + lay.Layer + "' data-type='" + lay.DataType + "' data-id='"+ lay.FeatureType +"'  onclick='AppLayer.generateLayer(this)'>" + lay.Label + "</li>")
+				FISH[sub].list.push(lay)
 				break;
 			}
 		}
@@ -454,7 +493,9 @@ function buildPanelDropdowns(){
 	})
 	
 	
+	console.log(basinSubs);
 	
+	organized_layers = [BASIN_CHARS, STREAM_ENV, FISH];
 	
 	
 	/*

@@ -5,6 +5,12 @@
 
 ## Changelog
 
+### v 0.3
+> - Improved Download Data Panel
+> - Added Download Button to SidePanel
+> - Implemented a User/Register System
+> - Removed old Data Download Button
+
 ### v 0.2
 > - Added Download Data Panel
 > - Improved Functionality of Layer Control

@@ -2,7 +2,8 @@ AppLayer = {
 	
 	
 	cursorState:"pan",
-	
+	wmsSource:null,
+	wmsLayer:null,
 	/**
 	 * Generates a layer from an element 
  	 * @param {Object} el
@@ -86,21 +87,21 @@ AppLayer = {
 	
 	
 	//Creates a WMS Layer and sets it's opacity to 0 on return
-	createWMSLayer:function(){
+	createWMSLayer:function(cb){
 		
 		
-		var wmsSource = new ol.source.TileWMS({
+		this.wmsSource = new ol.source.TileWMS({
 			url:'http://felek.cns.umass.edu:8080/geoserver/wms',
 			params: {
 				'LAYERS' : 'Streams:NENY_NHDCatchments_LocalStats_2' }
 		});
 		
-		var wmsLayer = new ol.layer.Tile({
-			source: wmsSource
+		this.wmsLayer = new ol.layer.Tile({
+			source: AppLayer.wmsSource
 		})
 		
-		GisMap.Map.map.addLayer(wmsLayer);
-		wmsLayer.setOpacity(0);
+		GisMap.Map.map.addLayer(this.wmsLayer);
+		this.wmsLayer.setOpacity(0);
 		
 		var viewProjection = /** @type {ol.proj.Projection} */
    			 (GisMap.Map.map.getView().getProjection());
@@ -112,7 +113,7 @@ AppLayer = {
 			
 			Data.createCatchmentPopup(evt.coordinate);
 			var viewResolution = /** @type {number} */ (GisMap.Map.map.getView().getResolution());
-			  var url = wmsSource.getGetFeatureInfoUrl(
+			  var url = AppLayer.wmsSource.getGetFeatureInfoUrl(
 			      evt.coordinate, viewResolution, viewProjection,
 			      {'INFO_FORMAT': 'application/json'});
 			  if (url) {
@@ -125,6 +126,9 @@ AppLayer = {
 			  }
 		})
 		
+		if(cb){
+			cb();
+		}
 		
 		
 	},

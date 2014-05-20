@@ -8,15 +8,123 @@ var User = {
 		var panel = GisMap.UI.spawnPanel({
 			class : "user-panel"
 		}, function(el) {
-			var header = $("<span>User: &nbsp;<b>" + User.name + "</b></span>");
-			$(el.div).append(header);
-
-			$(el.div).append("<a href='#' style='margin-left:10px;color:black;background: rgba(255,255,255,.2);padding: 4px;'>Sign Out</a>");
-			$(el.div).append("<a href='#' style='margin-left:10px;color:black;background: rgba(255,255,255,.2);padding: 4px;'>My Account</a>");
+			//var header = $("<span>User: &nbsp;<b>" + User.name + "</b></span>");
+			//$(el.div).append(header);
+			$(el.div).append("<form id='form_login' style='display:inline-block; width:70%;'><input type='text' style='display:inline-block; width:50%;' class='form-control' name='username' placeholder='Username'><input type='password' style='display:inline-block; width:50%;' class='form-control' name='password' placeholder='Password'></form>");
+			$(el.div).append("<a href='#' id = 'button_login'>Log In</a>");
+			$(el.div).append("<span href= '#' id = 'text_username'>Guest</span>");
+			$(el.div).append("<a href='#' id = 'button_logout'>Log Out</a>");
+			$(el.div).append("<a href='#' id = 'button_register'>Register</a>");
+			//$(el.div).append("<a href='#' style='margin-left:10px;color:black;background: rgba(255,255,255,.2);padding: 4px;'>My Account</a>");
+			$("#button_logout").hide();
+			$("#text_username").hide();
+			$('#button_login').attr("onclick", "User.sendLoginData()");
+			$('#button_register').attr("onclick", "User.spawnLogInPanel()");
+			$('#button_logout').attr("onclick", "User.resetLogin()");
 		});
 
 		this.downloadUserBasins();
 
+	},
+	
+	spawnLogInPanel : function() {
+		
+		if ($(".login-panel").length > 0){
+			return;
+		}
+		
+		this.container = GisMap.UI.spawnPanel({
+			class: "login-panel" },
+			function(ret){ console.log(ret.div)
+				
+				$(ret.div).draggable();
+				
+				$(ret.div).append("<div id='options-close' style='padding: 11px 12px;' class='btn btn-danger' onclick='ToolBar.hideThis(this);'><span class='glyphicon glyphicon-remove'></span></div>");
+				
+				$(ret.div).append("<h3 style = 'margin: 0 5; text-align: center'>Register</h3>");
+				
+				$(ret.div).append("<form id='form_register'><input type='text' class='form-control' width=90% name='fullname' placeholder='Full Name'><input type='text' class='form-control' width=90% name='registerusername' placeholder='Username'><input type='email' class='form-control' width=90% name='email' placeholder='Email'><input type='password' class='form-control' width=90% id='registerpassword' placeholder='Password'><input type='password' class='form-control' width=90% name='confirmpassword' placeholder='Confirm Password'></form>");
+				
+				$(ret.div).append("<a href='#' id='button_completeregistration'>Complete Registration</a>");
+				
+				$('#button_completeregistration').attr("onclick", "User.sendRegistrationData()");
+				
+				//$("#pwalert").hide();
+				
+				$("#registerpassword").hover(function(){
+					$(ret.div).append("<div id='pwalert' class='alert alert-warning'><div class='arrow-left'></div>The password must contain at least <strong>6 characters</strong> and at least <strong>one number</strong>.</div>");
+				}, function(){
+					$("#pwalert").remove();
+				});
+				
+		})
+		
+		
+	},
+	
+	displayAlert : function() {
+		
+		$("#pwalert").show();
+		
+	},
+	
+	sendLoginData : function() {
+		
+		var logininfo = $("#form_login").serializeArray();
+		
+		console.log(logininfo);
+		
+		$.post('http://felek.cns.umass.edu:8888/map/login-map-user', logininfo, function(d){
+			User.setUser(d.data.username);
+		});
+		
+	},
+	
+	sendRegistrationData : function() {
+		
+		
+		var registrationinfo = $("#form_register").serializeArray();
+		
+		console.log(registrationinfo);
+		
+		
+		$.post('http://felek.cns.umass.edu:8888/map/register-map-user', registrationinfo, function(d){
+			console.log(d);
+		});
+		
+		$(".login-panel").remove();
+		
+		var password = $("#form_register input[type=password]")[0].value;
+		var confirmpass = $("#form_register input[type=password]")[1].value;
+		
+		console.log(password);
+		console.log(confirmpassword);
+	},
+	
+	setUser : function(user) {
+		
+		
+		$(".user-panel").addClass("active");
+
+		$("#form_login").hide();
+		$("#button_login").hide();
+		$("#button_register").hide();
+		$("#button_logout").show();
+		$("#text_username").text("Hello, " + user + "!");
+		$("#text_username").show();
+		
+	},
+	
+	resetLogin : function() {
+		
+		$(".user-panel").removeClass("active");
+		
+		$("#form_login").show();
+		$("#button_login").show();
+		$("#button_register").show();
+		$("#button_logout").hide();
+		$("#text_username").hide();
+		
 	},
 
 	downloadUserBasins : function() {
